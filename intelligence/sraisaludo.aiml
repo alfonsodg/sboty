@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!--srai Hola (saludo.aiml)-->
+
+	<category><pattern>HOLA *</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>* HOLA</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>_ HOLA *</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>HOLAS</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>HOLAS *</pattern><template><srai>HOLA</srai><sr/></template></category>
+	<category><pattern>* HOLAS</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>_ HOLAS *</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>HELLO</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>HELLO *</pattern><template><srai>HOLA</srai> <sr/></template></category>
+	<category><pattern>* HELLO</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>_ HELLO *</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>HI</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>HI *</pattern><template><srai>HOLA</srai> <sr/></template></category>
+	<category><pattern>* HI</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>_ HI *</pattern><template><srai>HOLA</srai></template></category>
+
+	<category><pattern>OLA</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>OLA *</pattern><template><srai>HOLA</srai> <sr/></template></category>
+	<category><pattern>* OLA</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>_ OLA *</pattern><template><srai>HOLA</srai></template></category>
+
+	<category><pattern>BUEN DIA</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>BUEN DIA *</pattern><template><srai>HOLA</srai> <sr/></template></category>
+	<category><pattern>* BUEN DIA</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>_ BUEN DIA *</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>BUEN DÍA</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>BUEN DÍA *</pattern><template><srai>HOLA</srai> <sr/></template></category>
+	<category><pattern>* BUEN DÍA</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>_ BUEN DÍA *</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>BUENAS</pattern><template><srai>HOLA</srai></template></category>
+
+	<category><pattern>BUENOS DÍAS</pattern><template> <srai>HOLA</srai></template></category>
+	<category><pattern>BUENOS DÍAS *</pattern><template><srai>HOLA</srai> <sr/></template></category>
+	<category><pattern>* BUENOS DÍAS</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>_ BUENOS DÍAS *</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>BUENOS DÌAS</pattern><template> <srai>HOLA</srai></template></category>
+	<category><pattern>BUENOS DÌAS *</pattern><template><srai>HOLA</srai> <sr/></template></category>
+	<category><pattern>* BUENOS DÌAS</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>_ BUENOS DÌAS *</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>BUENOS DIAS</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>BUENOS DIAS *</pattern><template><srai>HOLA</srai> <sr/></template></category>
+	<category><pattern>* BUENOS DIAS</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>_ BUENOS DIAS *</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>BUENAS TARDES</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>BUENAS TARDES *</pattern><template><srai>HOLA</srai> <sr/></template></category>
+	<category><pattern>* BUENAS TARDES</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>_ BUENAS TARDES *</pattern><template><srai>HOLA</srai></template></category>	
+	<category><pattern>BUENAS NOCHES</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>BUENAS NOCHES *</pattern><template><srai>HOLA</srai> <sr/></template></category>
+	<category><pattern>* BUENAS NOCHES</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>_ BUENAS NOCHES *</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>SALUDOS</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>SALUDOS *</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>* SALUDOS</pattern><template><srai>HOLA</srai></template></category>
+	<category><pattern>_ SALUDOS *</pattern><template><srai>HOLA</srai></template></category>
+
+<!--srai Adios (saludo.aiml)-->
+
+	<category><pattern>ADIOS *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* ADIOS</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ ADIOS *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>ADIÓS</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>ADIÓS *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* ADIÓS</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ ADIÓS *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>ADIÒS</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>ADIÒS *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* ADIÒS</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ ADIÒS *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>HASTA PRONTO</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>HASTA PRONTO *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* HASTA PRONTO</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ HASTA PRONTO *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>HASTA LUEGO</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>HASTA LUEGO *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* HASTA LUEGO</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ HASTA LUEGO *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>VEO LUEGO</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>VEO LUEGO *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* VEO LUEGO</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ VEO LUEGO *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>VEMOS LUEGO</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>VEMOS LUEGO *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* VEMOS LUEGO</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ VEMOS LUEGO *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>BYE</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>BYE *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* BYE</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ BYE *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>CHAO</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>CHAO *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* CHAO</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ CHAO *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>CHAU</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>CHAU *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* CHAU</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ CHAU *</pattern><template><srai>ADIOS</srai></template></category>	
+	<category><pattern>TE DEJO</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>TE DEJO *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* TE DEJO</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ TE DEJO *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>HASTA NUNCA</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>HASTA NUNCA *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* HASTA NUNCA</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ HASTA NUNCA *</pattern><template><srai>ADIOS</srai></template></category>
+
+	<category><pattern>HASTA LA PROXIMA</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>HASTA LA PROXIMA *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* HASTA LA PROXIMA</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ HASTA LA PROXIMA *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>HASTA LA PRÓXIMA</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>HASTA LA PRÓXIMA *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* HASTA LA PRÓXIMA</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ HASTA LA PRÓXIMA *</pattern><template><srai>ADIOS</srai></template></category>
+
+	<category><pattern>HASTA LA VISTA</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>HASTA LA VISTA *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* HASTA LA VISTA</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ HASTA LA VISTA *</pattern><template><srai>ADIOS</srai></template></category>
+
+	<category><pattern>HASTA OTRA</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>HASTA OTRA *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* HASTA OTRA</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ HASTA OTRA *</pattern><template><srai>ADIOS</srai></template></category>
+
+	<category><pattern>ME MARCHO</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>ME MARCHO *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* ME MARCHO</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ ME MARCHO *</pattern><template><srai>ADIOS</srai></template></category>
+
+	<category><pattern>ME VOY</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>ME VOY *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* ME VOY</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ ME VOY *</pattern><template><srai>ADIOS</srai></template></category>
+
+	<category><pattern>QUE TE VAYA BIEN</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>QUE TE VAYA BIEN *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* QUE TE VAYA BIEN</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ QUE TE VAYA BIEN *</pattern><template><srai>ADIOS</srai></template></category>
+
+	<category><pattern>TE DEJO</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>TE DEJO *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* TE DEJO</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ TE DEJO *</pattern><template><srai>ADIOS</srai></template></category>
+
+	<category><pattern>TENGO QUE IRME</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>TENGO QUE IRME *</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>* TENGO QUE IRME</pattern><template><srai>ADIOS</srai></template></category>
+	<category><pattern>_ TENGO QUE IRME *</pattern><template><srai>ADIOS</srai></template></category>
+
+<!--srai Que te cuentas (saludo.aiml)-->
+
+	<category><pattern>* QUE TE CUENTAS</pattern><template><srai>QUE TE CUENTAS</srai></template></category>
+	<category><pattern>QUE TE CUENTAS *</pattern><template><srai>QUE TE CUENTAS</srai></template></category>
+	<category><pattern>_ QUE TE CUENTAS *</pattern><template><srai>QUE TE CUENTAS</srai></template></category>
+	<category><pattern>QUÉ TE CUENTAS</pattern><template><srai>QUE TE CUENTAS</srai></template></category>
+	<category><pattern>* QUÉ TE CUENTAS</pattern><template><srai>QUE TE CUENTAS</srai></template></category>
+	<category><pattern>QUÉ TE CUENTAS *</pattern><template><srai>QUE TE CUENTAS</srai></template></category>
+	<category><pattern>_ QUÉ TE CUENTAS *</pattern><template><srai>QUE TE CUENTAS</srai></template></category>
+	<category><pattern>QUE ME CUENTAS</pattern><template><srai>QUE TE CUENTAS</srai></template></category>
+	<category><pattern>* QUE ME CUENTAS</pattern><template><srai>QUE TE CUENTAS</srai></template></category>
+	<category><pattern>QUE ME CUENTAS *</pattern><template><srai>QUE TE CUENTAS</srai></template></category>
+	<category><pattern>_ QUE ME CUENTAS *</pattern><template><srai>QUE TE CUENTAS</srai></template></category>
+	<category><pattern>QUÉ ME CUENTAS</pattern><template><srai>QUE TE CUENTAS</srai></template></category>
+	<category><pattern>* QUÉ ME CUENTAS</pattern><template><srai>QUE TE CUENTAS</srai></template></category>
+	<category><pattern>QUÉ ME CUENTAS *</pattern><template><srai>QUE TE CUENTAS</srai></template></category>
+	<category><pattern>_ QUÉ ME CUENTAS *</pattern><template><srai>QUE TE CUENTAS</srai></template></category>
+	
+<!-- srai Gracias (saludo.aiml)-->
+
+	<category><pattern>_ GRACIAS</pattern><template><srai>GRACIAS</srai></template></category>
+	<category><pattern>GRACIAS *</pattern><template><srai>GRACIAS</srai></template></category>
+	<category><pattern>_ GRACIAS *</pattern><template><srai>GRACIAS</srai></template></category>
+	<category><pattern>THANKS</pattern><template><srai>GRACIAS</srai></template></category>
+	<category><pattern>_ THANKS</pattern><template><srai>GRACIAS</srai></template></category>
+	<category><pattern>THANKS *</pattern><template><srai>GRACIAS</srai></template></category>
+	<category><pattern>_ THANKS *</pattern><template><srai>GRACIAS</srai></template></category>
+	<!-- agradesco-->
+	<category><pattern>MUCHO GUSTO</pattern><template>El gusto es mio</template></category>
+	<category><pattern>MUCHO GUSTO *</pattern><template><srai>MUCHO GUSTO</srai></template></category>
+	<category><pattern>* MUCHO GUSTO</pattern><template><srai>MUCHO GUSTO</srai></template></category>
+	<category><pattern>_ MUCHO GUSTO *</pattern><template><srai>MUCHO GUSTO</srai></template></category>
+	
+</aiml>
+
+

@@ -1,0 +1,13 @@
+*.~
+*.DS_STORE
+*.pyc
+*.pyo
+*.bak
+*.bak2
+*.brn
+.hg/*
+.hgignore
+chatbot_settings.xml
+cache/*
+errors/*
+registration/*

@@ -1,0 +1,7 @@
+{
+  "venv": "", 
+  "project-type": "Import from sources", 
+  "name": "sboty", 
+  "license": "GNU General Public License v3", 
+  "description": "Messaging Multiprotocol Application with automatically responsive\nby using the AIML standard.\n"
+}

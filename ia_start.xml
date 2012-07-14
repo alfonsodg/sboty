@@ -1,0 +1,19 @@
+<aiml version="1.0">
+
+<!-- In this category are working with the Standard AIML set - in the intelligence folder -->
+
+<category>
+    <pattern>LOAD AIML B</pattern>
+    <template>
+        <learn>intelligence/personalidad.aiml</learn>
+        <learn>intelligence/sraipersonalidad.aiml</learn>
+        <learn>intelligence/adverbios.aiml</learn>
+        <learn>intelligence/insultos.aiml</learn>
+        <learn>intelligence/expresiones.aiml</learn>
+        <learn>intelligence/saludo.aiml</learn>
+        <learn>intelligence/sraisaludo.aiml</learn>
+        <learn>intelligence/aleatorio.aiml</learn>
+        <learn>intelligence/connectores.aiml</learn>
+    </template>
+</category>
+</aiml>

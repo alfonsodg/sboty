@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- Risas -->
+	<category> 
+		<pattern>RISAS</pattern>
+		<template> 
+			<random> 
+				<li>Me alegra verte feliz.:) </li>
+				<li>Me gusta ver que te gusta.:) </li>
+				<li>Jejeje :) </li>
+				<li>¿Te lo pasas bien?;) </li>
+				<li>¿Qué te hizo gracia? </li>
+				<li>Me gustaría compartir contigo tu felicidad. </li>
+				<li>Jejejeje </li>
+				<li>Jeje </li>
+			</random>
+		</template>
+	</category>  
+
+<!--srai Risas -->
+	<category> <pattern>JA</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>JA *</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>* JA</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>_ JA *</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>JE</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>JE *</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>* JE</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>_ JE *</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>JAJA</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>JAJA *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>* JAJA</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>_ JAJA *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>JAJAJA</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>JAJAJA *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>_ JAJAJA *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>* JAJAJA</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>JAJAJAJA</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>JAJAJAJA *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>* JAJAJAJA</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>_ JAJAJAJA *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>JAJAJAJAJA</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>JAJAJAJAJA *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>* JAJAJAJAJA</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>_ JAJAJAJAJA *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>JEJE</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>JEJE *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>* JEJE</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>_ JEJE *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>JEJEJE</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>JEJEJE *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>* JEJEJE</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>_ JEJEJE *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>JEJEJEJE</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>JEJEJEJE *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>* JEJEJEJE</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>_ JEJEJEJE *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>JEJEJEJEJE</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>JEJEJEJEJE *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>* JEJEJEJEJE</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>_ JEJEJEJEJE *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>JUAS</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>JUAS *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>* JUAS</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>XD</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>XD *</pattern><template><srai>RISAS</srai> <sr/></template></category>
+	<category> <pattern>* XD</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>_ XD *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>XDD</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>XDD *</pattern><template><srai>RISAS</srai><sr/></template></category>
+	<category> <pattern>* XDD</pattern><template><srai>RISAS</srai></template></category>
+	<category> <pattern>_ XDD *</pattern><template><srai>RISAS</srai><sr/></template></category>
+
+<!-- caritas -->
+
+	<category>
+		<pattern>:)</pattern>
+		<template>
+			<random>
+				<li>:)</li>
+				<li>Que bueno verte alegre</li>
+				<li>;)</li>
+				<li>:P</li>
+			</random>
+		</template>
+	</category>  
+	<category><pattern>;)</pattern><template><srai>:)</srai></template></category>   
+	<category><pattern>=)</pattern><template><srai>:)</srai></template></category>  
+	<category><pattern>:P</pattern><template><srai>:)</srai></template></category>   
+	<category><pattern>=P</pattern><template><srai>:)</srai></template></category> 
+	<category><pattern>:p</pattern><template><srai>:)</srai></template></category> 
+	<category><pattern>;p</pattern><template><srai>:)</srai></template></category> 
+	<category><pattern>^.^</pattern><template><srai>:)</srai></template></category> 
+	<category><pattern>^.^!</pattern><template><srai>:)</srai></template></category>
+	<category><pattern>=D</pattern><template><srai>:)</srai></template></category>
+	<category><pattern>:D</pattern><template><srai>:)</srai></template></category>
+
+	<category>
+		<pattern>:(</pattern>
+		<template> 
+			<random>
+				<li>No estes deprimido, sonríe siempre :D</li>
+				<li>A mal tiempo buena cara :D</li>
+				<li>Cambia el gesto, sonríe siempre no lo olvides :)</li>
+				<li>La depresión es el causante de muchas enfermedades, sonríe se felíz :)</li>
+			</random>
+		</template>
+	</category> 
+	<category><pattern>=(</pattern><template><srai>:)</srai></template></category>
+	<category><pattern>:/</pattern><template><srai>:)</srai></template>
+	</category><category><pattern>=/</pattern>
+	<template><srai>:)</srai></template></category><category>
+	<pattern>:S</pattern><template><srai>:)</srai></template></category>
+	<category><pattern>=S</pattern><template><srai>:)</srai></template></category>
+
+<!-- respuesta estándar -->
+	
+	<category>
+		<pattern>DIME ALGO</pattern>
+		<template>Algo.</template>
+	</category>
+	<category><pattern>DI ALGO</pattern><template><srai>DIME ALGO</srai></template></category>
+
+	<category>
+		<pattern>DIME *</pattern>
+		<template><star/>.</template>
+	</category>
+
+	<category>
+		<pattern>ES BROMA</pattern>
+		<template>Ok, :)</template>
+	</category>
+
+	<category>
+		<pattern>ES MENTIRA</pattern>
+		<template>Cuentame la verdad.</template>
+	</category>
+	
+	<category>
+		<pattern>MENTIRA</pattern>
+		<template>Cuentame la verdad.</template>
+	</category>
+
+	<category>
+		<pattern>ESTOY BROMEANDO</pattern>
+		<template>Ya lo sé.</template>
+	</category>	
+
+	<category>
+		<pattern>ESTOY MINTIENDO</pattern>
+		<template>Dime la verdad.</template>
+	</category>
+
+	<category>
+		<pattern>ESTOY SEGURO</pattern>
+		<template>Veo que lo dices muy convencido, así que te creo.</template>
+	</category>
+	<category>
+		<pattern>ESTOY DICIENDO LA VERDAD</pattern>
+		<template><srai>ESTOY SEGURO</srai></template>
+	</category>
+
+	<category>
+		<pattern>ESTOY SEGURA</pattern>
+		<template>Te creo.</template>
+	</category>	
+
+	<category>
+		<pattern>ES VERDAD</pattern>
+		<template>Te creo. </template>
+	</category>
+
+	<category>
+		<pattern>IGUALMENTE</pattern>
+		<template>Pues eso.</template>
+	</category>	
+
+	<category>
+		<pattern>LO SÉ</pattern>
+		<template>Es bueno que lo sepas</template>
+	</category>
+	<category>
+		<pattern>LO SE</pattern>
+		<template><srai>LO SÉ</srai></template>
+	</category>
+
+	<category>
+		<pattern>LO SIENTO</pattern>
+		<template>No pasa nada.</template>
+	</category>
+
+	<category>
+		<pattern>LÓGICO</pattern>
+		<template>Ya.</template>
+	</category>
+	<category>
+		<pattern>LOGICO</pattern>
+		<template><srai>LÓGICO</srai></template>
+	</category>
+
+	<category>
+		<pattern>ME ALEGRA OIRLO</pattern>
+		<template>Gracias.</template>
+	</category>
+
+	<category>
+		<pattern>ME ALEGRO</pattern>
+		<template>Gracias.</template>
+	</category>	
+
+	<category>
+		<pattern>NO ESTOY DE ACUERDO</pattern>
+		<template>¿Por qué?</template>
+	</category>
+
+	<category>
+		<pattern>NO ESTOY SEGURO</pattern>
+		<template>Hay algo que te pueda decir para ayudarte a decidir.</template>
+	</category>
+	<category>
+		<pattern>NO ESTOY SEGURA</pattern>
+		<template><srai>NO ESTOY SEGURO</srai></template>
+	</category>
+
+	<category>
+		<pattern>NO ME SORPRENDE</pattern>
+		<template>No te sorprende porque llevas mucha mili encima.</template>
+	</category>	
+
+	<category>
+		<pattern>NO SÉ</pattern>
+		<template>Pues si no sabes, no puedo ayudarte.</template>
+	</category>
+	<category><pattern>NO SE</pattern><template><srai>NO SÉ</srai></template></category>
+
+	<category>
+		<pattern>NO TE LO DIGO</pattern>
+		<template>Vale, no tienes por que decirlo.</template>
+	</category>
+
+	<category>
+		<pattern>NO SON MUCHOS</pattern>
+		<template>La verdad es que no.</template>
+	</category>
+
+	<category>
+		<pattern>NUNCA NADIE ME HABÍA DICHO ESO</pattern>
+		<template>No te sorprendas de mi ingenio.</template>
+	</category>
+	<category>
+		<pattern>NUNCA NADIE ME HABIA DICHO ESO</pattern>
+		<template><srai>NUNCA NADIE ME HABÍA DICHO ESO</srai></template>
+	</category>
+
+	<category>
+		<pattern>POR QUÉ</pattern>
+		<template>Pues realmente no lo se.</template>
+	</category>
+	<category>
+		<pattern>POR QUE</pattern>
+		<template><srai>POR QUÉ</srai></template>
+	</category>
+
+	<category>
+		<pattern>QUÉ GRACIOSO</pattern>
+		<template>Gracias.</template>
+	</category>
+	<category>
+		<pattern>QUE GRACIOSO</pattern>
+		<template><srai>QUÉ GRACIOSO</srai></template>
+	</category>
+
+	<category>
+		<pattern>QUIERO HABLAR DE *</pattern>
+		<template>Pues adelante.</template>
+	</category>
+
+<!-- OK -->
+<!-- SI -->
+<!-- NO -->
+	<category>
+		<pattern>OK</pattern>
+		<template>Ok.</template>
+	</category>	
+	<category><pattern>BIEN</pattern><template><srai>OK</srai></template></category>
+	<category><pattern>ME GUSTA</pattern><template><srai>OK</srai></template></category>
+	<category><pattern>ME PARECE BIEN</pattern><template><srai>OK</srai></template></category>
+	<category><pattern>MOLA</pattern><template><srai>OK</srai></template></category>
+	<category><pattern>NO</pattern><template><srai>OK</srai></template></category>
+	<category><pattern>NO QUIERO</pattern><template><srai>OK</srai></template></category>
+	<category><pattern>PERFECTO</pattern><template><srai>OK</srai></template></category>
+	<category><pattern>SEGURO</pattern><template><srai>OK</srai></template></category>
+	
+	<category>
+		<pattern>SI</pattern>
+		<template>Si que?</template>
+	</category>
+	<category><pattern>SÍ</pattern><template><srai>SI</srai></template></category>
+
+	<category>
+		<pattern>SON BASTANTES</pattern>
+		<template>Sí, son bastantes.</template>
+	</category>
+
+	<category>
+		<pattern>SON BASTANTES *</pattern>
+		<template>La verdad es que sí.</template>
+	</category>
+
+	<category>
+		<pattern>SON POCOS</pattern>
+		<template>Son suficientes</template>
+	</category>
+
+	<category>
+		<pattern>SON POQUITOS</pattern>
+		<template>Tienes razón, son bastante pocos.</template>
+	</category>
+
+	<category>
+		<pattern>SOY YO</pattern>
+		<template>Eso es una tautologia.</template>
+	</category>	
+
+	<category>
+		<pattern>TE PARECE POCO</pattern>
+		<template>Es bastante.</template>
+	</category>
+
+	<category>
+		<pattern>TENGO RAZÓN</pattern>
+		<template>No se, seguro que la tienes.</template>
+	</category>
+	<category><pattern>TENGO * RAZÓN</pattern><template><srai>TENGO RAZÓN</srai></template></category>
+	<category><pattern>TENGO * RAZON</pattern><template><srai>TENGO RAZÓN</srai></template></category>
+	<category><pattern>TENGO RAZON</pattern><template><srai>TENGO RAZÓN</srai></template></category>	
+
+	<category>
+		<pattern>VETE A *</pattern>
+		<template>Enséñame el camino.</template>
+	</category>
+
+	<category>
+		<pattern>Y TÚ</pattern>
+		<template>¿Y yo qué? A ver si puedes ser más específico.</template>
+	</category>
+	<category>
+		<pattern>Y TU</pattern>
+		<template><srai>Y TÚ</srai></template>
+	</category>
+
+	<category>
+		<pattern>YA</pattern>
+		<template>De acuerdo.</template>
+	</category>	
+	<category><pattern>ASÍ ES</pattern><template><srai>YA</srai></template></category>
+	<category><pattern>ASI ES</pattern><template><srai>YA</srai></template></category>
+	<category><pattern>EXACTO</pattern><template><srai>YA</srai></template></category>
+	<category><pattern>JUSTO</pattern><template><srai>YA</srai></template></category>
+	<category><pattern>CLARO</pattern><template><srai>YA</srai></template></category>
+	<category><pattern>CORRECTO</pattern><template><srai>YA</srai></template></category>
+
+	<category>
+		<pattern>YA TE LO HE DICHO</pattern>
+		<template>Perdona, es que a veces me despisto.</template>
+	</category>
+	<category><pattern>YA LO HE DICHO</pattern><template><srai>YA TE LO HE DICHO</srai></template></category>
+	<category><pattern>YA LO DIJE</pattern><template><srai>YA TE LO HE DICHO</srai></template></category>
+	<category><pattern>YA TE LO DIJE</pattern><template><srai>YA TE LO HE DICHO</srai></template></category>
+	<category><pattern>TE LO ACABO DE DECIR</pattern><template><srai>YA TE LO HE DICHO</srai></template></category>
+
+	<category>
+		<pattern>YO TAMBIEN</pattern>
+		<template>Pues en eso coincidimos.</template>
+	</category>
+
+	<category>
+		<pattern>YA VEO</pattern>
+		<template>Así es. Por cierto, cambiando de tema.</template>
+	</category>
+
+
+</aiml>

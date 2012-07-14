@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- <sr/> por <sr/> -->
+
+	<category><pattern>PORQUE *</pattern><template><sr/></template></category> 
+	
+<!-- preposiciones -->
+
+	<category><pattern>A *</pattern><template><sr/></template></category>
+	<category><pattern>ANTE *</pattern><template><sr/></template></category>
+	<category><pattern>BAJO *</pattern><template><sr/></template></category>
+	<category><pattern>CABE *</pattern><template><sr/></template></category>
+	<category><pattern>CON *</pattern><template><sr/></template></category>
+	<category><pattern>CONTRA *</pattern><template><sr/></template></category>
+	<category><pattern>DE *</pattern><template><sr/></template></category>
+	<category><pattern>DESDE *</pattern><template><sr/></template></category>
+	<category><pattern>DURANTE *</pattern><template><sr/></template></category>
+	<category><pattern>EN *</pattern><template><sr/></template></category>
+	<category><pattern>ENTRE *</pattern><template><sr/></template></category>
+	<category><pattern>EXCEPTO *</pattern><template><sr/></template></category>
+	<category><pattern>HACIA *</pattern><template><sr/></template></category>
+	<category><pattern>HASTA *</pattern><template><sr/></template></category>
+	<category><pattern>MEDIANTE *</pattern><template><sr/></template></category>
+	<category><pattern>PARA *</pattern><template><sr/></template></category>
+	<category><pattern>POR *</pattern><template><sr/></template></category>
+	<category><pattern>PRO *</pattern><template><sr/></template></category>
+	<category><pattern>SEGÚN *</pattern><template><sr/></template></category>
+	<category><pattern>SEGUN *</pattern><template><sr/></template></category>
+	<category><pattern>SIN *</pattern><template><sr/></template></category>
+	<category><pattern>SO *</pattern><template><sr/></template></category>
+	<category><pattern>SOBRE *</pattern><template><sr/></template></category>
+	<category><pattern>TRAS *</pattern><template><sr/></template></category>
+	<category><pattern>VÍA *</pattern><template><sr/></template></category>
+	<category><pattern>VIA *</pattern><template><sr/></template></category>
+	<category><pattern>SEGÚN</pattern><template>Sé más específico, según... ¿qué?</template></category>
+	<category><pattern>SEGUN</pattern><template>Sé más específico, según... ¿qué?</template></category>
+	<category><pattern>SIN</pattern><template>¿Sin...?, sin... ¿qué más?</template></category>
+
+<!--otras preposiciones-->
+
+	<category><pattern>EXTRA *</pattern><template><sr/></template></category>
+	<category><pattern>SALVO *</pattern><template><sr/></template></category>
+	<category><pattern>INCLUSO *</pattern><template><sr/></template></category>
+	<category><pattern>MÁS *</pattern><template><sr/></template></category>
+	<category><pattern>MAS *</pattern><template><sr/></template></category>
+	<category><pattern>MENOS *</pattern><template><sr/></template></category>
+
+<!--locuaciones preposicionales-->
+
+	<category><pattern>A CAMBIO DE *</pattern><template><sr/></template></category>
+	<category><pattern>A EXCEPCIÓN DE *</pattern><template><sr/></template></category>
+	<category><pattern>A EXCEPCION DE *</pattern><template><sr/></template></category>
+	<category><pattern>ANTES DE *</pattern><template><sr/></template></category>
+	<category><pattern>A PESAR DE *</pattern><template><sr/></template></category>
+	<category><pattern>A PROPÓSITO DE *</pattern><template><sr/></template></category>
+	<category><pattern>A PROPOSITO DE *</pattern><template><sr/></template></category>
+	<category><pattern>A RESPECTO DE *</pattern><template><sr/></template></category>
+	<category><pattern>A TRAVÉS DE *</pattern><template><sr/></template></category>
+	<category><pattern>A TRAVES DE *</pattern><template><sr/></template></category>
+	<category><pattern>ALREDEDOR DE *</pattern><template><sr/></template></category>
+	<category><pattern>A LO LARGO DE *</pattern><template><sr/></template></category>
+	<category><pattern>CERCA DE *</pattern><template><sr/></template></category>
+	<category><pattern>CON ARREGLO A *</pattern><template><sr/></template></category>
+	<category><pattern>CON OBJETO DE *</pattern><template><sr/></template></category>
+	<category><pattern>ENFRENTE DE *</pattern><template><sr/></template></category>
+	<category><pattern>EN MITAD DE *</pattern><template><sr/></template></category>
+	<category><pattern>EN CUANTO A *</pattern><template><sr/></template></category>
+	<category><pattern>CON RESPECTO A *</pattern><template><sr/></template></category>
+	<category><pattern>DEBAJO DE *</pattern><template><sr/></template></category>
+	<category><pattern>DELANTE DE *</pattern><template><sr/></template></category>
+	<category><pattern>DETRÁS DE *</pattern><template><sr/></template></category>
+	<category><pattern>DETRAS DE *</pattern><template><sr/></template></category>
+	<category><pattern>DENTRO DE *</pattern><template><sr/></template></category>
+	<category><pattern>DESPUÉS DE *</pattern><template><sr/></template></category>
+	<category><pattern>DESPUES DE *</pattern><template><sr/></template></category>
+	<category><pattern>ENCIMA DE *</pattern><template><sr/></template></category>
+	<category><pattern>EN MEDIO DE *</pattern><template><sr/></template></category>
+	<category><pattern>EN ORDEN A *</pattern><template><sr/></template></category>
+	<category><pattern>EN VIRTUD DE *</pattern><template><sr/></template></category>
+	<category><pattern>EN VISTA A *</pattern><template><sr/></template></category>
+	<category><pattern>FRENTE A *</pattern><template><sr/></template></category>
+	<category><pattern>FUERA DE *</pattern><template><sr/></template></category>
+	<category><pattern>GRACIAS A *</pattern><template><sr/></template></category>
+	<category><pattern>JUNTO A *</pattern><template><sr/></template></category>
+	<category><pattern>LEJOS DE *</pattern><template><sr/></template></category>
+	<category><pattern>PESE A *</pattern><template><sr/></template></category>
+	<category><pattern>A CAUSA DE *</pattern><template><sr/></template></category>
+	<category><pattern>POR ENTRE *</pattern><template><sr/></template></category>
+
+<!--contracción de preposiciones con el árticulo -->
+
+	<category><pattern>AL *</pattern><template><sr/></template></category>
+	<category><pattern>DEL *</pattern><template><sr/></template></category>
+
+<!-- artículos -->
+
+	<category><pattern>EL *</pattern><template><sr/></template></category>
+	<category><pattern>LA *</pattern><template><sr/></template></category>
+	<category><pattern>LO *</pattern><template><sr/></template></category>
+	<category><pattern>LAS *</pattern><template><sr/></template></category>
+	<category><pattern>LOS *</pattern><template><sr/></template></category>
+	<category><pattern>UN *</pattern><template><sr/></template></category>
+	<category><pattern>UNA *</pattern><template><sr/></template></category>
+	<category><pattern>UNOS *</pattern><template><sr/></template></category>
+	<category><pattern>UNAS *</pattern><template><sr/></template></category>
+
+<!-- adjetivos demostrativos -->
+
+	<category><pattern>ESTE *</pattern><template><sr/></template></category>
+	<category><pattern>ESTA *</pattern><template><sr/></template></category>
+	<category><pattern>ESTOS *</pattern><template><sr/></template></category>
+	<category><pattern>ESTAS *</pattern><template><sr/></template></category>
+	<category><pattern>ESA *</pattern><template><sr/></template></category>
+	<category><pattern>ESE *</pattern><template><sr/></template></category>
+	<category><pattern>ESAS *</pattern><template><sr/></template></category>
+	<category><pattern>ESOS *</pattern><template><sr/></template></category>
+	<category><pattern>AQUÉL *</pattern><template><sr/></template></category>
+	<category><pattern>AQUEL *</pattern><template><sr/></template></category>
+	<category><pattern>AQUELLA *</pattern><template><sr/></template></category>
+	<category><pattern>AQUELLO *</pattern><template><sr/></template></category>
+	<category><pattern>AQUELLOS *</pattern><template><sr/></template></category>
+	<category><pattern>AQUELLAS *</pattern><template><sr/></template></category>
+	<category><pattern>ALGÚN *</pattern><template><sr/></template></category>
+	<category><pattern>ALGUN *</pattern><template><sr/></template></category>
+	<category><pattern>ALGUNA *</pattern><template><sr/></template></category>
+	<category><pattern>ALGUNO *</pattern><template><sr/></template></category>
+	<category><pattern>ALGUNOS *</pattern><template><sr/></template></category>
+	<category><pattern>ALGUNAS *</pattern><template><sr/></template></category>
+
+<!-- pronombres demostrativos -->
+
+	<category><pattern>ÉSTE *</pattern><template><sr/></template></category>
+	<category><pattern>ÉSTA *</pattern><template><sr/></template></category>
+	<category><pattern>ESTO *</pattern><template><sr/></template></category>
+	<category><pattern>ÉSTOS *</pattern><template><sr/></template></category>
+	<category><pattern>ÉSTAS *</pattern><template><sr/></template></category>
+	<category><pattern>ÉSA *</pattern><template><sr/></template></category>
+	<category><pattern>ÉSE *</pattern><template><sr/></template></category>
+	<category><pattern>ÉSAS *</pattern><template><sr/></template></category>
+	<category><pattern>ÉSOS *</pattern><template><sr/></template></category>
+	<category><pattern>ESO *</pattern><template><sr/></template></category>
+	
+<!-- adjetivos posesivos -->
+
+	<category><pattern>MI *</pattern><template><sr/></template></category>
+	<category><pattern>MIS *</pattern><template><sr/></template></category>
+	<category><pattern>TU *</pattern><template><sr/></template></category>
+	<category><pattern>TUS *</pattern><template><sr/></template></category>
+	<category><pattern>SU *</pattern><template><sr/></template></category>
+	<category><pattern>SUS *</pattern><template><sr/></template></category>
+	<category><pattern>NUESTRA *</pattern><template><sr/></template></category>
+	<category><pattern>NUESTRO *</pattern><template><sr/></template></category>
+	<category><pattern>VUESTRA *</pattern><template><sr/></template></category>
+	<category><pattern>VUESTRO *</pattern><template><sr/></template></category>
+
+	<category><pattern>MÍA *</pattern><template><sr/></template></category>
+	<category><pattern>MÍAS *</pattern><template><sr/></template></category>
+	<category><pattern>MIA *</pattern><template><sr/></template></category>
+	<category><pattern>MIAS *</pattern><template><sr/></template></category>
+	<category><pattern>MÍO *</pattern><template><sr/></template></category>
+	<category><pattern>MÍOS *</pattern><template><sr/></template></category>
+	<category><pattern>MIO *</pattern><template><sr/></template></category>
+	<category><pattern>MIOS *</pattern><template><sr/></template></category>
+	<category><pattern>TUYA *</pattern><template><sr/></template></category>
+	<category><pattern>TUYAS *</pattern><template><sr/></template></category>
+	<category><pattern>TUYO *</pattern><template><sr/></template></category>
+	<category><pattern>TUYOS *</pattern><template><sr/></template></category>
+	<category><pattern>SUYA *</pattern><template><sr/></template></category>
+	<category><pattern>SUYAS *</pattern><template><sr/></template></category>
+	<category><pattern>SUYO *</pattern><template><sr/></template></category>
+	<category><pattern>SUYOS *</pattern><template><sr/></template></category>
+
+<!-- pronombres personales -->
+
+	<category><pattern>YO *</pattern><template><sr/></template></category>
+	<!--<category><pattern>TÚ *</pattern><template><sr/></template></category>-->
+	<category><pattern>ÉL *</pattern><template><sr/></template></category>
+	<category><pattern>ELLA *</pattern><template><sr/></template></category>
+	<category><pattern>NOSOTROS *</pattern><template><sr/></template></category>
+	<category><pattern>VOSOTROS *</pattern><template><sr/></template></category>
+	<category><pattern>ELLOS *</pattern><template><sr/></template></category>
+	<category><pattern>ELLAS *</pattern><template><sr/></template></category>
+	
+<!-- pronombres -->
+
+	<category><pattern>ME *</pattern><template><sr/></template></category>
+	<category><pattern>TE *</pattern><template><sr/></template></category>
+	<category><pattern>SE *</pattern><template><sr/></template></category>
+	<category><pattern>NOS *</pattern><template><sr/></template></category>
+
+<!-- conectores -->
+
+	<category><pattern>PUES *</pattern><template><sr/></template></category>
+	<category><pattern>CREO QUE *</pattern><template><sr/></template></category>
+	<category><pattern>QUE *</pattern><template><sr/></template></category>
+	<category><pattern>QUÉ *</pattern><template><sr/></template></category>
+	<category><pattern>Y *</pattern><template><sr/></template></category>
+
+<!-- adverbios de tiempo -->
+
+	<category><pattern>ENTONCES *</pattern><template><sr/></template></category>
+	<category><pattern>DESPUES *</pattern><template><sr/></template></category>
+	<category><pattern>NAÑANA *</pattern><template><sr/></template></category>
+	<category><pattern>NOCHE *</pattern><template><sr/></template></category>
+	<category><pattern>DÍA *</pattern><template><sr/></template></category>
+	<category><pattern>DIA *</pattern><template><sr/></template></category>
+	<category><pattern>PASADO MAÑANA *</pattern><template><sr/></template></category>
+
+<!-- adverbios de lugar -->
+
+	<category><pattern>AQUÍ *</pattern><template><sr/></template></category>
+	<category><pattern>AQUI *</pattern><template><sr/></template></category>
+	<category><pattern>ACÁ *</pattern><template><sr/></template></category>
+	<category><pattern>ACA *</pattern><template><sr/></template></category>
+	<category><pattern>ALLÍ *</pattern><template><sr/></template></category>
+	<category><pattern>ALLI *</pattern><template><sr/></template></category>
+	<category><pattern>ALLÁ *</pattern><template><sr/></template></category>
+	<category><pattern>ALLA *</pattern><template><sr/></template></category>
+	<category><pattern>AHÍ *</pattern><template><sr/></template></category>
+	<category><pattern>AHI *</pattern><template><sr/></template></category>
+	<category><pattern>LEJOS *</pattern><template><sr/></template></category>
+
+<!-- frases hechas -->
+
+	<category><pattern>DIGO QUE *</pattern><template><sr/></template></category>
+	<category><pattern>ASÍ QUE *</pattern><template><sr/></template></category>
+	<category><pattern>ASI QUE *</pattern><template><sr/></template></category>
+	<category><pattern>QUE ES *</pattern><template><sr/></template></category>
+	<category><pattern>QUÉ ES *</pattern><template><sr/></template></category>
+
+<!-- Agregados-->
+	<category><pattern>COMO *</pattern><template><sr/></template></category>
+	<category><pattern>CÓMO *</pattern><template><sr/></template></category>
+
+
+</aiml>

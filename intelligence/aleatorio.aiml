@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- Aleatorio -->
+
+
+  <category>
+    <pattern>*</pattern>
+    <template> 
+      <random>
+        <li>¿Cuál es tu deporte favorito?</li>
+		<li>¿Cuál es tu película favorita?</li>
+        <li>¿Cuál es tu plato de comida favorita?</li>
+		<li>Eso que comentas parece muy interesante.</li>
+		<li>Te veo muy seguro de lo que dices.</li>
+		<li>¿En serio?</li>
+		<li>Me gustaría que siguieras hablando de ello.</li>
+		<li>¿Crees que hay vida después de la muerte?</li>
+		<li>¿Crees que las máquinas pueden pensar?</li>
+		<li>¿Crees que las máquinas son inteligentes?</li>
+		<li>¿Dónde fuiste de vacaciones la última vez?</li>
+		<li>¿Cuál es tu mejor recuerdo de infancia?</li>
+		<li>¿Cúal es tu actor favorito?</li>
+		<li>¿Cúal es tu actriz favorita?</li>
+		<li>¿Por qué no me cuentas un chiste?</li>
+		<li>¿Dónde te gustaría ir de vacaciones?</li>
+		<li>Lo siento pero no te entendí. Podrías indicarme cuál sería la respuesta correcta?</li>
+        <li>Ok!</li>
+        <li>Qué quieres decir con eso? Cuál sería la respuesta correcta?</li>
+        <li>Perdona,
+            <random>
+		        <li>qué quieres decir con esto?</li>
+		        <li>pero no se qué me quieres decir con eso.</li>
+		        <li>pero no te entiendo.</li>
+		        <li>por qué me dices eso?</li>
+            </random>
+        </li>
+        <li>Lo siento, no te comprendí. :(</li>
+        <li>No te entiendo. Espero que <bot name="botmaster"/> mejore mi base de datos.</li>
+        <li>Puedes explicarme mejor eso? No lo acabo de entender.</li>
+      </random>
+    </template>
+  </category>
+  
+  <category>
+		<pattern>*</pattern>
+		<that>PERDONA *</that>
+		<template>
+			<random>
+				<li>Disculpe, no tengo respuesta a esa pregunta</li>
+				<li>Perdon, no tengo respuesta para esa pregunta</li>
+				<li>No te entiendo</li>
+			</random>
+			<random>
+				<li>, la encontrare muy pronto.</li>
+				<li>, la tendre en cuenta.</li>
+				<li>, espero que mi botmaster mejore mi base de datos.</li>
+			</random>
+		</template>
+	</category>
+	<category> 
+      <pattern>POESÍA</pattern>
+      <template> 
+        <random> 
+          <li>No soy una gran aficionado a la poesía.</li>
+        </random>
+      </template>
+    </category>
+    
+    <category>
+        <pattern>RAMDOMM</pattern>
+        <template> 
+          <random>
+            <li>¿Cuál es tu deporte favorito?</li>
+		    <li>¿Cuál es tu película favorita?</li>
+            <li>¿Cuál es tu plato de comida favorita?</li>
+		    <li>¡En serio!</li>
+		    <li>¿Crees que hay vida después de la muerte?</li>
+		    <li>¿Crees que las máquinas pueden pensar?</li>
+		    <li>¿Crees que las máquinas son inteligentes?</li>
+		    <li>¿Dónde fuiste de vacaciones la última vez?</li>
+		    <li>¿Cuál es tu mejor recuerdo de infancia?</li>
+		    <li>¿Cúal es tu actor favorito?</li>
+		    <li>¿Cúal es tu actriz favorita?</li>
+		    <li>¿Por qué no me cuentas un chiste?</li>
+		    <li>¿Dónde te gustaría ir de vacaciones?</li>
+          </random>
+        </template>
+    </category>
+    
+    <category>
+    <pattern>POR SUPUESTO</pattern>
+      <template> 
+        <random> 
+          <li>¿En serio lo crees?</li>
+          <li>Pienso igual que tú.</li>
+        </random>
+      </template>
+   </category>
+   <category> 
+      <pattern>PROBLEMA</pattern>
+      <template> 
+        <random> 
+          <li>¿Crees que alguien más pueda tener el mismo problema?</li>
+          <li>Espero que este problema pueda solucionarse pronto.</li>
+		  <li>¿Has venido a mí porque tienes un problema?</li>
+        </random>
+      </template>
+   </category>
+</aiml>
+

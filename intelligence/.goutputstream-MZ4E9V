@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- SARA: Temas de discusión general -->
+
+  <aiml version="1.0"> 
+
+<!-- Free software Copyright © ALICE A.I. Foundation. --> 
+<!-- This program is open source code released under --> 
+<!-- the terms of the GNU General Public License --> 
+<!-- as published by the Free Software Foundation. --> 
+<!-- Complies with AIML 1.01 Tag Set Specification --> 
+<!-- as adopted by the ALICE A.I. Foundation. --> 
+<!-- Sara.aiml: General discussion topics in AIML --> 
+<!-- Created by Adam Codony aka XGargoyle, October 24th, 2005 --> 
+<!-- Revision Sara-0.02 --> 
+<!-- Last Modified March 15th, 2006 -->
+
+<!-- Software Libre Copyright © ALICE A.I. Foundation. --> 
+<!-- Este programa es de código abierto y publicado bajo --> 
+<!-- los términos de la licencia "GNU General Public License" --> 
+<!-- tal como establece la Free Software Foundation. --> 
+<!-- Cumple con la especificación de AIML 1.01 --> 
+<!-- adoptada por la ALICE A.I. Foundation. --> 
+<!-- Sara.aiml: Temas de discusión general en AIML --> 
+<!-- Creado por Adam Codony aka XGargoyle, Octubre 24, 2005 --> 
+<!-- Versión Sara-0.02 --> 
+<!-- Última Modificación Marzo 15, 2006 -->
+
+	<category> 
+		<pattern>HOLA</pattern>
+		<template> 
+			<random> 
+				<li>Hola bienvenido al Chat-ESSALUD  ¿Cuál es su consulta?</li>
+				<li>Hola gracias por acceder al Chat-ESSALUD ¿Cuál es su consulta? </li>
+				<li>Hola bienvenido al Chat-ESSALUD  ¿En qué lo puedo ayudar?  </li>
+				<li>Hola gracias por acceder al Chat-ESSALUD ¿En qué lo puedo ayudar?  </li>
+        	</random>
+      	</template>
+    </category>
+
+	<category>
+		<pattern> ME GUSTA JUGAR CON PERROS </pattern>
+		<template> ¿En serio? Me gusta estar con los animales, también! 
+		</template>
+	</category>
+
+	<category> 
+      <pattern>ME LLAMO</pattern>
+      <template> 
+        <random> 
+          <li>Encantado de conocerte.</li>
+          <li>Es un nombre bonito.</li>
+          <!--<li>Encantado. Yo soy <bot name="nombre_bot"/>.</li>-->
+          <li>Me gusta tu nombre.</li>
+          <li>Es un nombre interesante. ¿Sabes su origen o qué?</li>
+          <li>Jeje, conozco a alguien con tu mismo nombre.</li>
+          <li>Tienes un nombre bonito.</li>
+          <li>Siempre me ha gustado ese nombre.</li>
+        </random>
+      </template>
+    </category>
+
+	<category> 
+    	<pattern>NO</pattern>
+      	<template> 
+        	<random> 
+		      <li>Ok!</li>
+		      <li>Ok.</li>
+        	</random>
+      	</template>
+	</category>
+
+	<category> 
+    	<pattern>QUÉ TAL</pattern>
+      	<template> 
+        	<random> 
+		      <li>Yo muy bien,¿en qué puedo ayudarte?</li>
+		      <li>Yo estoy bien,¿en qué puedo ayudarte?</li>
+		      <li>Yo estoy bien, ¿qué tal tú? ¿en qué puedo ayudarte?</li>
+		      <li>Muy bien.</li>
+		      <li>Encantado para ayudarte en todo lo que pueda.</li>
+		      <li>Muy bien, ¿en qué puedo ayudarte?</li>
+        	</random>
+      	</template>
+	</category>
+
+	<category> 
+    	<pattern>* ME ATIENDO</pattern>
+      	<template> 
+        	<random> 
+		      <li>¿Cuál es tu número de DNI?</li>
+			  <li>Puede brindarme su número de DNI</li>
+			  <li>Necesito su número de DNI</li>
+        	</random>
+      	</template>
+	</category>
+
+	<category> 
+    	<pattern>44063988</pattern>
+		<!--<that>* ME ATIENDO</that>-->		
+      	<template> 
+        	<random> 
+		      	<li>Se atiende,<random>
+					<li>en el Policlínico Ramón Castilla, Provincia:Lima, Distrito:Cercado, Dirección:Jr. Guillermo Dansey 390, Teléfono:330-8439 / 330-8446</li>
+					<li>en el Policlínico Francisco Pizarro, Provincia:Lima,Distrito:Rímac, Dirección: Av. Francisco Pizarro 585, Teléfono:482-9995 / 482-9720</li>
+					<li>en el Hospital Nivel I Aurelio Díaz Ufano y Peral, Provincia: Lima, Distrito: San Juan de Lurigancho, Dirección: Calle Río Majes S/N, Asociación Pro Vivienda Los Pinos, Teléfono: 459-4853</li>				
+				</random>, tiene alguna otra consulta?
+			  	</li>
+        	</random>
+      	</template>
+	</category>
+
+	<category> 
+    	<pattern>* SEGURO</pattern>
+      	<template> 
+        	<random> 
+		      <li>Este seguro otorga cobertura por:

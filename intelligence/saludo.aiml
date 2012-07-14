@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- Hola -->
+	<category> 
+		<pattern>HOLA</pattern>
+		<template>
+			<condition name="nombre">
+				<li value="">
+					<random> 
+						<li>Hola como estás </li>
+						<li>Hola como te va </li>
+					</random>
+					<random> 
+						<li>¿Cómo te llamas?</li>
+						<li>¿Cúal es tu nombre?</li>
+					</random>
+					<think><set name="nombre"><formal>Undefined</formal></set></think>
+				</li>
+				<li>
+					<random>
+						<li>Encantada, <get name="nombre"/></li>
+						<li>Un gusto hablar contigo, <get name="nombre"/></li>
+						<li>Es un placer, <get name="nombre"/></li>
+						<li>¡Hola <get name="nombre"/>!</li>
+					</random>
+					<srai>RAMDOMM</srai>
+				</li>				
+			</condition>
+		</template>
+	</category>
+<!-- Adios -->
+	<category>
+		<pattern>ADIOS</pattern>
+    	<template>
+			<random>
+				<li>Chau <get name="nombre"/>. :)</li>
+				<li>Espero haber sido de ayuda <get name="nombre"/>. ;)</li>
+				<li>Espero verte de nuevo <get name="nombre"/>. :)</li>
+		  	</random>
+		</template>
+	</category>
+
+<!-- Nombre y Edad (Asegurado)-->	
+	<category><pattern>*</pattern><that>HOLA COMO *</that><template><srai>NAME <star index="1"/></srai></template></category>
+	<category><pattern>YO SOY *</pattern><that>HOLA COMO *</that><template><srai>NAME <star index="1"/></srai></template></category>
+	<category><pattern>SOY *</pattern><that>HOLA COMO *</that><template><srai>NAME <star index="1"/></srai></template></category>
+	<category><pattern>ME LLAMO *</pattern><that>HOLA COMO *</that><template><srai>NAME <star index="1"/></srai></template></category>
+	<category><pattern>* ME LLAMO *</pattern><that>HOLA COMO *</that><template><srai>NAME <star index="2"/></srai></template></category>
+	<category><pattern>ME LLAMAN *</pattern><that>HOLA COMO *</that><template><srai>NAME <star index="1"/></srai></template></category>
+	<category><pattern>* ME LLAMAN *</pattern><that>HOLA COMO *</that><template><srai>NAME <star index="2"/></srai></template></category>
+	<category><pattern>LLÁMAME *</pattern><that>HOLA COMO *</that><template><srai>NAME <star index="1"/></srai></template></category>
+	<category><pattern>LLAMAME *</pattern><that>HOLA COMO *</that><template><srai>NAME <star index="1"/></srai></template></category>
+	<category><pattern>MI NOMBRE ES *</pattern><that>HOLA COMO *</that><template><srai>NAME <star index="1"/></srai></template></category>
+	<category>
+		<pattern>NAME *</pattern>
+		<template>
+			<think><set name="nombre"><formal><star/></formal></set></think>
+			<random>
+				<li>Encantada, <get name="nombre"/></li>
+				<li>Un gusto hablar contigo, <get name="nombre"/></li>
+				<li>Es un placer, <get name="nombre"/></li>
+				<li>¡Hola <get name="nombre"/>!</li>
+			</random>
+			<random>
+				<li>y cuantos años tienes</li>
+				<li>y cual es tu edad</li>
+			</random>
+		</template>
+	</category>
+
+	<category><pattern>*</pattern><that>* Y CUAL ES TU EDAD</that><template><srai>EDAD <star index="1"/></srai></template></category>
+	<category><pattern>YO TENGO *</pattern><that>* Y CUAL ES TU EDAD</that><template><srai>EDAD <star index="1"/></srai></template></category>
+	<category><pattern>TENGO *</pattern><that>* Y CUAL ES TU EDAD</that><template><srai>EDAD <star index="1"/></srai></template></category>
+	<category><pattern>MI EDAD ES *</pattern><that>* Y CUAL ES TU EDAD</that><template><srai>EDAD <star index="1"/></srai></template></category>
+	<category><pattern>ES *</pattern><that>* Y CUANTOS AÑOS TIENES</that><template><srai>EDAD <star index="1"/></srai></template></category>
+	<category><pattern>*</pattern><that>* Y CUANTOS AÑOS TIENES</that><template><srai>EDAD <star index="1"/></srai></template></category>
+	<category><pattern>YO TENGO *</pattern><that>* Y CUANTOS AÑOS TIENES</that><template><srai>EDAD <star index="1"/></srai></template></category>
+	<category><pattern>TENGO *</pattern><that>* Y CUANTOS AÑOS TIENES</that><template><srai>EDAD <star index="1"/></srai></template></category>
+	<category><pattern>MI EDAD ES *</pattern><that>* Y CUANTOS AÑOS TIENES</that><template><srai>EDAD <star index="1"/></srai></template>
+	</category>
+	<category><pattern>ES *</pattern><that>* Y CUANTOS AÑOS TIENES</that><template><srai>EDAD <star index="1"/></srai></template></category>
+	<category>
+		<pattern>EDAD *</pattern>
+		<template>
+			<think><set name="edad"><star/></set></think>
+			<random>
+				<li>Gracias</li>
+				<li>Muy bien</li>
+			</random>
+            <srai>RAMDOMM</srai>
+		</template>
+	</category>
+	
+<!-- sin that-->
+    <category><pattern>*</pattern><template><srai>NAMEE <star index="1"/></srai></template></category>
+	<category><pattern>YO SOY *</pattern><template><srai>NAMEE <star index="1"/></srai></template></category>
+	<category><pattern>SOY *</pattern><template><srai>NAMEE <star index="1"/></srai></template></category>
+	<category><pattern>ME LLAMO *</pattern><template><srai>NAMEE <star index="1"/></srai></template></category>
+	<category><pattern>* ME LLAMO *</pattern><template><srai>NAMEE <star index="2"/></srai></template></category>
+	<category><pattern>ME LLAMAN *</pattern><template><srai>NAMEE <star index="1"/></srai></template></category>
+	<category><pattern>* ME LLAMAN *</pattern><template><srai>NAMEE <star index="2"/></srai></template></category>
+	<category><pattern>LLÁMAME *</pattern><template><srai>NAMEE <star index="1"/></srai></template></category>
+	<category><pattern>LLAMAME *</pattern><template><srai>NAMEE <star index="1"/></srai></template></category>
+	<category><pattern>MI NOMBRE ES *</pattern><template><srai>NAMEE <star index="1"/></srai></template></category>
+	<category>
+		<pattern>NAMEE *</pattern>
+		<template>
+			<think><set name="nombre"><formal><star/></formal></set></think>
+			<random>
+				<li>Encantada, <get name="nombre"/></li>
+				<li>Un gusto hablar contigo, <get name="nombre"/></li>
+				<li>Es un placer, <get name="nombre"/></li>
+				<li>¡Hola <get name="nombre"/>!</li>
+			</random>
+		</template>
+	</category>
+
+<!-- Que te cuentas-->
+	<category>
+		<pattern>QUE TE CUENTAS</pattern>
+		<template>
+			<random>
+				<li>Nada serio ¿Y tú?</li>
+				<li>Pues no sé ¿Qué hiciste ayer?</li>
+			</random>
+		</template>
+	</category>
+
+	<category>
+		<pattern>*</pattern>
+		<that>NADA SERIO *</that>
+		<template>
+			<random>
+				<li>chebre :)</li>
+				<li>que interesante :D</li>
+			</random>
+		</template>
+	</category>
+	<category>
+		<pattern>*</pattern>
+		<that>PUES NO SÉ *</that>
+		<template>
+			<random>
+				<li>chebre :)</li>
+				<li>que interesante :D</li>
+			</random>
+		</template>
+	</category>
+
+<!-- gracias -->
+
+	<category>
+		<pattern>GRACIAS</pattern>
+		<template>
+			<random>
+				<li>No hay de que</li>
+				<li>De nada</li>
+				<li>Es mi trabajo ayudarte</li>
+			</random>
+			<random>
+				<li>, necesitas algo más</li>
+			</random>
+		</template>
+	</category>
+	<category> 
+		<pattern>SI</pattern>
+		<that>* NECESITAS ALGO MÁS</that>
+		<template> 
+			<random> 
+				<li>Dime cual es tu consulta.</li>
+				<li>En que más te puedo ayudar.</li>
+				<li>Dime en que más te puedo ayudar.</li>
+			</random>
+		</template>
+	</category>
+	<category> 
+		<pattern>SI *</pattern>
+		<that>* NECESITAS ALGO MÁS</that>
+		<template><srai>Ok,<star index="1"/></srai></template>
+	</category>
+	<category> 
+		<pattern>NO</pattern>
+		<that>* NECESITAS ALGO MÁS</that>
+		<template> 
+			<random> 
+				<li>Ok, gracias por la entretenida conversación.</li>
+				<li>Ok, gracias por la amena conversación.</li>
+			</random>
+		</template>
+	</category>
+</aiml>

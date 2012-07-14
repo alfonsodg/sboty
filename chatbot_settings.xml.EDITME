@@ -1,0 +1,18 @@
+<!-- account settings -->
+<setup>
+    <loginusergtalk>***********</loginusergtalk>
+    <loginusermsn>----------@hotmail.com</loginusermsn>
+    <emailsender>**********@gmail.com</emailsender>
+    <loginpasswordgtalk>**********</loginpasswordgtalk>
+    <loginpasswordmsn>----------</loginpasswordmsn>
+    <jabberserver>gmail.com</jabberserver>
+    <botname>Sboty</botname>
+    <botconf>
+        <brain>chatbot_bot.brn</brain>
+        <msnini>chatbot_bot.ini</msnini>
+    </botconf>
+    <path>
+        <logpath>registration</logpath>
+        <cachepath>cache</cachepath>
+    </path>
+</setup>

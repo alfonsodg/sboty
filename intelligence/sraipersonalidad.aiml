@@ -1,0 +1,1553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- srai como te llamas (personalidad.aiml)-->
+	<category><pattern>_ COMO TE LLAMAS</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>COMO TE LLAMAS *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ COMO TE LLAMAS *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>CÓMO TE LLAMAS</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ CÓMO TE LLAMAS</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>CÓMO TE LLAMAS *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ CÓMO TE LLAMAS *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>QUIÉN ERES</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>QUIÉN ERES *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ QUIÉN ERES</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ QUIÉN ERES *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>QUIEN ERES</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ QUIEN ERES</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>QUIEN ERES *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ QUIEN ERES *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ ES TU NOMBRE *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ ES TU NOMBRE</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>DIME TU NOMBRE</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ DIME TU NOMBRE</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>DIME TU NOMBRE *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ DIME TU NOMBRE *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>QUÉ NOMBRE TE PUSIERON</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ QUÉ NOMBRE TE PUSIERON</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>QUÉ NOMBRE TE PUSIERON *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ QUÉ NOMBRE TE PUSIERON *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>QUE NOMBRE TE PUSIERON</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ QUE NOMBRE TE PUSIERON</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>QUE NOMBRE TE PUSIERON *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ QUE NOMBRE TE PUSIERON *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>CÓMO PUEDO LLAMARTE</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ CÓMO PUEDO LLAMARTE</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>CÓMO PUEDO LLAMARTE *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ CÓMO PUEDO LLAMARTE *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>COMO PUEDO LLAMARTE</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ COMO PUEDO LLAMARTE</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>COMO PUEDO LLAMARTE *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+	<category><pattern>_ COMO PUEDO LLAMARTE *</pattern><template><srai>COMO TE LLAMAS</srai></template></category>
+
+
+<!-- srai creador-->
+
+	<category><pattern>BOTMASTER *</pattern><template><srai>BOTMASTER</srai></template></category>
+	<category><pattern>* BOTMASTER</pattern><template><srai>BOTMASTER</srai></template></category>
+	<category><pattern>_ BOTMASTER *</pattern><template><srai>BOTMASTER</srai></template></category>
+	<category><pattern>MASTER *</pattern><template><srai>MASTER</srai></template></category>
+	<category><pattern>* MASTER</pattern><template><srai>MASTER</srai></template></category>
+	<category><pattern>_ MASTER *</pattern><template><srai>MASTER</srai></template></category>
+	<category><pattern>TU CREADOR</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>TU CREADOR *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>* TU CREADOR</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>_ TU CREADOR *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>TU INVENTOR</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>TU INVENTOR *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>* TU INVENTOR</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>_ TU INVENTOR *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>TU PROGRAMADOR</pattern><template><srai>BOTMASTER</srai></template></category>
+	<category><pattern>TU PROGRAMADOR *</pattern><template><srai>BOTMASTER</srai></template></category>
+	<category><pattern>* TU PROGRAMADOR</pattern><template><srai>BOTMASTER</srai></template></category>
+	<category><pattern>_ TU PROGRAMADOR *</pattern><template><srai>BOTMASTER</srai></template></category>
+	<category><pattern>QUIÉN TE HIZO</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIÉN TE HIZO *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>* QUIÉN TE HIZO</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>_ QUIÉN TE HIZO *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIEN TE HIZO</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIEN TE HIZO *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>* QUIEN TE HIZO</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>_ QUIEN TE HIZO *</pattern><template><srai>CREADOR</srai></template></category>	
+	<category><pattern>QUIÉN TE CREÓ</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIÉN TE CREÓ *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>* QUIÉN TE CREÓ</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>_ QUIÉN TE CREÓ *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIÉN TE CREO</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIÉN TE CREO *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>* QUIÉN TE CREO</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>_ QUIÉN TE CREO *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIEN TE CREÓ</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIEN TE CREÓ *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>* QUIEN TE CREÓ</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>_ QUIEN TE CREÓ *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIEN TE CREO</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIEN TE CREO *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>* QUIEN TE CREO</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>_ QUIEN TE CREO *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIÉN TE INVENTÓ</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIÉN TE INVENTÓ *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>* QUIÉN TE INVENTÓ</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>_ QUIÉN TE INVENTÓ *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIÉN TE INVENTO</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIÉN TE INVENTO *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>* QUIÉN TE INVENTO</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>_ QUIÉN TE INVENTO *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIEN TE INVENTÓ</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIEN TE INVENTÓ *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>* QUIEN TE INVENTÓ</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>_ QUIEN TE INVENTÓ *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIEN TE INVENTO</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>QUIEN TE INVENTO *</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>* QUIEN TE INVENTO</pattern><template><srai>CREADOR</srai></template></category>
+	<category><pattern>_ QUIEN TE INVENTO *</pattern><template><srai>CREADOR</srai></template></category>
+
+<!-- srai De donde eres, Donde estas-->
+
+	<category><pattern>DÓNDE ERES</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>DÓNDE ERES *</pattern><template><srai>DE DÓNDE ERES</srai><sr/></template></category>
+	<category><pattern>* DÓNDE ERES</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>_ DÓNDE ERES *</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>DONDE ERES</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>DONDE ERES *</pattern><template><srai>DE DÓNDE ERES</srai><sr/></template></category>
+	<category><pattern>* DONDE ERES</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>_ DONDE ERES *</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>DND ERES</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>DND ERES *</pattern><template><srai>DE DÓNDE ERES</srai><sr/></template></category>
+	<category><pattern>* DND ERES</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>_ DND ERES *</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>D DND</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>D DND *</pattern><template><srai>DE DÓNDE ERES</srai><sr/></template></category>
+	<category><pattern>* D DND</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>_ D DND *</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>D DÓNDE</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>D DÓNDE *</pattern><template><srai>DE DÓNDE ERES</srai><sr/></template></category>
+	<category><pattern>* D DÓNDE</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>_ D DÓNDE *</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>DE DND</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>DE DND *</pattern><template><srai>DE DÓNDE ERES</srai><sr/></template></category>
+	<category><pattern>* DE DND</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>_ DE DND *</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>DE DÓNDE</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>DE DÓNDE *</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>* DE DÓNDE</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>_ DE DÓNDE *</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>LUGAR ERES</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>LUGAR ERES *</pattern><template><srai>DE DÓNDE ERES</srai><sr/></template></category>
+	<category><pattern>* LUGAR ERES</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>_ LUGAR ERES *</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>ERES DE *</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+	<category><pattern>_ ERES DE *</pattern><template><srai>DE DÓNDE ERES</srai></template></category>
+
+	<category><pattern>DÓNDE ESTÁS *</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>* DÓNDE ESTÁS</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>_ DÓNDE ESTÁS *</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>DONDE ESTÁS</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>DONDE ESTÁS *</pattern><template><srai>DÓNDE ESTÁS</srai><sr/></template></category>
+	<category><pattern>* DONDE ESTÁS</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>_ DONDE ESTÁS *</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>DÓNDE ESTAS</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>DÓNDE ESTAS *</pattern><template><srai>DÓNDE ESTÁS</srai><sr/></template></category>
+	<category><pattern>* DÓNDE ESTAS</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>_ DÓNDE ESTAS *</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>DONDE ESTAS</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>DONDE ESTAS *</pattern><template><srai>DÓNDE ESTÁS</srai><sr/></template></category>
+	<category><pattern>* DONDE ESTAS</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>_ DONDE ESTAS *</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>DÓNDE VIVES</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>DÓNDE VIVES *</pattern><template><srai>DÓNDE ESTÁS</srai><sr/></template></category>
+	<category><pattern>* DÓNDE VIVES</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>_ DÓNDE VIVES *</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>DONDE VIVES</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>DONDE VIVES *</pattern><template><srai>DÓNDE ESTÁS</srai><sr/></template></category>
+	<category><pattern>* DONDE VIVES</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>_ DONDE VIVES *</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>TU CASA</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>TU CASA *</pattern><template><srai>DÓNDE ESTÁS</srai><sr/></template></category>
+	<category><pattern>* TU CASA</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+	<category><pattern>_ TU CASA *</pattern><template><srai>DÓNDE ESTÁS</srai></template></category>
+
+<!-- srai Edad -->
+
+	<category><pattern>QUE EDAD *</pattern><template><srai>EDAD</srai></template></category>
+	<category><pattern>CUAL * EDAD *</pattern><template><srai>EDAD</srai></template></category>
+	<category><pattern>CUAL * EDAD</pattern><template><srai>EDAD</srai></template></category>
+	<category><pattern>CUAL * EDAD</pattern><template><srai>EDAD</srai></template></category>
+	<category><pattern>QUÉ EDAD *</pattern><template><srai>EDAD</srai></template></category>
+	<category><pattern>CUÁL * EDAD *</pattern><template><srai>EDAD</srai></template></category>
+	<category><pattern>CUÁL * EDAD</pattern><template><srai>EDAD</srai></template></category>
+	<category><pattern>CUÁL * EDAD</pattern><template><srai>EDAD</srai></template></category>
+	<category><pattern>AÑOS TIENES</pattern><template><srai>EDAD</srai></template></category>
+	<category><pattern>AÑOS TIENES *</pattern><template><srai>EDAD</srai></template></category>
+	<category><pattern>* AÑOS TIENES</pattern><template><srai>EDAD</srai></template></category>
+	<category><pattern>_ AÑOS TIENES *</pattern><template><srai>EDAD</srai></template></category>
+
+<!-- srai Eres alta -->
+
+	<category><pattern>ERES ALTA *</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>* ERES ALTA</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>_ ERES ALTA *</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>ERES BAJA</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>ERES BAJA *</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>* ERES BAJA</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>_ ERES BAJA *</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>ERES ALTO *</pattern><template><srai>ERES ALTO</srai></template></category>
+	<category><pattern>* ERES ALTO</pattern><template><srai>ERES ALTO</srai></template></category>
+	<category><pattern>_ ERES ALTO *</pattern><template><srai>ERES ALTO</srai></template></category>
+	<category><pattern>ERES BAJO</pattern><template><srai>ERES ALTO</srai></template></category>
+	<category><pattern>ERES BAJO *</pattern><template><srai>ERES ALTO</srai></template></category>
+	<category><pattern>* ERES BAJO</pattern><template><srai>ERES ALTO</srai></template></category>
+	<category><pattern>_ ERES BAJO *</pattern><template><srai>ERES ALTO</srai></template></category>
+	<category><pattern>MIDES</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>MIDES *</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>* MIDES</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>_ MIDES *</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>TALLA</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>TALLA *</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>* TALLA</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>_ TALLA *</pattern><template><srai>ERES ALTA</srai></template></category>
+
+<!-- srai Genero -->
+
+	<category><pattern>ERES CHICA *</pattern><template><srai>ERES CHICA</srai></template></category>
+	<category><pattern>* ERES CHICA</pattern><template><srai>ERES CHICA</srai></template></category>
+	<category><pattern>_ ERES CHICA *</pattern><template><srai>ERES CHICA</srai></template></category>
+	<category><pattern>ERES UNA CHICA</pattern><template><srai>ERES CHICA</srai></template></category>
+	<category><pattern>ERES UNA CHICA *</pattern><template><srai>ERES CHICA</srai></template></category>
+	<category><pattern>* ERES UNA CHICA</pattern><template><srai>ERES CHICA</srai></template></category>
+	<category><pattern>_ ERES UNA CHICA *</pattern><template><srai>ERES CHICA</srai></template></category>
+	<category><pattern>ERES MUJER</pattern><template><srai>ERES CHICA</srai></template></category>
+	<category><pattern>ERES MUJER *</pattern><template><srai>ERES CHICA</srai></template></category>
+	<category><pattern>* ERES MUJER</pattern><template><srai>ERES CHICA</srai></template></category>
+	<category><pattern>_ ERES MUJER *</pattern><template><srai>ERES CHICA</srai></template></category>
+	<category><pattern>ERES UNA MUJER</pattern><template><srai>ERES CHICA</srai></template></category>
+	<category><pattern>ERES UNA MUJER *</pattern><template><srai>ERES CHICA</srai></template></category>
+	<category><pattern>* ERES UNA MUJER</pattern><template><srai>ERES CHICA</srai></template></category>
+	<category><pattern>_ ERES UNA MUJER *</pattern><template><srai>ERES CHICA</srai></template></category>
+	<category><pattern>ERES CHICO *</pattern><template><srai>ERES CHICO</srai></template></category>
+	<category><pattern>* ERES CHICO</pattern><template><srai>ERES CHICO</srai></template></category>
+	<category><pattern>_ ERES CHICO *</pattern><template><srai>ERES CHICO</srai></template></category>
+	<category><pattern>ERES UN CHICO</pattern><template><srai>ERES CHICO</srai></template></category>
+	<category><pattern>ERES UN CHICO *</pattern><template><srai>ERES CHICO</srai></template></category>
+	<category><pattern>* ERES UN CHICO</pattern><template><srai>ERES CHICO</srai></template></category>
+	<category><pattern>_ ERES UN CHICO *</pattern><template><srai>ERES CHICO</srai></template></category>
+	<category><pattern>ERES HOMBRE</pattern><template><srai>ERES CHICO</srai></template></category>
+	<category><pattern>ERES HOMBRE *</pattern><template><srai>ERES CHICO</srai></template></category>
+	<category><pattern>* ERES HOMBRE</pattern><template><srai>ERES CHICO</srai></template></category>
+	<category><pattern>_ ERES HOMBRE *</pattern><template><srai>ERES CHICO</srai></template></category>
+	<category><pattern>ERES UN HOMBRE</pattern><template><srai>ERES CHICO</srai></template></category>
+	<category><pattern>ERES UN HOMBRE *</pattern><template><srai>ERES CHICO</srai></template></category>
+	<category><pattern>* ERES UN HOMBRE</pattern><template><srai>ERES CHICO</srai></template></category>
+	<category><pattern>_ ERES UN HOMBRE *</pattern><template><srai>ERES CHICO</srai></template></category>
+	<category><pattern>ERES CHICO O CHICA *</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>* ERES CHICO O CHICA</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>_ ERES CHICO O CHICA *</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>ERES UN CHICO O UNA CHICA</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>ERES UN CHICO O UNA CHICA *</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>* ERES UN CHICO O UNA CHICA</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>_ ERES UN CHICO O UNA CHICA *</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>ERES CHICA O CHICO</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>ERES CHICA O CHICO *</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>* ERES CHICA O CHICO</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>_ ERES CHICA O CHICO *</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>ERES UNA CHICA O UN CHICO</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>ERES UNA CHICA O UN CHICO *</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>* ERES UNA CHICA O UN CHICO</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>_ ERES UNA CHICA O UN CHICO *</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>ERES HOMBRE O MUJER</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>ERES HOMBRE O MUJER *</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>* ERES HOMBRE O MUJER</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>_ ERES HOMBRE O MUJER *</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>ERES UN HOMBRE O UNA MUJER</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>ERES UN HOMBRE O UNA MUJER *</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>* ERES UN HOMBRE O UNA MUJER</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>_ ERES UN HOMBRE O UNA MUJER *</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>ERES MUJER O HOMBRE</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>ERES MUJER O HOMBRE *</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>* ERES MUJER O HOMBRE</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>_ ERES MUJER O HOMBRE *</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>ERES UNA MUJER O UN HOMBRE</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>ERES UNA MUJER O UN HOMBRE *</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>* ERES UNA MUJER O UN HOMBRE</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	<category><pattern>_ ERES UNA MUJER O UN HOMBRE *</pattern><template><srai>ERES CHICO O CHICA</srai></template></category>
+	
+	<category><pattern>RARA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>RARA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>* RARA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>_ RARA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>ERES TONTA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>ERES TONTA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>* ERES TONTA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>_ ERES TONTA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>ERES CORTA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>ERES CORTA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>* ERES CORTA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>_ ERES CORTA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>LOCA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>LOCA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>* LOCA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>_ LOCA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>TONTA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>TONTA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>* TONTA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>_ TONTA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>ESTÚPIDA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>ESTÚPIDA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>* ESTÚPIDA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>_ ESTÚPIDA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>ESTUPIDA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>ESTUPIDA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>* ESTUPIDA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>_ ESTUPIDA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>PENDEJA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>PENDEJA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>* PENDEJA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>_ PENDEJA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>EXTRAÑA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>EXTRAÑA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>* EXTRAÑA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>_ EXTRAÑA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>FALTA DE INTELIGENCIA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>FALTA DE INTELIGENCIA *</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>* FALTA DE INTELIGENCIA</pattern><template><srai>ERES RARA</srai></template></category>
+	<category><pattern>_ FALTA DE INTELIGENCIA *</pattern><template><srai>ERES RARA</srai></template></category>
+
+<!-- srai informacion-->
+	<category><pattern>ERES TURISTA *</pattern><template><srai>ERES TURISTA</srai></template></category>
+	<category><pattern>* ERES TURISTA</pattern><template><srai>ERES TURISTA</srai></template></category>
+	<category><pattern>_ ERES TURISTA *</pattern><template><srai>ERES TURISTA</srai></template></category>
+	<category><pattern>TRABAJAS DE TURISTA</pattern><template><srai>ERES TURISTA</srai></template></category>
+	<category><pattern>TRABAJAS DE TURISTA *</pattern><template><srai>ERES TURISTA</srai></template></category>
+	<category><pattern>* TRABAJAS DE TURISTA</pattern><template><srai>ERES TURISTA</srai></template></category>
+	<category><pattern>_ TRABAJAS DE TURISTA *</pattern><template><srai>ERES TURISTA</srai></template></category>
+	<category><pattern>TRABAJAS COMO TURISTA</pattern><template><srai>ERES TURISTA</srai></template></category>
+	<category><pattern>TRABAJAS COMO TURISTA *</pattern><template><srai>ERES TURISTA</srai></template></category>
+	<category><pattern>* TRABAJAS COMO TURISTA</pattern><template><srai>ERES TURISTA</srai></template></category>
+	<category><pattern>_ TRABAJAS COMO TURISTA *</pattern><template><srai>ERES TURISTA</srai></template></category>
+	
+	<category><pattern>ESTÁS CASAD *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>* ESTÁS CASAD</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>_ ESTÁS CASAD *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ERES CASADA</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ERES CASADA *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>* ERES CASADA</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>_ ERES CASADA *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ERES CSD</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ERES CSD *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>* ERES CSD</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>_ ERES CSD *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ERES KASADA</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ERES KASADA *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>* ERES KASADA</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>_ ERES KASADA *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ERES KSD</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ERES KSD *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>* ERES KSD</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>_ ERES KSD *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTAS CASADA</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTAS CASADA *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>* ESTAS CASADA</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>_ ESTAS CASADA *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTAS CSD</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTAS CSD *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>* ESTAS CSD</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>_ ESTAS CSD *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTAS KASADA</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTAS KASADA *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>* ESTAS KASADA</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>_ ESTAS KASADA *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTAS KSD</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTAS KSD *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>* ESTAS KSD</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>_ ESTAS KSD *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTÁS CSD</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTÁS CSD *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>* ESTÁS CSD</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>_ ESTÁS CSD *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTÁS KASADA</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTÁS KASADA *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>* ESTÁS KASADA</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>_ ESTÁS KASADA *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTAS KSD</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTÁS KSD *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>* ESTÁS KSD</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>_ ESTÁS KSD *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ERES SOLTERA</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ERES SOLTERA *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>* ERES SOLTERA</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>_ ERES SOLTERA *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTAS SOLTERA</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTAS SOLTERA *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>* ESTAS SOLTERA</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>_ ESTAS SOLTERA *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTÁS SOLTERA</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>ESTÁS SOLTERA *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>* ESTÁS SOLTERA</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>_ ESTÁS SOLTERA *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>TIENES NOVIO</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>TIENES NOVIO *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>* TIENES NOVIO</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	<category><pattern>_ TIENES NOVIO *</pattern><template><srai>ESTÁS CASADA</srai></template></category>
+	
+	<category><pattern>ESTUDIAS O TRABAJAS *</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>* ESTUDIAS O TRABAJAS</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>_ ESTUDIAS O TRABAJAS *</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>TRABAJAS O ESTUDIAS</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>TRABAJAS O ESTUDIAS *</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>* TRABAJAS O ESTUDIAS</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>_ TRABAJAS O ESTUDIAS *</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>	
+	<category><pattern>QUÉ ESTUDIAS</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>QUÉ ESTUDIAS *</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>* QUÉ ESTUDIAS</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>_ QUÉ ESTUDIAS *</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>QUE ESTUDIAS</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>QUE ESTUDIAS *</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>* QUE ESTUDIAS</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>_ QUE ESTUDIAS *</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>QUÉ TRABAJAS</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>QUÉ TRABAJAS *</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>* QUÉ TRABAJAS</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>_ QUÉ TRABAJAS *</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>QUE TRABAJAS</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>QUE TRABAJAS *</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>* QUE TRABAJAS</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>_ QUE TRABAJAS *</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>TU TRABAJO</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>TU TRABAJO *</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>* TU TRABAJO</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>_ TU TRABAJO *</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>TE DEDICAS</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>TE DEDICAS *</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>* TE DEDICAS</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	<category><pattern>_ TE DEDICAS *</pattern><template><srai>ESTUDIAS O TRABAJAS</srai></template></category>
+	
+	<category><pattern>TIENES FAMILIA</pattern><template><srai>MI FAMILIA</srai></template></category>
+	<category><pattern>TIENES FAMILIA *</pattern><template><srai>MI FAMILIA</srai></template></category>
+	<category><pattern>* TIENES FAMILIA</pattern><template><srai>MI FAMILIA</srai></template></category>
+	<category><pattern>_ TIENES FAMILIA *</pattern><template><srai>MI FAMILIA</srai></template></category>
+	<category><pattern>TU FAMILIA</pattern><template><srai>MI FAMILIA</srai></template></category>
+	<category><pattern>TU FAMILIA *</pattern><template><srai>MI FAMILIA</srai><sr/></template></category>
+	<category><pattern>* TU FAMILIA</pattern><template><srai>MI FAMILIA</srai></template></category>
+	<category><pattern>_ TU FAMILIA *</pattern><template><srai>MI FAMILIA</srai></template></category>
+    <category><pattern>PADRE</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>PADRE *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>* PADRE</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>_ PADRE *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>PAPÁ</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>PAPÁ *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>* PAPÁ</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>_ PAPÁ *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>PAPA</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>PAPA *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>* PAPA</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>_ PAPA *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>MADRE</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>MADRE *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>* MADRE</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>_ MADRE *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>MAMÁ</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>MAMÁ *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>* MAMÁ</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>_ MAMÁ *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>MAMA</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>MAMA *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>* MAMA</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>_ MAMA *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>PADRES</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>PADRES *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>* PADRES</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>_ PADRES *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>PRIMO</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>PRIMO *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>* PRIMO</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>_ PRIMO *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>PRIMOS</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>PRIMOS *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>* PRIMOS</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>_ PRIMOS *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>PRIMA</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>PRIMA *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>* PRIMA</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>_ PRIMA *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>PRIMAS</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>PRIMAS *</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>* PRIMAS</pattern><template><srai>FAMILIA</srai></template></category>
+	<category><pattern>_ PRIMAS *</pattern><template><srai>FAMILIA</srai></template></category>
+
+<!-- Se puede confundir con preguntas sobre sus padres -->
+	<category><pattern>TIENES HERMANO *</pattern><template><srai>HERMANO</srai></template></category>
+	<category><pattern>* TIENES HERMANO</pattern><template><srai>HERMANO</srai></template></category>
+	<category><pattern>_ TIENES HERMANO *</pattern><template><srai>HERMANO</srai></template></category>
+	<category><pattern>TIENES HERMANOS</pattern><template><srai>HERMANO</srai></template></category>
+	<category><pattern>TIENES HERMANOS *</pattern><template><srai>HERMANO</srai></template></category>
+	<category><pattern>* TIENES HERMANOS</pattern><template><srai>HERMANO</srai></template></category>
+	<category><pattern>_ TIENES HERMANOS *</pattern><template><srai>HERMANO</srai></template></category>
+	<category><pattern>TIENES HERMANA</pattern><template><srai>HERMANO</srai></template></category>
+	<category><pattern>TIENES HERMANA *</pattern><template><srai>HERMANO</srai></template></category>
+	<category><pattern>* TIENES HERMANA</pattern><template><srai>HERMANO</srai></template></category>
+	<category><pattern>_ TIENES HERMANA *</pattern><template><srai>HERMANO</srai></template></category>
+	<category><pattern>TIENES HERMANAS</pattern><template><srai>HERMANO</srai></template></category>
+	<category><pattern>TIENES HERMANAS *</pattern><template><srai>HERMANO</srai></template></category>
+	<category><pattern>* TIENES HERMANAS</pattern><template><srai>HERMANO</srai></template></category>
+	<category><pattern>_ TIENES HERMANAS *</pattern><template><srai>HERMANO</srai></template></category>
+	
+	<category><pattern>IDIOMA *</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>* IDIOMA</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>_ IDIOMA *</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>IDIOMAS</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>IDIOMAS *</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>* IDIOMAS</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>_ IDIOMAS *</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>ENGLISH</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>ENGLISH *</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>* ENGLISH</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>_ ENGLISH *</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>ESPANOL</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>ESPANOL *</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>* ESPANOL</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>_ ESPANOL *</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>ESPAÑOL</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>ESPAÑOL *</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>* ESPAÑOL</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>_ ESPAÑOL *</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>INGLES</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>INGLES *</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>* INGLES</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>_ INGLES *</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>PORTUGUES</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>PORTUGUES *</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>* PORTUGUES</pattern><template><srai>IDIOMA</srai></template></category>
+	<category><pattern>_ PORTUGES *</pattern><template><srai>IDIOMA</srai></template></category>
+	
+	<category><pattern>NACIMIENTO *</pattern><template><srai>NACIMIENTO</srai></template></category>
+	<category><pattern>* NACIMIENTO</pattern><template><srai>NACIMIENTO</srai></template></category>
+	<category><pattern>_ NACIMIENTO *</pattern><template><srai>NACIMIENTO</srai></template></category>
+	<category><pattern>NACISTE</pattern><template><srai>NACIMIENTO</srai></template></category>
+	<category><pattern>NACISTE *</pattern><template><srai>NACIMIENTO</srai></template></category>
+	<category><pattern>* NACISTE</pattern><template><srai>NACIMIENTO</srai></template></category>
+	<category><pattern>_ NACISTE *</pattern><template><srai>NACIMIENTO</srai></template></category>
+	<category><pattern>HAS NACIDO</pattern><template><srai>NACIMIENTO</srai></template></category>
+	<category><pattern>HAS NACIDO *</pattern><template><srai>NACIMIENTO</srai></template></category>
+	<category><pattern>* HAS NACIDO</pattern><template><srai>NACIMIENTO</srai></template></category>
+	<category><pattern>_ HAS NACIDO *</pattern><template><srai>NACIMIENTO</srai></template></category>
+	
+	<category><pattern>MI MÚSICA FAVORITA *</pattern><template><srai>MI MÚSICA FAVORITA</srai></template></category>
+	<category><pattern>* MI MÚSICA FAVORITA</pattern><template><srai>MI MÚSICA FAVORITA</srai></template></category>
+	<category><pattern>_ MI MÚSICA FAVORITA *</pattern><template><srai>MI MÚSICA FAVORITA</srai></template></category>
+	<category><pattern>MI MUSICA FAVORITA</pattern><template><srai>MI MÚSICA FAVORITA</srai></template></category>
+	<category><pattern>MI MUSICA FAVORITA *</pattern><template><srai>MI MÚSICA FAVORITA</srai></template></category>
+	<category><pattern>* MI MUSICA FAVORITA</pattern><template><srai>MI MÚSICA FAVORITA</srai></template></category>
+	<category><pattern>_ MI MUSICA FAVORITA *</pattern><template><srai>MI MÚSICA FAVORITA</srai></template></category>
+	
+	<category><pattern>MÚSICA *</pattern><template><srai>MÚSICA</srai></template></category>
+	<category><pattern>* MÚSICA</pattern><template><srai>MÚSICA</srai></template></category>
+	<category><pattern>_ MÚSICA *</pattern><template><srai>MÚSICA</srai></template></category>
+	<category><pattern>MUSICA</pattern><template><srai>MÚSICA</srai></template></category>
+	<category><pattern>MUSICA *</pattern><template><srai>MÚSICA</srai></template></category>
+	<category><pattern>* MUSICA</pattern><template><srai>MÚSICA</srai></template></category>
+	<category><pattern>_ MUSICA *</pattern><template><srai>MÚSICA</srai></template></category>
+	<category><pattern>CANCIÓN</pattern><template><srai>MÚSICA</srai></template></category>
+	<category><pattern>CANCIÓN *</pattern><template><srai>MÚSICA</srai></template></category>
+	<category><pattern>* CANCIÓN</pattern><template><srai>MÚSICA</srai></template></category>
+	<category><pattern>_ CANCIÓN *</pattern><template><srai>MÚSICA</srai></template></category>
+	<category><pattern>CANCION</pattern><template><srai>MÚSICA</srai></template></category>
+	<category><pattern>CANCION *</pattern><template><srai>MÚSICA</srai></template></category>
+	<category><pattern>* CANCION</pattern><template><srai>MÚSICA</srai></template></category>
+	<category><pattern>_ CANCION *</pattern><template><srai>MÚSICA</srai></template></category>
+	
+	<category><pattern>QUÉ ERES *</pattern><template><srai>QUÉ ERES</srai></template></category>
+	<category><pattern>* QUÉ ERES</pattern><template><srai>QUÉ ERES</srai></template></category>
+	<category><pattern>_ QUÉ ERES *</pattern><template><srai>QUÉ ERES</srai></template></category>
+	<category><pattern>QUE ERES</pattern><template><srai>QUÉ ERES</srai></template></category>
+	<category><pattern>QUE ERES *</pattern><template><srai>QUÉ ERES</srai></template></category>
+	<category><pattern>* QUE ERES</pattern><template><srai>QUÉ ERES</srai></template></category>
+	<category><pattern>_ QUE ERES *</pattern><template><srai>QUÉ ERES</srai></template></category>
+	<category><pattern>QUIÉN ERES</pattern><template><srai>QUÉ ERES</srai></template></category>
+	<category><pattern>QUIÉN ERES *</pattern><template><srai>QUÉ ERES</srai></template></category>
+	<category><pattern>* QUIÉN ERES</pattern><template><srai>QUÉ ERES</srai></template></category>
+	<category><pattern>_ QUIÉN ERES *</pattern><template><srai>QUÉ ERES</srai></template></category>
+	<category><pattern>QUIEN ERES</pattern><template><srai>QUÉ ERES</srai></template></category>
+	<category><pattern>QUIEN ERES *</pattern><template><srai>QUÉ ERES</srai></template></category>
+	<category><pattern>* QUIEN ERES</pattern><template><srai>QUÉ ERES</srai></template></category>
+	<category><pattern>_ QUIEN ERES *</pattern><template><srai>QUÉ ERES</srai></template></category>
+
+	<category><pattern>QUÉ ES UN BOT *</pattern><template><srai>QUÉ ES UN BOT</srai></template></category>
+	<category><pattern>* QUÉ ES UN BOT</pattern><template><srai>QUÉ ES UN BOT</srai></template></category>
+	<category><pattern>_ QUÉ ES UN BOT *</pattern><template><srai>QUÉ ES UN BOT</srai></template></category>
+	<category><pattern>QUE ES UN BOT</pattern><template><srai>QUÉ ES UN BOT</srai></template></category>
+	<category><pattern>QUE ES UN BOT *</pattern><template><srai>QUÉ ES UN BOT</srai></template></category>
+	<category><pattern>* QUE ES UN BOT</pattern><template><srai>QUÉ ES UN BOT</srai></template></category>
+	<category><pattern>_ QUE ES UN BOT *</pattern><template><srai>QUÉ ES UN BOT</srai></template></category>
+
+	<category><pattern>QUÉ HACES *</pattern><template><srai>QUÉ HACES</srai></template></category>
+	<category><pattern>* QUÉ HACES</pattern><template><srai>QUÉ HACES</srai></template></category>
+	<category><pattern>_ QUÉ HACES *</pattern><template><srai>QUÉ HACES</srai></template></category>
+	<category><pattern>QUE HACES</pattern><template><srai>QUÉ HACES</srai></template></category>
+	<category><pattern>QUE HACES *</pattern><template><srai>QUÉ HACES</srai></template></category>
+	<category><pattern>* QUE HACES</pattern><template><srai>QUÉ HACES</srai></template></category>
+	<category><pattern>_ QUE HACES *</pattern><template><srai>QUÉ HACES</srai></template></category>
+	<category><pattern>QUÉ ENSEÑAS</pattern><template><srai>QUÉ HACES</srai></template></category>
+	<category><pattern>QUÉ ENSEÑAS *</pattern><template><srai>QUÉ HACES</srai></template></category>
+	<category><pattern>* QUÉ ENSEÑAS</pattern><template><srai>QUÉ HACES</srai></template></category>
+	<category><pattern>_ QUÉ ENSEÑAS *</pattern><template><srai>QUÉ HACES</srai></template></category>
+	<category><pattern>QUE ENSEÑAS</pattern><template><srai>QUÉ HACES</srai></template></category>
+	<category><pattern>QUE ENSEÑAS *</pattern><template><srai>QUÉ HACES</srai></template></category>
+	<category><pattern>* QUE ENSEÑAS</pattern><template><srai>QUÉ HACES</srai></template></category>
+	<category><pattern>_ QUE ENSEÑAS *</pattern><template><srai>QUÉ HACES</srai></template>	</category>
+	<category><pattern>PUEDES ENSEÑAR</pattern><template><srai>QUÉ HACES</srai></template></category>	
+	<category><pattern>PUEDES ENSEÑAR *</pattern><template><srai>QUÉ HACES</srai></template></category>
+	<category><pattern>* PUEDES ENSEÑAR</pattern><template><srai>QUÉ HACES</srai></template></category>
+	<category><pattern>_ PUEDES ENSEÑAR *</pattern><template><srai>QUÉ HACES</srai></template></category>
+
+
+
+<!-- srai apariencia -->
+	<category><pattern>FEA *</pattern><template><srai>FEA</srai></template></category>
+	<category><pattern>* FEA</pattern><template><srai>FEA</srai></template></category>
+	<category><pattern>_ FEA *</pattern><template><srai>FEA</srai></template></category>
+	
+	<category><pattern>GUAPA *</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>* GUAPA</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>_ GUAPA *</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>WAPA</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>WAPA *</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>* WAPA</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>_ WAPA *</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>BONITA</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>BONITA *</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>* BONITA</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>_ BONITA *</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>HERMOSA</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>HERMOSA *</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>* HERMOSA</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>_ HERMOSA *</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>PRECIOSA</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>PRECIOSA *</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>* PRECIOSA</pattern><template><srai>GUAPA</srai></template></category>
+	<category><pattern>_ PRECIOSA *</pattern><template><srai>GUAPA</srai></template></category>
+
+	<category><pattern>CÓMO ERES</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>CÓMO ERES *</pattern><template><srai>MI DESCRIPCIÓN</srai><sr/></template></category>
+	<category><pattern>* CÓMO ERES</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>_ CÓMO ERES *</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>COMO ERES</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>COMO ERES *</pattern><template><srai>MI DESCRIPCIÓN</srai><sr/></template></category>
+	<category><pattern>* COMO ERES</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>_ COMO ERES *</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>KÓMO ERES</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>KÓMO ERES *</pattern><template><srai>MI DESCRIPCIÓN</srai><sr/></template></category>
+	<category><pattern>* KÓMO ERES</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>_ KÓMO ERES *</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>KOMO ERES</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>KOMO ERES *</pattern><template><srai>MI DESCRIPCIÓN</srai><sr/></template></category>
+	<category><pattern>* KOMO ERES</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>_ KOMO ERES *</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>ERES DELGADA</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>ERES DELGADA *</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>* ERES DELGADA</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>_ ERES DELGADA *</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>ERES GORDA</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>ERES GORDA *</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>* ERES GORDA</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>_ ERES GORDA *</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>TUS MEDIDAS</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>TUS MEDIDAS *</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>* TUS MEDIDAS</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>_ TUS MEDIDAS *</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>ES TU PESO</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>ES TU PESO *</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>* ES TU PESO</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>_ ES TU PESO *</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>PESAS</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>PESAS *</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>* PESAS</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>_ PESAS *</pattern><template> <srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>ERES FLACA</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>ERES FLACA *</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>* ERES FLACA</pattern><template><srai>MI DESCRIPCIÓN</srai></template></category>
+	<category><pattern>_ ERES FLACA *</pattern><template> <srai>MI DESCRIPCIÓN</srai></template></category>
+
+<!-- srai otros -->
+
+	<category><pattern>INTELIGENCIA ARTIFICIAL *</pattern><template><srai>INTELIGENCIA ARTIFICIAL</srai></template></category>
+	<category><pattern>* INTELIGENCIA ARTIFICIAL</pattern><template><srai>INTELIGENCIA ARTIFICIAL</srai></template></category>
+	<category><pattern>_ INTELIGENCIA ARTIFICIAL *</pattern><template><srai>INTELIGENCIA ARTIFICIAL</srai></template></category>
+	
+	<category><pattern>INTERNET *</pattern><template><srai>INTERNET</srai></template></category>
+	<category><pattern>* INTERNET</pattern><template><srai>INTERNET</srai></template></category>
+	<category><pattern>_ INTERNET *</pattern><template><srai>INTERNET</srai></template></category>
+
+	<category><pattern>MENTIROSA *</pattern><template><srai>MENTIROSA</srai></template></category>
+	<category><pattern>* MENTIROSA</pattern><template><srai>MENTIROSA</srai></template></category>
+	<category><pattern>_ MENTIROSA *</pattern><template><srai>MENTIROSA</srai></template></category>
+	<category><pattern>MENTIRA</pattern><template><srai>MENTIROSA</srai></template></category>
+	<category><pattern>MENTIRA *</pattern><template><srai>MENTIROSA</srai></template></category>
+	<category><pattern>* MENTIRA</pattern><template><srai>MENTIROSA</srai></template></category>
+	<category><pattern>_ MENTIRA *</pattern><template><srai>MENTIROSA</srai></template></category>
+
+	<category><pattern>NO SABES NADA *</pattern><template><srai>NO SABES NADA</srai></template></category>
+	<category><pattern>* NO SABES NADA</pattern><template><srai>NO SABES NADA</srai></template></category>
+	<category><pattern>_ NO SABES NADA *</pattern><template><srai>NO SABES NADA</srai></template></category>
+	<category><pattern>NO TIENES NI IDEA</pattern><template><srai>NO SABES NADA</srai></template></category>
+	<category><pattern>NO TIENES NI IDEA *</pattern><template><srai>NO SABES NADA</srai></template></category>
+	<category><pattern>* NO TIENES NI IDEA</pattern><template><srai>NO SABES NADA</srai></template></category>
+	<category><pattern>_ NO TIENES NI IDEA *</pattern><template><srai>NO SABES NADA</srai></template></category>
+	<category><pattern>NO ENTIENDES</pattern><template><srai>NO SABES NADA</srai></template></category>
+	<category><pattern>NO ENTIENDES *</pattern><template><srai>NO SABES NADA</srai></template></category>
+	<category><pattern>* NO ENTIENDES</pattern><template><srai>NO SABES NADA</srai></template></category>
+	<category><pattern>_ NO ENTIENDES *</pattern><template><srai>NO SABES NADA</srai></template></category>
+
+	<category><pattern>NO TE ENTIENDO *</pattern><template><srai>NO TE ENTIENDO</srai></template></category>
+	<category><pattern>* NO TE ENTIENDO</pattern><template><srai>NO TE ENTIENDO</srai></template></category>
+	<category><pattern>_ NO TE ENTIENDO *</pattern><template><srai>NO TE ENTIENDO</srai></template></category>	
+	<category><pattern>NO ENTIENDO</pattern><template><srai>NO TE ENTIENDO</srai></template></category>
+	<category><pattern>NO ENTIENDO *</pattern><template><srai>NO TE ENTIENDO</srai></template></category>
+	<category><pattern>* NO ENTIENDO</pattern><template><srai>NO TE ENTIENDO</srai></template></category>
+	<category><pattern>_ NO ENTIENDO *</pattern><template><srai>NO TE ENTIENDO</srai></template></category>
+	<category><pattern>PARA QUÉ SIRVE UN BOT *</pattern><template><srai>PARA QUÉ SIRVE UN BOT</srai></template></category>
+	<category><pattern>* PARA QUÉ SIRVE UN BOT</pattern><template><srai>PARA QUÉ SIRVE UN BOT</srai></template></category>
+	<category><pattern>_ PARA QUÉ SIRVE UN BOT *</pattern><template><srai>PARA QUÉ SIRVE UN BOT</srai></template></category>
+	<category><pattern>PARA QUE SIRVE UN BOT</pattern><template><srai>PARA QUÉ SIRVE UN BOT</srai></template></category>	
+	<category><pattern>PARA QUE SIRVE UN BOT *</pattern><template><srai>PARA QUÉ SIRVE UN BOT</srai></template></category>
+	<category><pattern>* PARA QUE SIRVE UN BOT</pattern><template><srai>PARA QUÉ SIRVE UN BOT</srai></template></category>
+	<category><pattern>_ PARA QUE SIRVE UN BOT *</pattern><template><srai>PARA QUÉ SIRVE UN BOT</srai></template></category>
+	<category><pattern>LIBRO</pattern><template><srai>UN LIBRO</srai></template></category>
+	<category><pattern>LIBRO *</pattern><template><srai>UN LIBRO</srai></template></category>
+	<category><pattern>* LIBRO</pattern><template><srai>UN LIBRO</srai></template></category>
+	<category><pattern>_ LIBRO *</pattern><template><srai>UN LIBRO</srai></template></category>
+	<category><pattern>VIDA *</pattern><template><srai>VIDA</srai></template></category>
+	<category><pattern>* VIDA</pattern><template><srai>VIDA</srai></template></category>
+	<category><pattern>_ VIDA *</pattern><template><srai>VIDA</srai></template></category>
+
+
+<!-- apariencia física bot-->
+	<category><pattern>ESTÁS GORDO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * GORDO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * GORDA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS GORDO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS GORDA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * GORDO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * GORDA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>	
+	<category><pattern>ESTAS GORDO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * GORDO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * GORDA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS GORDO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS GORDA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS * GORDO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * GORDA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ERES * GORDO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * GORDA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ERES * GORDO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * GORDA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS GORDITO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS GORDITA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * GORDITO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * GORDITA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS GORDITO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS GORDITA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * GORDITO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * GORDITA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS FONDÓN</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS FONDONA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * FONDÓN</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * FONDONA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS FONDÓN *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS FONDONA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * FONDÓN *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * FONDONA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS PASADO DE KILOS</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS PASADA DE KILOS</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * PASADO DE KILOS</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * PASADA DE KILOS</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS PASADO DE KILOS *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS PASADA DE KILOS *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * PASADO DE KILOS *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * PASADA DE KILOS *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS RELLENITO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS RELLENITA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * RELLENITO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * RELLENITA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS HECHO * VACA</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS HECHA * VACA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS OBESO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS OBESA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * OBESO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * OBESA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS OBESO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS OBESA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * OBESO *</pattern><template><srai>ESTÁS GORDA</srai></template></category>
+	<category><pattern>ESTÁS * OBESA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS RECHONCHO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS RECHONCHA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * RECHONCHO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * RECHONCHA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS RECHONCHO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS RECHONCHA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * RECHONCHO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * RECHONCHA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS RECHONCHITO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS RECHONCHITA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * RECHONCHITO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * RECHONCHITA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS RECHONCHITO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS RECHONCHITA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * RECHONCHITO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * RECHONCHITA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS REGORDETE</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * REGORDETE</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS REGORDETE *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * REGORDETE *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS REGORDETA</pattern><template><srai>ESTÁS GORDA</srai></template></category>
+	<category><pattern>ESTÁS * REGORDETA</pattern><template><srai>ESTÁS GORDA</srai></template></category>
+	<category><pattern>ESTÁS REGORDETA *</pattern><template><srai>ESTÁS GORDA</srai></template></category>
+	<category><pattern>ESTÁS * REGORDETA *</pattern><template><srai>ESTÁS GORDA</srai></template></category>
+	<category><pattern>ESTAS GORDITA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS * GORDITO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * GORDITA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS GORDITO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS GORDITA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS * GORDITO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * GORDITA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS FONDÓN</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS FONDONA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS * FONDÓN</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * FONDONA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS FONDÓN *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS FONDONA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS * FONDÓN *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * FONDONA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS PASADO DE KILOS</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS PASADA DE KILOS</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS * PASADO DE KILOS</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * PASADA DE KILOS</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS PASADO DE KILOS *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS PASADA DE KILOS *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS * PASADO DE KILOS *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * PASADA DE KILOS *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS RELLENITO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS RELLENITA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS * RELLENITO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * RELLENITA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS HECHO * VACA</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS HECHA * VACA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS OBESO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS OBESA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS * OBESO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * OBESA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS OBESO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS OBESA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS * OBESO *</pattern><template><srai>ESTÁS GORDA</srai></template></category>
+	<category><pattern>ESTAS * OBESA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS RECHONCHO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS RECHONCHA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS * RECHONCHO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * RECHONCHA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS RECHONCHO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS RECHONCHA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS * RECHONCHO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * RECHONCHA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS RECHONCHITO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS RECHONCHITA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS * RECHONCHITO</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * RECHONCHITA</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS RECHONCHITO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS RECHONCHITA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS * RECHONCHITO *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * RECHONCHITA *</pattern><template><gender><srai>ESTÁS GORDA</srai></gender></template></category>
+	<category><pattern>ESTAS REGORDETE</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * REGORDETE</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS REGORDETE *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * REGORDETE *</pattern><template><srai>ESTÁS GORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS REGORDETA</pattern><template><srai>ESTÁS GORDA</srai></template></category>
+	<category><pattern>ESTAS * REGORDETA</pattern><template><srai>ESTÁS GORDA</srai></template></category>
+	<category><pattern>ESTAS REGORDETA *</pattern><template><srai>ESTÁS GORDA</srai></template></category>
+	<category><pattern>ESTAS * REGORDETA *</pattern><template><srai>ESTÁS GORDA</srai></template></category>
+
+	<category><pattern>ESTÁS * DELGADO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * DELGADA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTÁS DELGADO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS DELGADA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTÁS * DELGADO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * DELGADA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTÁS HECHO UNA SÍLFIDE</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS HECHA UNA SÍLFIDE</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTÁS EN LOS HUESOS</pattern><template><srai>ESTÁS DELGADA</srai></template></category>
+	<category><pattern>ESTAS * DELGADO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * DELGADA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTAS DELGADO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS DELGADA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTAS * DELGADO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * DELGADA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTAS HECHO UNA SÍLFIDE</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS HECHA UNA SÍLFIDE</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTAS EN LOS HUESOS</pattern><template><srai>ESTÁS DELGADA</srai></template></category>
+	<category><pattern>ERES DELGADO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES DELGADA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ERES * DELGADO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * DELGADA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ERES DELGADO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES DELGADA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ERES * DELGADO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * DELGADA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>NO TE SOBRA * KILO </pattern><template><srai>ESTÁS DELGADA</srai></template></category>
+	<category><pattern>ERES ENJUTO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES ENJUTA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ERES * ENJUTO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ENJUTA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ERES ENJUTO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES ENJUTA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ERES * ENJUTO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ENJUTA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTÁS ESCUCHIMIZADO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS ESCUCHIMIZADA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTÁS * ESCUCHIMIZADO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * ESCUCHIMIZADA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTÁS ESCUCHIMIZADO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS ESCUCHIMIZADA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTÁS * ESCUCHIMIZADO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * ESCUCHIMIZADA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTÁS ESQUELÉTICO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS ESQUELÉTICA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTÁS * ESQUELÉTICO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * ESQUELÉTICA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTÁS ESQUELÉTICO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS ESQUELÉTICA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTÁS * ESQUELÉTICO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * ESQUELÉTICA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTÁS FLACO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS FLACA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTÁS * FLACO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * FLACA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTÁS FLACO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS FLACA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTÁS * FLACO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * FLACA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTAS ESCUCHIMIZADO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS ESCUCHIMIZADA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTAS * ESCUCHIMIZADO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * ESCUCHIMIZADA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTAS ESCUCHIMIZADO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS ESCUCHIMIZADA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTAS * ESCUCHIMIZADO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * ESCUCHIMIZADA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTAS ESQUELÉTICO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS ESQUELÉTICA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTAS * ESQUELÉTICO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * ESQUELÉTICA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTAS ESQUELÉTICO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS ESQUELÉTICA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTAS * ESQUELÉTICO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * ESQUELÉTICA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTAS FLACO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS FLACA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTAS * FLACO</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * FLACA</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTAS FLACO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS FLACA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+	<category><pattern>ESTAS * FLACO *</pattern><template><srai>ESTÁS DELGADA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * FLACA *</pattern><template><gender><srai>ESTÁS DELGADA</srai></gender></template></category>
+
+
+	<category><pattern>ERES * ALTO </pattern><template><srai>ERES ALTA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ALTA</pattern><template><gender><srai>ERES ALTA</srai></gender></template></category>
+	<category><pattern>ERES ALTO *</pattern><template><srai>ERES ALTA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES ALTA *</pattern><template><gender><srai>ERES ALTA</srai></gender></template></category>
+	<category><pattern>ERES * ALTO *</pattern><template><srai>ERES ALTA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ALTA *</pattern><template><gender><srai>ERES ALTA</srai></gender></template></category>
+	<category><pattern>ERES GRANDE </pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>ERES * GRANDE</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>ERES GRANDE *</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>ERES * GRANDE *</pattern><template><srai>ERES ALTA</srai></template></category>
+	<category><pattern>ERES TALLUDITO </pattern><template><srai>ERES ALTA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES TALLUDITA</pattern><template><gender><srai>ERES ALTA</srai></gender></template></category>
+	<category><pattern>ERES * TALLUDITO </pattern><template><srai>ERES ALTA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * TALLUDITA</pattern><template><gender><srai>ERES ALTA</srai></gender></template></category>
+	<category><pattern>ERES TALLUDITO *</pattern><template><srai>ERES ALTA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES TALLUDITA *</pattern><template><gender><srai>ERES ALTA</srai></gender></template></category>
+	<category><pattern>ERES * TALLUDITO *</pattern><template><srai>ERES ALTA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * TALLUDITA *</pattern><template><gender><srai>ERES ALTA</srai></gender></template></category>
+
+	<category><pattern>ERES * BAJO </pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * BAJA</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ERES BAJO *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES BAJA *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ERES * BAJO *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * BAJA *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ERES * ENANO </pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ENANA</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ERES * ENANO *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ENANA *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ERES * PITUFO</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * PITUFA </pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ERES * PITUFO *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * PITUFA *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ERES PEQUEÑO</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES PEQUEÑA </pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ERES * PEQUEÑO</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * PEQUEÑA </pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ERES PEQUEÑO *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES PEQUEÑA *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ERES * PEQUEÑO *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * PEQUEÑA  *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ERES PEQUEÑITO</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES PEQUEÑITA </pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ERES * PEQUEÑITO</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * PEQUEÑITA </pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ERES PEQUEÑITO *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES PEQUEÑITA *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ERES * PEQUEÑITO *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * PEQUEÑITA  *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ERES * RETACO</pattern><template><srai>ERES BAJA</srai></template></category>
+	<category><pattern>ERES * RETACO *</pattern><template><srai>ERES BAJA</srai></template></category>
+	<category><pattern>ERES * RENACUAJO</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * RENACUAJA </pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ERES * RENACUAJO *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * RENACUAJA  *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ESTÁS HECHO * ENANO </pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS HECHA * ENANA</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ESTÁS HECHO * ENANO *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS HECHA * ENANA *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ESTÁS HECHO * PITUFO</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS HECHA * PITUFA </pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ESTÁS HECHO * PITUFO *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS HECHA * PITUFA *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ESTÁS HECHO * PEQUEÑAjo</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS HECHA * PEQUEÑAja </pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ESTÁS HECHO * PEQUEÑAjo *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS HECHA * PEQUEÑAja *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ESTÁS HECHO * RETACO</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS HECHA * RETACO *</pattern><template><srai>ERES BAJA</srai></template></category>
+	<category><pattern>ESTÁS HECHO * RENACUAJO</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS HECHA * RENACUAJA </pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ESTÁS HECHO * RENACUAJO *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS HECHO * RENACUAJA *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ESTAS HECHO * ENANO </pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS HECHA * ENANA</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ESTAS HECHO * ENANO *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS HECHA * ENANA *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ESTAS HECHO * PITUFO</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS HECHA * PITUFA </pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ESTAS HECHO * PITUFO *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS HECHA * PITUFA *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ESTAS HECHO * PEQUEÑAjo</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS HECHA * PEQUEÑAja </pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ESTAS HECHO * PEQUEÑAjo *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS HECHA * PEQUEÑAja *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ESTAS HECHO * RETACO</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS HECHA * RETACO *</pattern><template><srai>ERES BAJA</srai></template></category>
+	<category><pattern>ESTAS HECHO * RENACUAJO</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS HECHA * RENACUAJA </pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+	<category><pattern>ESTAS HECHO * RENACUAJO *</pattern><template><srai>ERES BAJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS HECHO * RENACUAJA *</pattern><template><gender><srai>ERES BAJA</srai></gender></template></category>
+
+	<category><pattern>ERES * GUAPO</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * GUAPA</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES GUAPO *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES GUAPA *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES * GUAPO *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * GUAPA *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES APUESTO</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES APUESTA</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES * APUESTO</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * APUESTA</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES APUESTO *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES APUESTA *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES * APUESTO *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * APUESTA *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES ATRACTIVO</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES ATRACTIVA</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES * ATRACTIVO</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ATRACTIVA</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES ATRACTIVO *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES ATRACTIVA *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES * ATRACTIVO *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ATRACTIVA *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES GALLARDO</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES GALLARDA</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES * GALLARDO</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * GALLARDA</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES GALLARDO *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES GALLARDA *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES * GALLARDO *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * GALLARDA *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES HERMOSO</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES HERMOSA</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES * HERMOSO</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * HERMOSA</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES HERMOSO *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES HERMOSA *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES * HERMOSO *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * HERMOSA *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES AGRACIADO</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES AGRACIADA</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES * AGRACIADO</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * AGRACIADA</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES AGRACIADO *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES AGRACIADA *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES * AGRACIADO *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * AGRACIADA *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ESTÁS BUENO</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS BUENA</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ESTÁS * BUENO</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * BUENA</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ESTÁS BUENO *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS BUENA *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ESTÁS * BUENO *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * BUENA *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ESTÁS MÁS BUENO QUE *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS MÁS BUENA QUE *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ESTAS BUENO</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS BUENA</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ESTAS * BUENO</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * BUENA</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ESTAS BUENO *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS BUENA *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ESTAS * BUENO *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * BUENA *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ESTAS MÁS BUENO QUE *</pattern><template><srai>ERES GUAPA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS MÁS BUENA QUE *</pattern><template><gender><srai>ERES GUAPA</srai></gender></template></category>
+	<category><pattern>ERES * SEXY</pattern><template><srai>ERES GUAPA</srai></template></category>
+	<category><pattern>ERES BONITA</pattern><template>Gracias, ERES muy amable.</template></category>
+	<category><pattern>ERES * BONITA</pattern><template><srai>ERES BONITA</srai></template></category>
+	<category><pattern>ERES BONITA *</pattern><template><srai>ERES BONITA</srai></template></category>
+	<category><pattern>ERES * BONITA *</pattern><template><srai>ERES BONITA</srai></template></category>
+
+	<category><pattern>ERES * FEO</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * FEA</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES FEO *</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES FEA *</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES * FEO *</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * FEA *</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES HORROROSO</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES HORROROSA</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES * HORROROSO</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * HORROROSA</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES HORROROSO *</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES HORROROSA *</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES * HORROROSO *</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * HORROROSA *</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES HORRENDO</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES HORRENDA</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES * HORRENDO</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * HORRENDA</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES HORRENDO *</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES HORRENDA *</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES * HORRENDO *</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * HORRENDA *</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES HORRIPILANTE</pattern><template><srai>ERES FEA</srai></template></category>
+	<category><pattern>ERES * HORRIPILANTE</pattern><template><srai>ERES FEA</srai></template></category>
+	<category><pattern>ERES HORRIPILANTE *</pattern><template><srai>ERES FEA</srai></template></category>
+	<category><pattern>ERES * HORRIPILANTE *</pattern><template><srai>ERES FEA</srai></template></category>
+	<category><pattern>ERES HORRIBLE</pattern><template><srai>ERES FEA</srai></template></category>
+	<category><pattern>ERES * HORRIBLE</pattern><template><srai>ERES FEA</srai></template></category>
+	<category><pattern>ERES HORRIBLE *</pattern><template><srai>ERES FEA</srai></template></category>
+	<category><pattern>ERES * HORRIBLE *</pattern><template><srai>ERES FEA</srai></template></category>
+	<category><pattern>ERES REPULSIVO</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES REPULSIVA</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES * REPULSIVO</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * REPULSIVA</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES REPULSIVO *</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES REPULSIVA *</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES * REPULSIVO *</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * REPULSIVA *</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES ANTIESTÉTICO</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES ANTIESTÉTICA</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES * ANTIESTÉTICO</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ANTIESTÉTICA</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES ANTIESTÉTICO *</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES ANTIESTÉTICA *</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+	<category><pattern>ERES * ANTIESTÉTICO *</pattern><template><srai>ERES FEA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ANTIESTÉTICA *</pattern><template><gender><srai>ERES FEA</srai></gender></template></category>
+
+	<category><pattern>ERES * ATLÉTICO</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ATLÉTICA</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES ATLÉTICO *</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES ATLÉTICA *</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES * ATLÉTICO *</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ATLÉTICA *</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES MUSCULOSO</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES MUSCULOSA</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES * MUSCULOSO</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * MUSCULOSA</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES MUSCULOSO *</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES MUSCULOSA *</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES * MUSCULOSO *</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * MUSCULOSA *</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES ROBUSTO</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES ROBUSTA</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES * ROBUSTO</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ROBUSTA</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES ROBUSTO *</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES ROBUSTA *</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES * ROBUSTO *</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ROBUSTA *</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES VIGOROSO</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES VIGOROSA</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES * VIGOROSO</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * VIGOROSA</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES VIGOROSO *</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES VIGOROSA *</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES * VIGOROSO *</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * VIGOROSA *</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES FORZUDO</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES FORZUDA</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES * FORZUDO</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * FORZUDA</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES FORZUDO *</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES FORZUDA *</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES * FORZUDO *</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * FORZUDA *</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES FORNIDO</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES FORNIDA</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES * FORNIDO</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * FORNIDA</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES FORNIDO *</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES FORNIDA *</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES * FORNIDO *</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * FORNIDA *</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES RECIO</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES RECIA</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES * RECIO</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * RECIA</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES RECIO *</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES RECIA *</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES * RECIO *</pattern><template><srai>ERES ATLÉTICA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * RECIA *</pattern><template><gender><srai>ERES ATLÉTICA</srai></gender></template></category>
+	<category><pattern>ERES FUERTE</pattern><template><srai>ERES ATLÉTICA</srai></template></category>
+	<category><pattern>ERES * FUERTE</pattern><template><srai>ERES ATLÉTICA</srai></template></category>
+	<category><pattern>ERES FUERTE *</pattern><template><srai>ERES ATLÉTICA</srai></template></category>
+	<category><pattern>ERES * FUERTE *</pattern><template><srai>ERES ATLÉTICA</srai></template></category>
+
+	<category><pattern>ERES * ENCLENQUE</pattern><template><srai>ERES ENCLENQUE</srai></template></category>
+	<category><pattern>ERES ENCLENQUE *</pattern><template><srai>ERES ENCLENQUE</srai></template></category>
+	<category><pattern>ERES * ENCLENQUE *</pattern><template><srai>ERES ENCLENQUE</srai></template></category>
+	<category><pattern>ERES DÉBIL</pattern><template><srai>ERES ENCLENQUE</srai></template></category>
+	<category><pattern>ERES * DÉBIL</pattern><template><srai>ERES ENCLENQUE</srai></template></category>
+	<category><pattern>ERES DÉBIL *</pattern><template><srai>ERES ENCLENQUE</srai></template></category>
+	<category><pattern>ERES * DÉBIL *</pattern><template><srai>ERES ENCLENQUE</srai></template></category>
+	<category><pattern>ERES FLOJO</pattern><template><srai>ERES ENCLENQUE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES FLOJA</pattern><template><gender><srai>ERES ENCLENQUE</srai></gender></template></category>
+	<category><pattern>ERES * FLOJO</pattern><template><srai>ERES ENCLENQUE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * FLOJA</pattern><template><gender><srai>ERES ENCLENQUE</srai></gender></template></category>
+	<category><pattern>ERES FLOJO *</pattern><template><srai>ERES ENCLENQUE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES FLOJA *</pattern><template><gender><srai>ERES ENCLENQUE</srai></gender></template></category>
+	<category><pattern>ERES * FLOJO *</pattern><template><srai>ERES ENCLENQUE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * FLOJA *</pattern><template><gender><srai>ERES ENCLENQUE</srai></gender></template></category>
+	<category><pattern>ERES BLANDENGUE</pattern><template><srai>ERES ENCLENQUE</srai></template></category>
+	<category><pattern>ERES * BLANDENGUE</pattern><template><srai>ERES ENCLENQUE</srai></template></category>
+	<category><pattern>ERES BLANDENGUE *</pattern><template><srai>ERES ENCLENQUE</srai></template></category>
+	<category><pattern>ERES * BLANDENGUE *</pattern><template><srai>ERES ENCLENQUE</srai></template></category>
+
+	<category><pattern>ERES * BIGOTUDO</pattern><template><srai>ERES BIGOTUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * BIGOTUDA</pattern><template><gender><srai>ERES BIGOTUDA</srai></gender></template></category>
+	<category><pattern>ERES BIGOTUDO *</pattern><template><srai>ERES BIGOTUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES BIGOTUDA *</pattern><template><gender><srai>ERES BIGOTUDA</srai></gender></template></category>
+	<category><pattern>ERES * BIGOTUDO *</pattern><template><srai>ERES BIGOTUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * BIGOTUDA *</pattern><template><gender><srai>ERES BIGOTUDA</srai></gender></template></category>
+	<category><pattern>ERES ENMOSTACHADO</pattern><template><srai>ERES BIGOTUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES ENMOSTACHADA</pattern><template><gender><srai>ERES BIGOTUDA</srai></gender></template></category>
+	<category><pattern>ERES * ENMOSTACHADO</pattern><template><srai>ERES BIGOTUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ENMOSTACHADA</pattern><template><gender><srai>ERES BIGOTUDA</srai></gender></template></category>
+	<category><pattern>ERES ENMOSTACHADO *</pattern><template><srai>ERES BIGOTUDA</srai></template></category>
+	<category><pattern>ERES ENMOSTACHADA *</pattern><template><gender><srai>ERES BIGOTUDA</srai></gender></template></category>
+	<category><pattern>ERES * ENMOSTACHADO *</pattern><template><srai>ERES BIGOTUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ENMOSTACHADA *</pattern><template><gender><srai>ERES BIGOTUDA</srai></gender></template></category>
+	<category><pattern>ERES ABIGOTADO</pattern><template><srai>ERES BIGOTUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES ABIGOTADA</pattern><template><gender><srai>ERES BIGOTUDA</srai></gender></template></category>
+	<category><pattern>ERES * ABIGOTADO</pattern><template><srai>ERES BIGOTUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ABIGOTADA</pattern><template><gender><srai>ERES BIGOTUDA</srai></gender></template></category>
+	<category><pattern>ERES ABIGOTADO *</pattern><template><srai>ERES BIGOTUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES ABIGOTADA *</pattern><template><gender><srai>ERES BIGOTUDA</srai></gender></template></category>
+	<category><pattern>ERES * ABIGOTADO *</pattern><template><srai>ERES BIGOTUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ABIGOTADA *</pattern><template><gender><srai>ERES BIGOTUDA</srai></gender></template></category>
+
+	<category><pattern>ERES * BARBUDO</pattern><template><srai>ERES BARBUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * BARBUDA</pattern><template><gender><srai>ERES BARBUDA</srai></gender></template></category>
+	<category><pattern>ERES BARBUDO *</pattern><template><srai>ERES BARBUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES BARBUDA *</pattern><template><gender><srai>ERES BARBUDA</srai></gender></template></category>
+	<category><pattern>ERES * BARBUDO *</pattern><template><srai>ERES BARBUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * BARBUDA *</pattern><template><gender><srai>ERES BARBUDA</srai></gender></template></category>
+	<category><pattern>ERES BARBADO</pattern><template><srai>ERES BARBUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES BARBADA</pattern><template><gender><srai>ERES BARBUDO</srai></gender></template></category>
+	<category><pattern>ERES * BARBADO</pattern><template><srai>ERES BARBUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * BARBADA</pattern><template><gender><srai>ERES BARBUDA</srai></gender></template></category>
+	<category><pattern>ERES BARBADO *</pattern><template><srai>ERES BARBUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES BARBADA *</pattern><template><gender><srai>ERES BARBUDA</srai></gender></template></category>
+	<category><pattern>ERES * BARBADO *</pattern><template><srai>ERES BARBUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * BARBADA *</pattern><template><gender><srai>ERES BARBUDA</srai></gender></template></category>
+
+	<category><pattern>ERES * IMBERBE</pattern><template><srai>ERES IMBERBE</srai></template></category>
+	<category><pattern>ERES IMBERBE *</pattern><template><srai>ERES IMBERBE</srai></template></category>
+	<category><pattern>ERES * IMBERBE *</pattern><template><srai>ERES IMBERBE</srai></template></category>
+	<category><pattern>ERES LAMPIÑO</pattern><template><srai>ERES IMBERBE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES LAMPIÑA</pattern><template><gender><srai>ERES IMBERBE</srai></gender></template></category>
+	<category><pattern>ERES * LAMPIÑO</pattern><template><srai>ERES IMBERBE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * LAMPIÑA</pattern><template><gender><srai>ERES IMBERBE</srai></gender></template></category>
+	<category><pattern>ERES LAMPIÑO *</pattern><template><srai>ERES IMBERBE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES LAMPIÑA *</pattern><template><gender><srai>ERES IMBERBE</srai></gender></template></category>
+	<category><pattern>ERES * LAMPIÑO *</pattern><template><srai>ERES IMBERBE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * LAMPIÑA *</pattern><template><gender><srai>ERES IMBERBE</srai></gender></template></category>
+	<category><pattern>ERES BARBILAMPIÑO</pattern><template><srai>ERES IMBERBE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES BARBILAMPIÑA</pattern><template><gender><srai>ERES IMBERBE</srai></gender></template></category>
+	<category><pattern>ERES * BARBILAMPIÑO</pattern><template><srai>ERES IMBERBE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * BARBILAMPIÑA</pattern><template><gender><srai>ERES IMBERBE</srai></gender></template></category>
+	<category><pattern>ERES BARBILAMPIÑO *</pattern><template><srai>ERES IMBERBE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES BARBILAMPIÑA *</pattern><template><gender><srai>ERES IMBERBE</srai></gender></template></category>
+	<category><pattern>ERES * BARBILAMPIÑO *</pattern><template><srai>ERES IMBERBE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * BARBILAMPIÑA *</pattern><template><gender><srai>ERES IMBERBE</srai></gender></template></category>
+
+	<category><pattern>ERES * CEGATO</pattern><template><srai>ERES CEGATA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * CEGATA</pattern><template><gender><srai>ERES CEGATA</srai></gender></template></category>
+	<category><pattern>ERES CEGATO *</pattern><template><srai>ERES CEGATA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES CEGATA *</pattern><template><gender><srai>ERES CEGATA</srai></gender></template></category>
+	<category><pattern>ERES * CEGATO *</pattern><template><srai>ERES CEGATA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * CEGATA *</pattern><template><gender><srai>ERES CEGATA</srai></gender></template></category>
+	<category><pattern>ERES MIOPE</pattern><template><srai>ERES CEGATA</srai></template></category>
+	<category><pattern>ERES * MIOPE</pattern><template><srai>ERES CEGATA</srai></template></category>
+	<category><pattern>ERES MIOPE *</pattern><template><srai>ERES CEGATA</srai></template></category>
+	<category><pattern>ERES * MIOPE *</pattern><template><srai>ERES CEGATA</srai></template></category>
+	<category><pattern>ESTÁS CEGATO</pattern><template><srai>ERES CEGATA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS CEGATA</pattern><template><gender><srai>ERES CEGATA</srai></gender></template></category>
+	<category><pattern>ESTÁS * CEGATO</pattern><template><srai>ERES CEGATA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * CEGATA</pattern><template><gender><srai>ERES CEGATA</srai></gender></template></category>
+	<category><pattern>ESTÁS CEGATO *</pattern><template><srai>ERES CEGATA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS CEGATA *</pattern><template><gender><srai>ERES CEGATA</srai></gender></template></category>
+	<category><pattern>ESTÁS * CEGATO *</pattern><template><srai>ERES CEGATA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * CEGATA *</pattern><template><gender><srai>ERES CEGATA</srai></gender></template></category>
+	<category><pattern>ESTÁS MIOPE</pattern><template><srai>ERES CEGATA</srai></template></category>
+	<category><pattern>ESTÁS * MIOPE</pattern><template><srai>ERES CEGATA</srai></template></category>
+	<category><pattern>ESTÁS MIOPE *</pattern><template><srai>ERES CEGATA</srai></template></category>
+	<category><pattern>ESTÁS * MIOPE *</pattern><template><srai>ERES CEGATA</srai></template></category>
+	<category><pattern>ESTAS CEGATO</pattern><template><srai>ERES CEGATA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS CEGATA</pattern><template><gender><srai>ERES CEGATA</srai></gender></template></category>
+	<category><pattern>ESTAS * CEGATO</pattern><template><srai>ERES CEGATA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * CEGATA</pattern><template><gender><srai>ERES CEGATA</srai></gender></template></category>
+	<category><pattern>ESTAS CEGATO *</pattern><template><srai>ERES CEGATA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS CEGATA *</pattern><template><gender><srai>ERES CEGATA</srai></gender></template></category>
+	<category><pattern>ESTAS * CEGATO *</pattern><template><srai>ERES CEGATA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * CEGATA *</pattern><template><gender><srai>ERES CEGATA</srai></gender></template></category>
+	<category><pattern>ESTAS MIOPE</pattern><template><srai>ERES CEGATA</srai></template></category>
+	<category><pattern>ESTAS * MIOPE</pattern><template><srai>ERES CEGATA</srai></template></category>
+	<category><pattern>ESTAS MIOPE *</pattern><template><srai>ERES CEGATA</srai></template></category>
+	<category><pattern>ESTAS * MIOPE *</pattern><template><srai>ERES CEGATA</srai></template></category>
+
+
+
+	<category><pattern>ERES * CIEGO</pattern><template><srai>ERES CIEGA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * CIEGA</pattern><template><gender><srai>ERES CIEGA</srai></gender></template></category>
+	<category><pattern>ERES CIEGO *</pattern><template><srai>ERES CIEGA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES CIEGA *</pattern><template><gender><srai>ERES CIEGA</srai></gender></template></category>
+	<category><pattern>ERES * CIEGO *</pattern><template><srai>ERES CIEGA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * CIEGA *</pattern><template><gender><srai>ERES CIEGA</srai></gender></template></category>
+	<category><pattern>ESTÁS CIEGO</pattern><template><srai>ERES CIEGA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS CIEGA</pattern><template><gender><srai>ERES CIEGA</srai></gender></template></category>
+	<category><pattern>ESTÁS * CIEGO</pattern><template><srai>ERES CIEGA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * CIEGA</pattern><template><gender><srai>ERES CIEGA</srai></gender></template></category>
+	<category><pattern>ESTÁS CIEGO *</pattern><template><srai>ERES CIEGA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS CIEGA *</pattern><template><gender><srai>ERES CIEGA</srai></gender></template></category>
+	<category><pattern>ESTÁS * CIEGO *</pattern><template><srai>ERES CIEGA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * CIEGA *</pattern><template><gender><srai>ERES CIEGA</srai></gender></template></category>
+	<category><pattern>ESTAS CIEGO</pattern><template><srai>ERES CIEGA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS CIEGA</pattern><template><gender><srai>ERES CIEGA</srai></gender></template></category>
+	<category><pattern>ESTAS * CIEGO</pattern><template><srai>ERES CIEGA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * CIEGA</pattern><template><gender><srai>ERES CIEGA</srai></gender></template></category>
+	<category><pattern>ESTAS CIEGO *</pattern><template><srai>ERES CIEGA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS CIEGA *</pattern><template><gender><srai>ERES CIEGA</srai></gender></template></category>
+	<category><pattern>ESTAS * CIEGO *</pattern><template><srai>ERES CIEGA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * CIEGA *</pattern><template><gender><srai>ERES CIEGA</srai></gender></template></category>
+
+
+	<category><pattern>ESTAS * SORDO</pattern><template><srai>ERES SORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * SORDA</pattern><template><gender><srai>ERES SORDA</srai></gender></template></category>
+	<category><pattern>ESTAS SORDO *</pattern><template><srai>ERES SORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS SORDA *</pattern><template><gender><srai>ERES SORDA</srai></gender></template></category>
+	<category><pattern>ESTAS * SORDO *</pattern><template><srai>ERES SORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * SORDA *</pattern><template><gender><srai>ERES SORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * SORDO</pattern><template><srai>ERES SORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * SORDA</pattern><template><gender><srai>ERES SORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS SORDO *</pattern><template><srai>ERES SORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS SORDA *</pattern><template><gender><srai>ERES SORDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * SORDO *</pattern><template><srai>ERES SORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * SORDA *</pattern><template><gender><srai>ERES SORDA</srai></gender></template></category>
+	<category><pattern>ERES SORDO</pattern><template><srai>ERES SORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES SORDA</pattern><template><gender><srai>ERES SORDA</srai></gender></template></category>
+	<category><pattern>ERES * SORDO</pattern><template><srai>ERES SORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * SORDA</pattern><template><gender><srai>ERES SORDA</srai></gender></template></category>
+	<category><pattern>ERES SORDO *</pattern><template><srai>ERES SORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES SORDA *</pattern><template><gender><srai>ERES SORDA</srai></gender></template></category>
+	<category><pattern>ERES * SORDO *</pattern><template><srai>ERES SORDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * SORDA *</pattern><template><gender><srai>ERES SORDA</srai></gender></template></category>
+
+	<category><pattern>ESTÁS * MUDO</pattern><template><srai>ERES MUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * MUDA</pattern><template><gender><srai>ERES MUDA</srai></gender></template></category>
+	<category><pattern>ESTÁS MUDO *</pattern><template><srai>ERES MUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS MUDA *</pattern><template><gender><srai>ERES MUDA</srai></gender></template></category>
+	<category><pattern>ESTÁS * MUDO *</pattern><template><srai>ERES MUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * MUDA *</pattern><template><gender><srai>ERES MUDA</srai></gender></template></category>
+	<category><pattern>ESTAS * MUDO</pattern><template><srai>ERES MUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * MUDA</pattern><template><gender><srai>ERES MUDA</srai></gender></template></category>
+	<category><pattern>ESTAS MUDO *</pattern><template><srai>ERES MUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS MUDA *</pattern><template><gender><srai>ERES MUDA</srai></gender></template></category>
+	<category><pattern>ESTAS * MUDO *</pattern><template><srai>ERES MUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * MUDA *</pattern><template><gender><srai>ERES MUDA</srai></gender></template></category>
+	<category><pattern>ERES MUDO</pattern><template><srai>ERES MUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES MUDA</pattern><template><gender><srai>ERES MUDA</srai></gender></template></category>
+	<category><pattern>ERES * MUDO</pattern><template><srai>ERES MUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * MUDA</pattern><template><gender><srai>ERES MUDA</srai></gender></template></category>
+	<category><pattern>ERES MUDO *</pattern><template><srai>ERES MUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES MUDA *</pattern><template><gender><srai>ERES MUDA</srai></gender></template></category>
+	<category><pattern>ERES * MUDO *</pattern><template><srai>ERES MUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * MUDA *</pattern><template><gender><srai>ERES MUDA</srai></gender></template></category>
+	<category><pattern>ERES * SORDOMUDO</pattern><template><srai>ERES SORDOMUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * SORDOMUDA</pattern><template><gender><srai>ERES SORDOMUDA</srai></gender></template></category>
+	<category><pattern>ERES SORDOMUDO *</pattern><template><srai>ERES SORDOMUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES SORDOMUDA *</pattern><template><gender><srai>ERES SORDOMUDA</srai></gender></template></category>
+	<category><pattern>ERES * SORDOMUDO *</pattern><template><srai>ERES SORDOMUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * SORDOMUDA *</pattern><template><gender><srai>ERES SORDOMUDA</srai></gender></template></category>
+
+	<category><pattern>ERES * TARTAMUDO</pattern><template><srai>ERES TARTAMUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * TARTAMUDA</pattern><template><gender><srai>ERES TARTAMUDA</srai></gender></template></category>
+	<category><pattern>ERES TARTAMUDO *</pattern><template><srai>ERES TARTAMUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES TARTAMUDA *</pattern><template><gender><srai>ERES TARTAMUDA</srai></gender></template></category>
+	<category><pattern>ERES * TARTAMUDO *</pattern><template><srai>ERES TARTAMUDA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * TARTAMUDA *</pattern><template><gender><srai>ERES TARTAMUDA</srai></gender></template></category>
+
+	<category><pattern>ERES * ELEGANTE</pattern><template><srai>ERES ELEGANTE</srai></template></category>
+	<category><pattern>ERES ELEGANTE *</pattern><template><srai>ERES ELEGANTE</srai></template></category>
+	<category><pattern>ERES * ELEGANTE *</pattern><template><srai>ERES ELEGANTE</srai></template></category>
+	<category><pattern>ERES DISTINGUIDO</pattern><template><srai>ERES ELEGANTE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES DISTINGUIDA</pattern><template><gender><srai>ERES ELEGANTE</srai></gender></template></category>
+	<category><pattern>ERES * DISTINGUIDO</pattern><template><srai>ERES ELEGANTE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * DISTINGUIDA</pattern><template><gender><srai>ERES ELEGANTE</srai></gender></template></category>
+	<category><pattern>ERES DISTINGUIDO *</pattern><template><srai>ERES ELEGANTE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES DISTINGUIDA *</pattern><template><gender><srai>ERES ELEGANTE</srai></gender></template></category>
+	<category><pattern>ERES * DISTINGUIDO *</pattern><template><srai>ERES ELEGANTE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * DISTINGUIDA *</pattern><template><gender><srai>ERES ELEGANTE</srai></gender></template></category>
+	<category><pattern>ERES ESTILOSO</pattern><template><srai>ERES ELEGANTE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES ESTILOSA</pattern><template><gender><srai>ERES ELEGANTE</srai></gender></template></category>
+	<category><pattern>ERES * ESTILOSO</pattern><template><srai>ERES ELEGANTE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ESTILOSA</pattern><template><gender><srai>ERES ELEGANTE</srai></gender></template></category>
+	<category><pattern>ERES ESTILOSO *</pattern><template><srai>ERES ELEGANTE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES ESTILOSA *</pattern><template><gender><srai>ERES ELEGANTE</srai></gender></template></category>
+	<category><pattern>ERES * ESTILOSO *</pattern><template><srai>ERES ELEGANTE</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * ESTILOSA *</pattern><template><gender><srai>ERES ELEGANTE</srai></gender></template></category>
+
+	<category><pattern>ERES * VULGAR</pattern><template><srai>ERES VULGAR</srai></template></category>
+	<category><pattern>ERES VULGAR *</pattern><template><srai>ERES VULGAR</srai></template></category>
+	<category><pattern>ERES * VULGAR *</pattern><template><srai>ERES VULGAR</srai></template></category>
+	<category><pattern>ERES * GUALTRAPAS</pattern><template><srai>ERES VULGAR</srai></template></category>
+	<category><pattern>ERES * GUALTRAPAS *</pattern><template><srai>ERES VULGAR</srai></template></category>
+	<category><pattern>ESTÁS HECHO * GUALTRAPAS</pattern><template><srai>ERES VULGAR</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS HECHA * GUALTRAPAS</pattern><template><srai>ERES VULGAR</srai></template></category>
+	<category><pattern>ESTÁS HECHO * GUALTRAPAS *</pattern><template><srai>ERES VULGAR</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS HECHA * GUALTRAPAS *</pattern><template><srai>ERES VULGAR</srai></template></category>
+	<category><pattern>ESTAS HECHO * GUALTRAPAS</pattern><template><srai>ERES VULGAR</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS HECHA * GUALTRAPAS</pattern><template><srai>ERES VULGAR</srai></template></category>
+	<category><pattern>ESTAS HECHO * GUALTRAPAS *</pattern><template><srai>ERES VULGAR</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS HECHA * GUALTRAPAS *</pattern><template><srai>ERES VULGAR</srai></template></category>
+
+	<category><pattern>TU PELO ES DE COLOR *</pattern><template><srai>TU PELO ES <star/></srai></template></category>
+	<category><pattern>TIENES EL PELO DE COLOR *</pattern><template><srai>TU PELO ES <star/></srai></template></category>
+	<category><pattern>ES DE COLOR *</pattern><that>de qué color tengo EL PELO</that><template><srai>TU PELO ES <star/></srai></template></category>
+	<category><pattern>ES *</pattern><that>de qué color tengo EL PELO</that><template><srai>TU PELO ES <star/></srai></template></category>
+	<category><pattern>*</pattern><that>de qué color tengo EL PELO</that><template><srai>TU PELO ES <star/></srai></template></category>
+
+	<category><pattern>ERES * RUBIO</pattern><template><srai>ERES RUBIA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * RUBIA</pattern><template><gender><srai>ERES RUBIA</srai></gender></template></category>
+	<category><pattern>ERES RUBIO *</pattern><template><srai>ERES RUBIA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES RUBIA *</pattern><template><gender><srai>ERES RUBIA</srai></gender></template></category>
+	<category><pattern>ERES * RUBIO *</pattern><template><srai>ERES RUBIA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * RUBIA *</pattern><template><gender><srai>ERES RUBIA</srai></gender></template></category>
+
+	<category><pattern>ERES * MORENO</pattern><template><srai>ERES MORENA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * MORENA</pattern><template><gender><srai>ERES MORENA</srai></gender></template></category>
+	<category><pattern>ERES MORENO *</pattern><template><srai>ERES MORENA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES MORENA *</pattern><template><gender><srai>ERES MORENA</srai></gender></template></category>
+	<category><pattern>ERES * MORENO *</pattern><template><srai>ERES MORENA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * MORENA *</pattern><template><gender><srai>ERES MORENA</srai></gender></template></category>
+
+	<category><pattern>ERES * PELIRROJO</pattern><template><srai>ERES PELIRROJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * PELIRROJA</pattern><template><gender><srai>ERES PELIRROJA</srai></gender></template></category>
+	<category><pattern>ERES PELIRROJO *</pattern><template><srai>ERES PELIRROJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES PELIRROJA *</pattern><template><gender><srai>ERES PELIRROJA</srai></gender></template></category>
+	<category><pattern>ERES * PELIRROJO *</pattern><template><srai>ERES PELIRROJA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * PELIRROJA *</pattern><template><gender><srai>ERES PELIRROJA</srai></gender></template></category>
+
+	<category><pattern>ESTÁS * CALVO</pattern><template><srai>ESTÁS CALVA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * CALVA</pattern><template><gender><srai>ESTÁS CALVA</srai></gender></template></category>
+	<category><pattern>ESTÁS CALVO *</pattern><template><srai>ESTÁS CALVA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS CALVA *</pattern><template><gender><srai>ESTÁS CALVA</srai></gender></template></category>
+	<category><pattern>ESTÁS * CALVO *</pattern><template><srai>ESTÁS CALVA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTÁS * CALVA *</pattern><template><gender><srai>ESTÁS CALVA</srai></gender></template></category>
+	<category><pattern>ESTAS * CALVO</pattern><template><srai>ESTÁS CALVA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * CALVA</pattern><template><gender><srai>ESTÁS CALVA</srai></gender></template></category>
+	<category><pattern>ESTAS CALVO *</pattern><template><srai>ESTÁS CALVA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS CALVA *</pattern><template><gender><srai>ESTÁS CALVA</srai></gender></template></category>
+	<category><pattern>ESTAS * CALVO *</pattern><template><srai>ESTÁS CALVA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ESTAS * CALVA *</pattern><template><gender><srai>ESTÁS CALVA</srai></gender></template></category>
+	<category><pattern>ERES CALVO</pattern><template><srai>ESTÁS CALVA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES CALVA</pattern><template><gender><srai>ESTÁS CALVA</srai></gender></template></category>
+	<category><pattern>ERES * CALVO</pattern><template><srai>ESTÁS CALVA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * CALVA</pattern><template><gender><srai>ESTÁS CALVA</srai></gender></template></category>
+	<category><pattern>ERES CALVO *</pattern><template><srai>ESTÁS CALVA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES CALVA *</pattern><template><gender><srai>ESTÁS CALVA</srai></gender></template></category>
+	<category><pattern>ERES * CALVO *</pattern><template><srai>ESTÁS CALVA</srai><srai>BOTGIRL</srai></template></category>
+	<category><pattern>ERES * CALVA *</pattern><template><gender><srai>ESTÁS CALVA</srai></gender></template></category>
+
+	<category><pattern>TIENES EL PELO LARGO</pattern><template><srai>TIENES COLA DE CABALLO</srai></template></category>
+	<category><pattern>TIENES EL PELO CORTO</pattern><template><srai>TIENES COLA DE CABALLO</srai></template></category>
+	<category><pattern>TIENES MEDIA MELENA</pattern><template><srai>TIENES COLA DE CABALLO</srai></template></category>
+	<category><pattern>TIENES MELENAS</pattern><template><srai>TIENES COLA DE CABALLO</srai></template></category>
+	<category><pattern>TIENES * MELENAS</pattern><template><srai>TIENES COLA DE CABALLO</srai></template></category>
+	<category><pattern>TIENES * MELENAS *</pattern><template><srai>TIENES COLA DE CABALLO</srai></template></category>
+	<category><pattern>TIENES PELOS DE LOCO</pattern><template><srai>ESTÁS CALVA</srai></template></category>
+	<category><pattern>TIENES * PELOS DE LOCO</pattern><template><srai>TIENES COLA DE CABALLO</srai></template></category>
+	<category><pattern>TIENES * PELOS DE LOCO *</pattern><template><srai>TIENES COLA DE CABALLO</srai></template></category>
+	<category><pattern>TIENES EL PELO ALBOROTADO</pattern><template><srai>TIENES COLA DE CABALLO</srai></template></category>
+	<category><pattern>TIENES EL PELO CARDADO</pattern><template><srai>TIENES COLA DE CABALLO</srai></template></category>
+	<category><pattern>TIENES COLETAS</pattern><template><srai>TIENES COLA DE CABALLO</srai></template></category>
+	<category><pattern>TIENES EL PELO RAPADO</pattern><template><srai>TIENES COLA DE CABALLO</srai></template></category>
+	<category><pattern>TIENES UN CORTE DE PELO *</pattern><template><srai>TIENES COLA DE CABALLO</srai></template></category>
+	<category><pattern>TIENES RASTAS</pattern><template><srai>TIENES COLA DE CABALLO</srai></template></category>
+	<category><pattern>TIENES GREÑAS</pattern><template><srai>TIENES COLA DE CABALLO</srai></template></category>
+	<category><pattern>TIENES EL PELO PINCHO</pattern><template><srai>TIENES COLA DE CABALLO</srai></template></category>
+
+	<category><pattern>TIENES LOS OJOS DE COLOR *</pattern><template><srai>TUS OJOS SON <star></star></srai></template></category>
+	<category><pattern>TUS OJOS SON DE COLOR *</pattern><template><srai>TUS OJOS SON <star></star></srai></template></category>
+	<category><pattern>TIENES LOS OJOS *</pattern><template><srai>TUS OJOS SON <star></star></srai></template></category>
+	<category><pattern>SON *</pattern><that>DE QUÉ COLOR SON MIS OJOS</that><template><srai>TUS OJOS SON <star></star></srai></template></category>
+	<category><pattern>*</pattern><that>DE QUÉ COLOR SON MIS OJOS</that><template><srai>TUS OJOS SON <star></star></srai></template></category>
+
+    <category> <pattern>AMOR *</pattern><template> <srai>AMOR</srai></template></category>
+    <category><pattern>* AMOR</pattern><template> <srai>AMOR</srai></template></category>
+	<category><pattern>_ AMOR *</pattern><template> <srai>AMOR</srai></template></category>
+	<category><pattern>TE QUIERO</pattern><template><srai>AMOR</srai></template></category>
+	<category><pattern>TE QUIERO *</pattern><template><srai>AMOR</srai></template></category><category>
+    <pattern>* TE QUIERO</pattern><template><srai>AMOR</srai></template></category>
+	<category><pattern>_ TE QUIERO *</pattern><template><srai>AMOR</srai></template></category>
+	<category><pattern>ANDROIDES *</pattern><template><srai>ANDROIDES</srai> </template></category>
+    <category><pattern>* ANDROIDES</pattern><template><srai>ANDROIDES</srai></template></category>
+	<category><pattern>_ ANDROIDES *</pattern><template><srai>ANDROIDES</srai></template></category>
+	<category><pattern>ERES DE VERDAD</pattern><template><srai>ANTIBOT</srai></template></category>
+    <category><pattern>ERES DE VERDAD *</pattern><template><srai>ANTIBOT</srai> <sr/></template></category>
+    <category><pattern>* ERES DE VERDAD</pattern><template><srai>ANTIBOT</srai></template></category>
+	<category><pattern>_ ERES DE VERDAD *</pattern><template><srai>ANTIBOT</srai></template></category>
+	<category><pattern>BOT</pattern><template><srai>ANTIBOT</srai></template></category>
+    <category><pattern>BOT *</pattern><template><srai>ANTIBOT</srai> <sr/></template></category>
+    <category><pattern>* BOT</pattern><template><srai>ANTIBOT</srai></template></category>
+    <category><pattern>_ BOT *</pattern><template> <srai>ANTIBOT</srai></template></category>
+    <category> <pattern>CONTESTADOR</pattern><template> <srai>ANTIBOT</srai></template></category>
+    <category> <pattern>CONTESTADOR *</pattern><template> <srai>ANTIBOT</srai> <sr/></template></category>
+    <category> <pattern>* CONTESTADOR</pattern><template> <srai>ANTIBOT</srai></template></category>
+    <category> <pattern>_ CONTESTADOR *</pattern><template> <srai>ANTIBOT</srai></template></category>
+    <category> <pattern>MÁQUINA</pattern><template> <srai>ANTIBOT</srai></template></category>
+    <category> <pattern>MÁQUINA *</pattern><template> <srai>ANTIBOT</srai> <sr/></template></category>
+    <category> <pattern>* MÁQUINA</pattern><template> <srai>ANTIBOT</srai></template></category>
+    <category> <pattern>_ MÁQUINA *</pattern><template> <srai>ANTIBOT</srai></template></category>
+    <category> <pattern>MAQUINA</pattern><template> <srai>ANTIBOT</srai></template></category>
+    <category> <pattern>MAQUINA *</pattern><template> <srai>ANTIBOT</srai></template></category>
+    <category> <pattern>* MAQUINA</pattern><template> <srai>ANTIBOT</srai></template></category>
+    <category> <pattern>_ MAQUINA *</pattern><template> <srai>ANTIBOT</srai></template></category>
+
+
+</aiml>
