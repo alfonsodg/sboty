@@ -11,7 +11,7 @@ import sqlite3
 
 def present_controller(conn, presence):
     """
-    Handler for add automatically users with jabber servers (gtalk).
+    Handler for automatically adding users to jabber servers (gtalk).
     """
     if presence:
         try:
@@ -39,7 +39,7 @@ def present_controller(conn, presence):
 
 def registrochat(message, email):
     """
-    Performs the chat log.
+    Logs the chat.
     """
     filename = chatbotini.LOGDIR + "/gtalk/" + email
     logfile = open(filename, "a")
@@ -62,7 +62,7 @@ def step_on(conn):
 
 def loop_start(conn):
     """
-    Starts the loop
+    Starts the loop.
     """
     while step_on(conn):
         SHOW.setShow("ax")
@@ -80,7 +80,7 @@ def disconnect_bot():
 
 def cache_read_rpta(email):
     """
-    Read Cache
+    Reads the cache
     """
     rpta = 0
     try:
@@ -98,7 +98,7 @@ def cache_read_rpta(email):
 
 def cache_write_rpta(message, email):
     """
-    whire Cache
+    Writes to the cache
     """
     try:
         cache = open(chatbotini.CACHEDIR + str(
@@ -111,7 +111,7 @@ def cache_write_rpta(message, email):
 
 def rpta_gtalk(conn, mess):
     """
-    Response messages to gtalk contacts.
+    Respond to messages from gtalk contacts.
     """
     logtime = chatbotini.now()
     text = mess.getBody()
@@ -166,7 +166,7 @@ def rpta_gtalk(conn, mess):
 
 def record_questions_unanswered(message, answer, email, date, time):
     """
-    Record Questions Unanswered
+    Records Unanswered Questions
     """
     answer = open("unanswered.txt", "r")
     unanswered = answer.readlines()

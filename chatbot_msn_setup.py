@@ -50,7 +50,7 @@ class UsefFunct():
 
     def emailtonick(self, email):
         """
-        Returns a nick accoriding to the given email, or None if noone matches.
+        Returns a nick using the given email, or None if nobody matches.
         """
         if email in MSN.users.keys():
             return MSN.users[email].nick
@@ -67,7 +67,7 @@ class UsefFunct():
 
     def quit(self, code=0):
         """
-        Sign out from MSN.
+        Signs out from MSN.
         """
         print "Closing"
         chatbotini.connection_log("Sesion terminada\n\n\n", "msn")
