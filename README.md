@@ -9,7 +9,7 @@ Requirements
 ------------
 
 * xmpp
-* msn_lib (included and modified to fix depreceated methods)
+* msn_lib (included and modified to fix deprecated methods)
 
 You can install xmpp, using:
 
@@ -26,7 +26,7 @@ Usage
 * To debug the AI, you can use/modify the scripts: all_questions.py
   (to show all questions being asked) or show_unanswered.py (to show
   only the unanswered ones).
-* If you need to change the logic or the content of the replys, change
+* If you need to change the logic or the content of the replies, change
   the corresponding files in the *intelligence* drawer.
 
 Demo
@@ -46,7 +46,7 @@ http://www.alicebot.org/aiml.html
 Notes
 -----
 
-You can copy or modify the chatbot_gtalk_setup.py to accomodate to any service.
+You can copy or modify the chatbot_gtalk_setup.py to accommodate to any service.
 Nowadays most messaging services use the xmpp protocol, so it should
 be simple to accommodate other providers.
 
@@ -73,5 +73,5 @@ License
 
 Under GPL / v3
 
-Propietary on demand when OSI / FSF licenses are not compatible with
+Proprietary on demand when OSI / FSF licenses are not compatible with
 your desires
