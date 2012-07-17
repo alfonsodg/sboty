@@ -24,7 +24,7 @@
 						<li>Es un placer, <get name="nombre"/></li>
 						<li>¡Hola <get name="nombre"/>!</li>
 					</random>
-					<srai>RAMDOMM</srai>
+					<srai>RANDOM</srai>
 				</li>				
 			</condition>
 		</template>
@@ -88,7 +88,7 @@
 				<li>Gracias</li>
 				<li>Muy bien</li>
 			</random>
-            <srai>RAMDOMM</srai>
+            <srai>RANDOM</srai>
 		</template>
 	</category>
 	

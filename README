@@ -1,17 +1,17 @@
 Sboty Project
 =============
 
-Messaging Multiprotocol Application with automatically responsive
-by using the AIML standard.
+Messaging Multiprotocol Application (bot) with automated responses
+using the AIML standard libraries.
 
 
 Requirements
 ============
 
 * xmpp
-* msn_lib (included and modified for fix depreceated methods)
+* msn_lib (included and modified to fix depreceated methods)
 
-You can install using:
+You can install xmpp, using:
 
     pip install xmpppy
 
@@ -19,16 +19,15 @@ You can install using:
 Usage
 =====
 
-Rename chatbot_settings.xml.EDITME as chatbot_settings.xml
-
-Edit chatbot_settings.xml filling the data required by each tag.
-
-Run chatbot_gtalk_setup.py or chatbot_msn_setup.py according to the service.
-
-You can use all_questions.py or show_unanswered.py for debug the IA.
-
-Please, go to the *intelligence* drawer for change the logic and replys
-
+* Rename **chatbot_settings.xml.EDITME** to **chatbot_settings.xml**.
+* Edit chatbot_settings.xml filling the data required by each tag.
+* Run **chatbot_gtalk_setup.py** or **chatbot_msn_setup.py** according
+  to what service you will be using.
+* To debug the AI, you can use/modify the scripts: all_questions.py
+  (to show all questions being asked) or show_unanswered.py (to show
+  only the unanswered ones).
+* If you need to change the logic or the content of the replys, change
+  the corresponding files in the *intelligence* drawer.
 
 Demo
 ====
@@ -38,8 +37,8 @@ Try adding this contact to gmail / google apps / live / hotmail :
     demo@ictec.biz
 
 
-AIML References
-===============
+AIML Reference
+==============
 
 http://www.alicebot.org/aiml.html
 
@@ -47,8 +46,9 @@ http://www.alicebot.org/aiml.html
 Notes
 =====
 
-You can surely modify the chatbot_gtalk_setup.py to accomodate to any service.
-Remember that today, almost any messaging services are xmpp protocol based.
+You can copy or modify the chatbot_gtalk_setup.py to accomodate to any service.
+Nowadays most messaging services use the xmpp protocol, so it should
+be simple to accommodate other providers.
 
 
 Author
