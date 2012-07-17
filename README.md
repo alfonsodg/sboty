@@ -6,7 +6,7 @@ using the AIML standard libraries.
 
 
 Requirements
-============
+------------
 
 * xmpp
 * msn_lib (included and modified to fix depreceated methods)
@@ -17,7 +17,7 @@ You can install xmpp, using:
 
 
 Usage
-=====
+-----
 
 * Rename **chatbot_settings.xml.EDITME** to **chatbot_settings.xml**.
 * Edit chatbot_settings.xml filling the data required by each tag.
@@ -30,7 +30,7 @@ Usage
   the corresponding files in the *intelligence* drawer.
 
 Demo
-====
+----
 
 Try adding this contact to gmail / google apps / live / hotmail :
 
@@ -38,13 +38,13 @@ Try adding this contact to gmail / google apps / live / hotmail :
 
 
 AIML Reference
-==============
+--------------
 
 http://www.alicebot.org/aiml.html
 
 
 Notes
-=====
+-----
 
 You can copy or modify the chatbot_gtalk_setup.py to accomodate to any service.
 Nowadays most messaging services use the xmpp protocol, so it should
@@ -52,7 +52,7 @@ be simple to accommodate other providers.
 
 
 Author
-======
+------
 
 ICTEC SAC
 
@@ -60,7 +60,7 @@ Alfonso de la Guarda Reyes <alfonsodg@gmail.com>
 
 
 Thanks
-======
+------
 
 César Bustios
 
@@ -69,7 +69,7 @@ Giancarlo Reyes
 
 
 License
-=======
+-------
 
 Under GPL / v3
 
