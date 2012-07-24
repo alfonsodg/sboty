@@ -87,7 +87,7 @@ def cache_read_rpta(email):
     rpta = 0
     try:
         cache = open(
-            chatbotini.CACHEDIR + str(email) + "_1.txt", "r")
+            "%s%s_1.txt" % (chatbotini.CACHEDIR, str(email)) , "r")
         frace = cache.read()
 
     except IOError:
