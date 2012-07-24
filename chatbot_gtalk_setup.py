@@ -174,7 +174,7 @@ def rpta_gtalk(conn, mess):
                 if anios < 5:
                     extramsg = u"Tan joven y ya sabes escribir?"
                 if anios > 95:
-                    extramsg = (u"Vaya eres la persona más longeva que",
+                    extramsg = (u"Vaya eres la persona más longeva que" +
                                 u"estoy conociendo!")
 
         message = xmpp.Message(
