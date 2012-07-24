@@ -54,8 +54,8 @@ def step_on(conn):
     try:
         conn.Process(1)
     except KeyboardInterrupt:
-        chatbotini.connection_log("Interrupcion de teclado (Ctrl+C)\n",
-                     "gtalk")
+        chatbotini.connection_log(
+            "Interrupcion de teclado (Ctrl+C)\n", "gtalk")
         disconnect_bot()
     return 1
 
@@ -84,12 +84,12 @@ def cache_read_rpta(email):
     """
     rpta = 0
     try:
-        cache = open(chatbotini.CACHEDIR + str(
-        email) + "_1.txt", "r")
+        cache = open(
+            chatbotini.CACHEDIR + str(email) + "_1.txt", "r")
         frace = cache.read()
         cache.close()
-        if frace.count("cuantos años tienes")>0 or frace.count(
-            "y cual es tu edad"):
+        if frace.count("cuantos años tienes") > 0 or frace.count(
+                "y cual es tu edad"):
             rpta = 1
     except IOError:
         pass
@@ -101,8 +101,8 @@ def cache_write_rpta(message, email):
     Writes to the cache
     """
     try:
-        cache = open(chatbotini.CACHEDIR + str(
-        email) + "_1.txt", "w")
+        cache = open(
+            chatbotini.CACHEDIR + str(email) + "_1.txt", "w")
         cache.write(message)
         cache.close()
     except IOError:
@@ -116,13 +116,14 @@ def rpta_gtalk(conn, mess):
     logtime = chatbotini.now()
     text = mess.getBody()
     #so you can convert to lower case
+    # TODO: find a cleaner solution
     text = text.replace(
-                    u"\xe1", u"a").replace(
-                    u"\xe9", u"e").replace(
-                    u"\xed", u"i").replace(
+        u"\xe1", u"a").replace(
+            u"\xe9", u"e").replace(
+                u"\xed", u"i").replace(
                     u"\xf3", u"o").replace(
-                    u"\xfa", u"u").replace(
-                    "+", " mas ")
+                        u"\xfa", u"u").replace(
+                            "+", " mas ")
     #text = text.replace(u"\xbf",u"") ##u"\xbf" = ¿
     user = mess.getFrom()
     user.lang = "en"   # dup
@@ -133,11 +134,11 @@ def rpta_gtalk(conn, mess):
         message = ""
     # Log query message
     registrochat(("%s <<< %s\n" % (logtime, message)), senderemail)
-    remsg = chatbotini.action_process(message, senderemail,
-        conn=CONN, mess=mess)
+    remsg = chatbotini.action_process(
+        message, senderemail, conn=CONN, mess=mess)
     #stores the questions that have no answers
-    record_questions_unanswered(message, remsg, senderemail,
-                     logtime[1:11], logtime[12:20])
+    record_questions_unanswered(
+        message, remsg, senderemail, logtime[1:11], logtime[12:20])
     if remsg:
         extramsg = u""
         if cache_read_rpta(senderemail) == 1:
@@ -150,14 +151,15 @@ def rpta_gtalk(conn, mess):
                         estoy conociendo!"""
             except:
                 pass
-        message = xmpp.Message(to=mess.getFrom(),
-                 body=extramsg.encode("utf-8") + remsg, typ="chat")
+        message = xmpp.Message(
+            to=mess.getFrom(), body=extramsg.encode("utf-8") + remsg,
+            typ="chat")
         CONN.send(unicode(message).encode("utf-8").replace(r"\n", "\n"))
     # Log response message
     try:
         message = message.getBody()
-        registrochat(("%s >>> %s\n" % (logtime, message.encode(
-        "utf-8"))), senderemail)
+        registrochat(
+            ("%s >>> %s\n" % (logtime, message.encode("utf-8"))), senderemail)
     except AttributeError:
         pass
 
@@ -179,8 +181,9 @@ def record_questions_unanswered(message, answer, email, date, time):
             #print data
             conn = sqlite3.connect("show_unanswered.bd")
             conn_cursor = conn.cursor()
+            # TODO: rewrite using % to avoid sql injection
             conn_cursor.execute(
-            """insert into preguntas values(?,?,?,?,?)""", data)
+                """insert into preguntas values(?,?,?,?,?)""", data)
             conn.commit()
             conn_cursor.close()
             conn.close()
@@ -192,14 +195,14 @@ SHOW = xmpp.Presence()
 SHOW.setShow("ax")
 CONRES = CONN.connect(server=("talk.google.com", 5223))
 chatbotini.connection_log("Iniciando sesion\n", "gtalk")
-chatbotini.connection_log("Conectando al servidor (talk.google.com)\n",
-    "gtalk")
+chatbotini.connection_log(
+    "Conectando al servidor (talk.google.com)\n", "gtalk")
 
 if not CONRES:
     print "No se puede conectar al servidor %s!" % chatbotini.SERVER
     chatbotini.connection_log(
-    "No ha sido posible conectar al servidor jabber (%s)\n" % (
-                                            chatbotini.SERVER), "gtalk")
+        "No ha sido posible conectar al servidor jabber (%s)\n" % (
+            chatbotini.SERVER), "gtalk")
     chatbotini.connection_log("Terminando\n\n\n", "gtalk")
     sys.exit(1)
 
@@ -212,8 +215,8 @@ AUTHRES = CONN.auth(chatbotini.LOGINGTALK.split("@")[0],
 chatbotini.connection_log("Autenticando\n", "gtalk")
 
 if not AUTHRES:
-    print "No se puede autorizar en %s - comprobar " % chatbotini.SERVER + \
-    "nombre de usuario / contrasenia."
+    print ("No se puede autorizar en %s - comprobar " % chatbotini.SERVER,
+           "nombre de usuario / contrasenia.")
     chatbotini.connection_log("Login/Password incorrectos\n", "gtalk")
     chatbotini.connection_log("Terminando\n\n\n", "gtalk")
     sys.exit(1)

@@ -213,7 +213,8 @@ class ServDiscon():
         """
         When the server disconnect us from MSN.
         """
-        print "\rServer sent disconnect (probably you logged in somewhere else)"
+        print ("\rServer sent disconnect",
+               " (probably you logged in somewhere else)")
         USEF_FUNCT.quit()
         msncb.cb_out(md1, type, tid, params)
 
@@ -388,7 +389,8 @@ while 1:
     try:
         FDS = select.select(INFD, OUTFD, [], 5)
     except KeyboardInterrupt:
-        chatbotini.connection_log("Interrupcion de teclado (Ctrl + C)\n", "msn")
+        chatbotini.connection_log(
+            "Interrupcion de teclado (Ctrl + C)\n", "msn")
         USEF_FUNCT.quit()
 
     for comp in FDS[0] + FDS[1]:        # see msnlib.msnd.pollable.__doc__

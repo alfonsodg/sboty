@@ -35,8 +35,8 @@ class DictionaryXml(dict):
         Static method to wrap_dict a dictionary recursively as an DictionaryXml
         """
         if isinstance(elem, dict):
-            return DictionaryXml((k, DictionaryXml.wrap_dict(v))
-                for (k, v) in elem.iteritems())
+            return DictionaryXml(
+                (k, DictionaryXml.wrap_dict(v)) for (k, v) in elem.iteritems())
         elif isinstance(elem, list):
             return [DictionaryXml.wrap_dict(v) for v in elem]
         else:
@@ -48,7 +48,8 @@ class DictionaryXml(dict):
         Defined function to help unwrap_dict
         """
         if isinstance(elem, dict):
-            return dict((k, DictionaryXml._unwrap_dict(v))
+            return dict(
+                (k, DictionaryXml._unwrap_dict(v))
                 for (k, v) in elem.iteritems())
         elif isinstance(elem, list):
             return [DictionaryXml._unwrap_dict(v) for v in elem]
@@ -67,13 +68,13 @@ def _dicttoxml(parent, elemdict):
     """
     Defined function to help dicttoxml
     """
-    assert type(elemdict) is not type([])
+    assert not isinstance(elemdict, list)
 
     if isinstance(elemdict, dict):
         for (tag, child) in elemdict.iteritems():
             if str(tag) == '_text':
                 parent.text = str(child)
-            elif type(child) is type([]):
+            elif isinstance(child, list):
                 # iterate through the array and convert
                 for listchild in child:
                     elem = ElementTree.Element(tag)
@@ -112,7 +113,7 @@ def _xmltodict(node, classdict):
         newitem = _xmltodict(child, classdict)
         if child.tag in nodedict:
             # found duplicate tag, force a list
-            if type(nodedict[child.tag]) is type([]):
+            if isinstance(nodedict[child.tag], list):
                 # append to existing list
                 nodedict[child.tag].append(newitem)
             else:
@@ -143,10 +144,8 @@ def xmltodict(root, classdict=DictionaryXml):
     Converts an XML file or ElementTree Element to a dictionary
     """
     # If a string is passed in, try to open it as a file
-    if type(root) == type(''):
+    if isinstance(root, basestring):
         root = ElementTree.parse(root).getroot()
     elif not isinstance(root, ElementTree.Element):
         raise Exception('Expected ElementTree.Element or file path string')
     return classdict({root.tag: _xmltodict(root, classdict)})
-
-
