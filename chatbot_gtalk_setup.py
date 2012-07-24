@@ -94,8 +94,8 @@ def cache_read_rpta(email):
         pass
 
     else:
-        if frace.count("cuantos años tienes") > 0 or frace.count(
-                "y cual es tu edad"):
+        if frace.count("cuantos años tienes") > 0 or \
+                frace.count("y cual es tu edad"):
             rpta = 1
 
     finally:
@@ -240,8 +240,8 @@ if __name__ == "__main__":
         sys.exit(1)
 
     if CONRES != "tls":
-        print ("Advertencia: no se puede estabilizar conexion segura ",
-               "- TLS fallo")
+        print (
+            "Advertencia: no se puede estabilizar conexion segura - TLS fallo")
 
     AUTHRES = CONN.auth(chatbotini.LOGINGTALK.split("@")[0],
                         chatbotini.LOGINPASSWORD,
@@ -250,8 +250,8 @@ if __name__ == "__main__":
     chatbotini.connection_log("Autenticando\n", "gtalk")
 
     if not AUTHRES:
-        print ("No se puede autorizar en %s - comprobar " % chatbotini.SERVER,
-               "nombre de usuario / contrasenia.")
+        print ("No se puede autorizar en %s - comprobar " +
+               "nombre de usuario / contrasenia.") % chatbotini.SERVER
 
         chatbotini.connection_log("Login/Password incorrectos\n", "gtalk")
         chatbotini.connection_log("Terminando\n\n\n", "gtalk")
