@@ -4,34 +4,90 @@
 Common functions and constants for both bots.
 """
 import os
+from ConfigParser import SafeConfigParser
 from datetime import datetime
 
 import aiml
-import xmlfunctions
+
+
+class Config(object):
+    """
+    Configuration class. Reads chatbot.cfg.
+    Returns and object with properties:
+        - common
+        - ACCOUNT_NAME
+    """
+    def __init__(self):
+        """
+        Initialize config object
+        """
+        config = SafeConfigParser
+        config.read('chatbot.cfg')
+
+        self._common = Section('common')
+
+        self._accounts = self._get_accounts(config)
+
+        for account in self._accounts:
+            aconfig = Section(config, account)
+            setattr(self, account, aconfig)
+
+
+    class Section(object):
+        """
+        Section class. Read seccions from chatbot.cnf
+        Returns an object with:
+            object.option = value
+        """
+        def __init__(self, config, name):
+            for section in config.options(name)
+                setattr(self, section, config.get(name, section))
+
+
+    @staticmethod
+    def _get_accounts(config):
+        accounts = config.sections()
+        accounts.remove('common')
+        return accounts
+
+    @staticmethod
+    def now():
+        """
+        Returns the current date and time.
+        """
+        now = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
+        ret = '[%s]' % (now)
+
+        return ret
+
+    @property
+    def accounts(self):
+        return self._accounts
+
 
 # TODO: use __name__ trick if possible
-
-ELEMENT = xmlfunctions.xmltodict('chatbot_settings.xml')
-
-# Main settings
-LOGINGTALK = ELEMENT['setup']['loginusergtalk']
-LOGINEMAILMSN = ELEMENT['setup']['loginusermsn']
-LOGINPASSWORD = ELEMENT['setup']['loginpasswordgtalk']
-LOGINPASSWORDMSN = ELEMENT['setup']['loginpasswordmsn']
-EMAIL_SENDER = ELEMENT['setup']['emailsender']
-SERVER = ELEMENT['setup']['jabberserver']
-BOTNAME = ELEMENT['setup']['botname']
-BRAIN = ELEMENT['setup']['botconf']['brain']
-MSNINI = ELEMENT['setup']['botconf']['msnini']
-LOGPATH = ELEMENT['setup']['path']['logpath']
-CACHEPATH = ELEMENT['setup']['path']['cachepath']
-MY_LIST = None
-
-# Initializes basic configurations for bot sessions
-ROOTDIR = os.getcwd()
-CONFIGFILE = '%s/%s' % (ROOTDIR, MSNINI)
-LOGDIR = '%s/%s' % (ROOTDIR, LOGPATH)
-CACHEDIR = '%s/%s/' % (ROOTDIR, CACHEPATH)
+#
+#ELEMENT = xmlfunctions.xmltodict('chatbot_settings.xml')
+#
+## Main settings
+#LOGINGTALK = ELEMENT['setup']['loginusergtalk']
+#LOGINEMAILMSN = ELEMENT['setup']['loginusermsn']
+#LOGINPASSWORD = ELEMENT['setup']['loginpasswordgtalk']
+#LOGINPASSWORDMSN = ELEMENT['setup']['loginpasswordmsn']
+#EMAIL_SENDER = ELEMENT['setup']['emailsender']
+#SERVER = ELEMENT['setup']['jabberserver']
+#BOTNAME = ELEMENT['setup']['botname']
+#BRAIN = ELEMENT['setup']['botconf']['brain']
+#MSNINI = ELEMENT['setup']['botconf']['msnini']
+#LOGPATH = ELEMENT['setup']['path']['logpath']
+#CACHEPATH = ELEMENT['setup']['path']['cachepath']
+#MY_LIST = None
+#
+## Initializes basic configurations for bot sessions
+#ROOTDIR = os.getcwd()
+#CONFIGFILE = '%s/%s' % (ROOTDIR, MSNINI)
+#LOGDIR = '%s/%s' % (ROOTDIR, LOGPATH)
+#CACHEDIR = '%s/%s/' % (ROOTDIR, CACHEPATH)
 
 
 # Create empty command cache file if doesn't exist
@@ -46,16 +102,6 @@ os.system('mkdir -p %s/msn' % LOGDIR)
 os.system('mkdir -p %s/gtalk' % LOGDIR)
 
 USE_BRAIN = True
-
-
-def now():
-    """
-    Returns the current date and time.
-    """
-    today = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
-    ret = '[%s]' % (today)
-
-    return ret
 
 
 def connection_log(message, bot):
