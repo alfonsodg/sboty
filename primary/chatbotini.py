@@ -9,6 +9,8 @@ from datetime import datetime
 import aiml
 import xmlfunctions
 
+# TODO: use __name__ trick if possible
+
 ELEMENT = xmlfunctions.xmltodict('chatbot_settings.xml')
 
 # Main settings
@@ -52,6 +54,7 @@ def now():
     """
     today = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
     ret = '[%s]' % (today)
+
     return ret
 
 
@@ -61,8 +64,11 @@ def connection_log(message, bot):
     """
     if bot == 'msn':
         filename = LOGDIR + '/msn_events'
+
     elif bot == 'gtalk':
         filename = LOGDIR + '/gtalk_events'
+
+    # TODO: embed into an exception block
     logfile = open(filename, 'a')
     logfile.write(now() + ' ' + message)
     logfile.close()
@@ -77,8 +83,10 @@ def configure(configfile, brainer):
     fil = open(configfile)
     opt = fil.readlines()
     fil.close()
+
     for elem in opt:
         par = elem.split('=')
+
         if len(par) == 2:
             brainer.setBotPredicate(par[0].strip(), par[1].strip())
 
@@ -89,6 +97,7 @@ def remove_cache(senderemail):
     """
     try:
         os.remove(CACHEDIR + str(senderemail) + '.txt')
+
     except OSError:
         pass
 
@@ -98,14 +107,19 @@ def action_process(message, senderemail, **kwargs):
     Perform the particular action for the given command.
     """
     remove_cache(senderemail)
+
     if CHATBOT.getPredicate('name', senderemail) == '':
         dispname = senderemail.split('@')
+
         if len(dispname) == 2:
             CHATBOT.setPredicate('name', dispname[0], senderemail)
+
     remsg = CHATBOT.respond(message, senderemail)
     remsg = getheader() + remsg + getfooter()
+
     if not remsg:
         remsg = u"Sorry, can't understand.".encode('utf-8')
+
     return remsg
 
 
@@ -131,6 +145,7 @@ CHATBOT.verbose(False)
 # Load brain
 if USE_BRAIN and os.path.isfile(BRAIN):
     CHATBOT.bootstrap(brainFile=BRAIN)
+
 else:
     CHATBOT.bootstrap(learnFiles='ia_start.xml', commands='load aiml b')
     CHATBOT.saveBrain(BRAIN)
