@@ -12,28 +12,7 @@ from chatbotconfig import Config
 
 # TODO: use __name__ trick if possible
 
-#ELEMENT = xmlfunctions.xmltodict('chatbot_settings.xml')
-
-# Main settings
-LOGINGTALK = ELEMENT['setup']['loginusergtalk']
-LOGINEMAILMSN = ELEMENT['setup']['loginusermsn']
-LOGINPASSWORD = ELEMENT['setup']['loginpasswordgtalk']
-LOGINPASSWORDMSN = ELEMENT['setup']['loginpasswordmsn']
-EMAIL_SENDER = ELEMENT['setup']['emailsender']
-SERVER = ELEMENT['setup']['jabberserver']
-BOTNAME = ELEMENT['setup']['botname']
-BRAIN = ELEMENT['setup']['botconf']['brain']
-MSNINI = ELEMENT['setup']['botconf']['msnini']
-LOGPATH = ELEMENT['setup']['path']['logpath']
-CACHEPATH = ELEMENT['setup']['path']['cachepath']
 MY_LIST = None
-
-# Initializes basic configurations for bot sessions
-ROOTDIR = os.getcwd()
-CONFIGFILE = '%s/%s' % (ROOTDIR, MSNINI)
-LOGDIR = '%s/%s' % (ROOTDIR, LOGPATH)
-CACHEDIR = '%s/%s/' % (ROOTDIR, CACHEPATH)
-
 
 # Create empty command cache file if doesn't exist
 if not os.path.exists(CACHEDIR + 'mencache.txt'):

@@ -1,18 +1,17 @@
 [common]
-file_dir = /path/to/file/dir
+log = logs
+cache = cache
 name = Sboty
 brain = chatbot_bot.brn
 msn_ini = chatbot_bot.ini
 
-[NAME1]
+[gtalk]
 login = -----@gmail.com
 password = ********
 emailsender = *****@gmail.com
-type = jabber
 server = gmail.com
 
-[NAME2]
+[msn]
 login = -----@hotmail.com
 password = ******
 emailsender = ******@hotmail.com
-type = msn

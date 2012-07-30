@@ -20,16 +20,29 @@ class Config(object):
         """
         Initialize config object
         """
-        config = SafeConfigParser
+        config = SafeConfigParser()
         config.read('chatbot.cfg')
 
-        self._common = Section('common')
+        self._common = Section(config, 'common')
 
-        self._accounts = self._get_accounts(config)
+        root = os.getcwd()
+        if hasattr(self._common, 'log'):
+            self._common.log = '%s/%s' % (root, self._common.log)
+        else:
+            self._common.log = '%s/log' % root
 
-        for account in self._accounts:
-            aconfig = Section(config, account)
-            setattr(self, account, aconfig)
+        if hasattr(self._common, 'cache'):
+            self._common.cache = '%s/%s' % (root, self._common.cache)
+        else:
+            self._common.cache = '%s/cache' % root
+
+        ini_config = SafeConfigParser()
+        ini_config.read(self._common.msn_ini)
+
+        self._common.msn_ini = Section(ini_config, 'DEFAULT')
+
+        self._gtalk = Section(config, 'gtalk')
+        self._msn = Section(config, 'msn')
 
 
     class Section(object):
@@ -39,15 +52,9 @@ class Config(object):
             object.option = value
         """
         def __init__(self, config, name):
-            for section in config.options(name)
-                setattr(self, section, config.get(name, section))
+            for option in config.options(name)
+                setattr(self, option, config.get(name, option))
 
-
-    @staticmethod
-    def _get_accounts(config):
-        accounts = config.sections()
-        accounts.remove('common')
-        return accounts
 
     @staticmethod
     def now():
@@ -60,6 +67,13 @@ class Config(object):
         return ret
 
     @property
-    def accounts(self):
-        return self._accounts
+    def common(self):
+        return self._common
 
+    @property
+    def gtalk(self):
+        return self._gtalk
+
+    @property
+    def msn(self):
+        return self._msn
