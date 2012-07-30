@@ -198,7 +198,7 @@ def record_questions_unanswered(message, answer, email, date, time):
 
 if __name__ == "__main__":
     print "\n\n* ChatBot Gtalk Client *\n"
-    config = Config()
+    config = chatbotini.Config()
 
     conn = xmpp.Client(config.gtalk.server, debug=[])
     show = xmpp.Presence()

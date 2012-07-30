@@ -9,23 +9,74 @@ from datetime import datetime
 import aiml
 
 from chatbotconfig import Config
+from chatbotio import write_to_file
 
-# TODO: use __name__ trick if possible
 
-MY_LIST = None
+class ChatBot(object):
+    """
+    ChatBot object
+    """
+    def __init__(self):
+        """
+        Initialization
+        """
+        self.my_list = None
+        self.use_brain = True
 
-# Create empty command cache file if doesn't exist
-if not os.path.exists(CACHEDIR + 'mencache.txt'):
-    command_cachefile = open(CACHEDIR + 'mencache.txt', 'w')
-    command_cachefile.write(str({}))
-    command_cachefile.close()
+        self._config = Config()
+        self._set_files()
+        self._brain_conf()
 
-# Create directories (if missing)
-os.system('mkdir -p %s' % CACHEDIR)
-os.system('mkdir -p %s/msn' % LOGDIR)
-os.system('mkdir -p %s/gtalk' % LOGDIR)
+    @property
+    def brain(self):
+        """
+        Run getter
+        """
+        return self._kernel
 
-USE_BRAIN = True
+    @propery
+    def config(self):
+        """
+        config getter
+        """
+        return self._config
+
+    def _set_files(self):
+        """
+        Create files and needed directories
+        """
+        # Create empty command cache file if doesn't exist
+        if not os.path.exists('%s/mencache.txt' % config.common.cache):
+            write_to_file('%s/mencache.txt' % config.common.cache, str({}))
+
+        # Create directories (if missing)
+        directories = ['%s' % config.common.cache,
+                       '%s/msn' % config.common.log,
+                       '%s/gtalk' % config.common.log]
+        for directory in directories:
+            os.mkdir(directory)
+
+
+    def _brain_conf(self):
+        """
+        Configure Brain
+        """
+        self._kernel = aiml.Kernel()
+
+        for option in self._config.common.ini_config.options:
+            self._kernel(
+                option, getattr(self._config.common.ini_config, option))
+
+        configure(self._config.common.ini_config, self._kernel)
+        self._kernel.verbose(False)
+
+        # Load Brain
+        if self._use_brain and os.path.isfile(self._config.common.brain):
+            self._kernel.bootstrap(brainFile=self._config.common.brain)
+        else:
+            self._kernel.bootstrap(
+                learnFiles='ia_start.xml', commands='load aiml b')
+            self._kernel.saveBrain(self._config.common.brain)
 
 
 def connection_log(message, bot):
@@ -105,17 +156,3 @@ def getfooter():
     Returns the footer.
     """
     return ''
-
-
-# Initialization
-CHATBOT = aiml.Kernel()
-configure(CONFIGFILE, CHATBOT)
-CHATBOT.verbose(False)
-
-# Load brain
-if USE_BRAIN and os.path.isfile(BRAIN):
-    CHATBOT.bootstrap(brainFile=BRAIN)
-
-else:
-    CHATBOT.bootstrap(learnFiles='ia_start.xml', commands='load aiml b')
-    CHATBOT.saveBrain(BRAIN)

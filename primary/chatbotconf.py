@@ -52,9 +52,14 @@ class Config(object):
             object.option = value
         """
         def __init__(self, config, name):
+            self._options = []
             for option in config.options(name)
                 setattr(self, option, config.get(name, option))
+                self._options.append(option)
 
+        @property
+        def options(self):
+            return self._options
 
     @staticmethod
     def now():
