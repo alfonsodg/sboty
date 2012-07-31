@@ -1,0 +1,17 @@
+[common]
+log = logs
+cache = cache
+name = Sboty
+brain = chatbot_bot.brn
+msn_ini = chatbot_bot.ini
+
+[gtalk]
+login = -----@gmail.com
+password = ********
+emailsender = *****@gmail.com
+server = gmail.com
+
+[msn]
+login = -----@hotmail.com
+password = ******
+emailsender = ******@hotmail.com

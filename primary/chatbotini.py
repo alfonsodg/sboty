@@ -5,53 +5,78 @@ Common functions and constants for both bots.
 """
 import os
 from datetime import datetime
+
 import aiml
-import xmlfunctions
 
-ELEMENT = xmlfunctions.xmltodict('chatbot_settings.xml')
-
-# Main settings
-LOGINGTALK = ELEMENT['setup']['loginusergtalk']
-LOGINEMAILMSN = ELEMENT['setup']['loginusermsn']
-LOGINPASSWORD = ELEMENT['setup']['loginpasswordgtalk']
-LOGINPASSWORDMSN = ELEMENT['setup']['loginpasswordmsn']
-EMAIL_SENDER = ELEMENT['setup']['emailsender']
-SERVER = ELEMENT['setup']['jabberserver']
-BOTNAME = ELEMENT['setup']['botname']
-BRAIN = ELEMENT['setup']['botconf']['brain']
-MSNINI = ELEMENT['setup']['botconf']['msnini']
-LOGPATH = ELEMENT['setup']['path']['logpath']
-CACHEPATH = ELEMENT['setup']['path']['cachepath']
-MY_LIST = None
-
-# Initializes basic configurations for bot sessions
-ROOTDIR = os.getcwd()
-CONFIGFILE = '%s/%s' % (ROOTDIR, MSNINI)
-LOGDIR = '%s/%s' % (ROOTDIR, LOGPATH)
-CACHEDIR = '%s/%s/' % (ROOTDIR, CACHEPATH)
+from chatbotconfig import Config
+from chatbotio import write_to_file
 
 
-# Create empty command cache file if doesn't exist
-if not os.path.exists(CACHEDIR + 'mencache.txt'):
-    command_cachefile = open(CACHEDIR + 'mencache.txt', 'w')
-    command_cachefile.write(str({}))
-    command_cachefile.close()
-
-# Create directories (if missing)
-os.system('mkdir -p %s' % CACHEDIR)
-os.system('mkdir -p %s/msn' % LOGDIR)
-os.system('mkdir -p %s/gtalk' % LOGDIR)
-
-USE_BRAIN = True
-
-
-def now():
+class ChatBot(object):
     """
-    Returns the current date and time.
+    ChatBot object
     """
-    today = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
-    ret = '[%s]' % (today)
-    return ret
+    def __init__(self):
+        """
+        Initialization
+        """
+        self.my_list = None
+        self.use_brain = True
+
+        self._config = Config()
+        self._set_files()
+        self._brain_conf()
+
+    @property
+    def brain(self):
+        """
+        Run getter
+        """
+        return self._kernel
+
+    @propery
+    def config(self):
+        """
+        config getter
+        """
+        return self._config
+
+    def _set_files(self):
+        """
+        Create files and needed directories
+        """
+        # Create empty command cache file if doesn't exist
+        if not os.path.exists('%s/mencache.txt' % config.common.cache):
+            write_to_file('%s/mencache.txt' % config.common.cache, str({}))
+
+        # Create directories (if missing)
+        directories = ['%s' % config.common.cache,
+                       '%s/msn' % config.common.log,
+                       '%s/gtalk' % config.common.log]
+        for directory in directories:
+            os.mkdir(directory)
+
+
+    def _brain_conf(self):
+        """
+        Configure Brain
+        """
+        self._kernel = aiml.Kernel()
+
+        for option in self._config.common.ini_config.options:
+            self._kernel(
+                option, getattr(self._config.common.ini_config, option))
+
+        configure(self._config.common.ini_config, self._kernel)
+        self._kernel.verbose(False)
+
+        # Load Brain
+        if self._use_brain and os.path.isfile(self._config.common.brain):
+            self._kernel.bootstrap(brainFile=self._config.common.brain)
+        else:
+            self._kernel.bootstrap(
+                learnFiles='ia_start.xml', commands='load aiml b')
+            self._kernel.saveBrain(self._config.common.brain)
 
 
 def connection_log(message, bot):
@@ -60,8 +85,11 @@ def connection_log(message, bot):
     """
     if bot == 'msn':
         filename = LOGDIR + '/msn_events'
+
     elif bot == 'gtalk':
         filename = LOGDIR + '/gtalk_events'
+
+    # TODO: embed into an exception block
     logfile = open(filename, 'a')
     logfile.write(now() + ' ' + message)
     logfile.close()
@@ -76,8 +104,10 @@ def configure(configfile, brainer):
     fil = open(configfile)
     opt = fil.readlines()
     fil.close()
+
     for elem in opt:
         par = elem.split('=')
+
         if len(par) == 2:
             brainer.setBotPredicate(par[0].strip(), par[1].strip())
 
@@ -88,6 +118,7 @@ def remove_cache(senderemail):
     """
     try:
         os.remove(CACHEDIR + str(senderemail) + '.txt')
+
     except OSError:
         pass
 
@@ -97,14 +128,19 @@ def action_process(message, senderemail, **kwargs):
     Perform the particular action for the given command.
     """
     remove_cache(senderemail)
+
     if CHATBOT.getPredicate('name', senderemail) == '':
         dispname = senderemail.split('@')
+
         if len(dispname) == 2:
             CHATBOT.setPredicate('name', dispname[0], senderemail)
+
     remsg = CHATBOT.respond(message, senderemail)
     remsg = getheader() + remsg + getfooter()
+
     if not remsg:
         remsg = u"Sorry, can't understand.".encode('utf-8')
+
     return remsg
 
 
@@ -120,16 +156,3 @@ def getfooter():
     Returns the footer.
     """
     return ''
-
-
-# Initialization
-CHATBOT = aiml.Kernel()
-configure(CONFIGFILE, CHATBOT)
-CHATBOT.verbose(False)
-
-# Load brain
-if USE_BRAIN and os.path.isfile(BRAIN):
-    CHATBOT.bootstrap(brainFile=BRAIN)
-else:
-    CHATBOT.bootstrap(learnFiles='ia_start.xml', commands='load aiml b')
-    CHATBOT.saveBrain(BRAIN)
