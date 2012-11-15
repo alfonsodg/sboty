@@ -87,20 +87,15 @@ def cache_read_rpta(email):
     rpta = 0
     try:
         cache = open(
-            "%s%s_1.txt" % (chatbotini.CACHEDIR, str(email)) , "r")
+            "%s%s_1.txt" % (chatbotini.CACHEDIR, str(email)), "r")
         frace = cache.read()
-
     except IOError:
         pass
-
     else:
         if frace.count("cuantos años tienes") > 0 or \
                 frace.count("y cual es tu edad"):
             rpta = 1
-
-    finally:
         cache.close()
-
     return rpta
 
 
