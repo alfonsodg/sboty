@@ -21,7 +21,7 @@ MSN = msnlib.msnd()
 MSN.cb = msncb.cb()
 
 
-class UsefFunct():
+class Use_Function():
     """
     Useful functions
     """
@@ -29,29 +29,29 @@ class UsefFunct():
         """Start"""
         pass
 
-    def do_login(self, email, logtype, msg):
+    def do_login(self, email, log_type, msg):
         """
         Performs the chat log.
         """
         if CONFIG["log history"]:
             logfile = "%s/%s" % (CONFIG["history directory"], email)
-            if logtype == "in":
+            lines = '\n'
+            if log_type == "in":
                 lines = "%s <<< %s\n" % (chatbotini.now(), str(msg))
-            elif logtype == "out":
-                lines = chatbotini.now() + " >>> " + str(msg) + "\n"
+            elif log_type == "out":
                 lines = "%s >>> %s\n" % (chatbotini.now(), str(msg))
 
             file_dict = open(logfile, "a")
             file_dict.write(lines)
             file_dict.close()
 
-    def null(self, samp):
+    def null(self, sample):
         """
         Null function, useful to void debug ones.
         """
         pass
 
-    def emailtonick(self, email):
+    def email_to_nick(self, email):
         """
         Returns a nick using the given email, or None if nobody matches.
         """
@@ -60,7 +60,7 @@ class UsefFunct():
         else:
             return None
 
-    def getconfigure(self):
+    def get_configure(self):
         """
         Parses the configuration, returns a var:value dict.
         """
@@ -85,7 +85,7 @@ class UsefFunct():
         sys.exit(code)
 
 
-class ServDiscon():
+class Server_Disconnect():
     """
     Server disconnect
     """
@@ -93,32 +93,35 @@ class ServDiscon():
         """Start"""
         pass
 
-    def cb_errors(self, md1, errno, params):
+    def cb_errors(self, md1, err_no, params):
         """
         Handles server errors.
         """
-        if not errno in msncb.error_table:
+        if not err_no in msncb.error_table:
             desc = "Unknown"
         else:
-            desc = msncb.error_table[errno]
+            desc = msncb.error_table[err_no]
 
-        desc = "\rServer sent error %d: %s\n" % (errno, desc)
+        desc = "\rServer sent error %d: %s\n" % (err_no, desc)
         print desc
 
-        msncb.cb_err(md1, errno, params)
+        msncb.cb_err(md1, err_no, params)
 
-    def cb_adding(self, md1, typedat, tid, params):
+    def cb_adding(self, md1, data_type, tid, params):
         """
         Handler for adding users.
         """
         plist = params.split(" ")
-        typedat = plist[0]
+        if not data_type:
+            data_type = plist[0]
+        email = ''
+        nick = ''
 
-        if typedat == "RL" or typedat == "FL":
+        if data_type == "RL" or data_type == "FL":
             email = plist[2]
             nick = urllib.unquote(plist[3])
 
-        if typedat == "RL":
+        if data_type == "RL":
             out = "\r%s (%s) has added you to his contact list" % (email, nick)
             print out
 
@@ -131,21 +134,22 @@ class ServDiscon():
             except KeyError:
                 pass
 
-        elif typedat == "FL":
+        elif data_type == "FL":
             out = "\r%s (%s) has been added to your contact list" % (
                 email, nick)
             print out
 
-        msncb.cb_add(md1, typedat, tid, params)
+        msncb.cb_add(md1, data_type, tid, params)
 
-    def cb_messages(self, md1, typedat, tid, params, sbd):
+    def cb_messages(self, md1, data_type, tid, params, sbd):
         """
         Handles MSN messages.
         """
         global LAST_RECEIVED
         plist = tid.split(" ")
         email = plist[0]
-
+        if not data_type:
+            data_type = False
         # Parse
         lines = params.split("\n")
         headers = {}
@@ -157,9 +161,9 @@ class ServDiscon():
                 break
 
             tvv = line.split(":", 1)
-            typedat = tvv[0]
+            data_type = tvv[0]
             value = tvv[1].strip()
-            headers[typedat] = value
+            headers[data_type] = value
             eoh += 1
 
         eoh += 1
@@ -179,40 +183,40 @@ class ServDiscon():
                     continue
 
                 tvv = line.split(":", 1)
-                typedat = tvv[0]
+                data_type = tvv[0]
                 value = tvv[1].strip()
-                hotmail_info[typedat] = value
+                hotmail_info[data_type] = value
 
             msnlib.debug(params)
 
             if headers["Content-Type"] == ("text/x-msmsgsinitialemail" +
                                            "notification; charset=UTF-8"):
-                newmsgs = int(hotmail_info["Inbox-Unread"])
+                new_messages = int(hotmail_info["Inbox-Unread"])
 
-                if not newmsgs:
+                if not new_messages:
                     return
 
                 print("\rYou have %s unread email(s)" +
-                      " in your Hotmail account") % str(newmsgs)
+                      " in your Hotmail account") % str(new_messages)
 
             elif headers["Content-Type"] == ("text/" +
                                              "x-msmsgsemailnotification;" +
                                              " charset=UTF-8"):
                 from_name = hotmail_info["From"]
-                from_addr = hotmail_info["From-Addr"]
+                from_address = hotmail_info["From-Addr"]
                 subject = hotmail_info["Subject"]
 
                 print("\rYou have just received an email in your" +
                       " Hotmail account:")
-                print "\r\tFrom: %s (%s)" % (from_name, from_addr)
+                print "\r\tFrom: %s (%s)" % (from_name, from_address)
                 print "\r\tSubject: %s" % subject
             return
 
         if "Content-Type" in headers and \
                 headers["Content-Type"] == "text/x-msmsgscontrol":
-            nick = USEF_FUNCT.emailtonick(email)
-            if not nick:
-                nick = email
+            nick = USE_FUNCTION.email_to_nick(email)
+            #if not nick:
+            #    nick = email
 
             if not "typing" in MSN.users[email].priv:
                 MSN.users[email].priv["typing"] = 0
@@ -234,7 +238,7 @@ class ServDiscon():
         else:
             # Messages
             MSN.users[email].priv["typing"] = 0
-            disp_message(email, lines, eoh)
+            display_message(email, lines, eoh)
 
             if len(HISTORY_BUFFER) > CONFIG["history size"]:
                 del(HISTORY_BUFFER[0])
@@ -251,7 +255,7 @@ class ServDiscon():
         print("\rServer sent disconnect" +
               " (probably you logged in somewhere else)")
 
-        USEF_FUNCT.quit()
+        USE_FUNCTION.quit()
         msncb.cb_out(md1, type, tid, params)
 
     def cb_join(self, md1, type, tid, params, sbd):
@@ -259,13 +263,13 @@ class ServDiscon():
         Join a conversation and send pending messages.
         """
         email = tid
-        nick = USEF_FUNCT.emailtonick(email)
+        nick = USE_FUNCTION.email_to_nick(email)
 
         if not nick:
             nick = email
 
         if sbd.emails and email != sbd.emails[0]:
-            first_nick = USEF_FUNCT.emailtonick(sbd.emails[0])
+            first_nick = USE_FUNCTION.email_to_nick(sbd.emails[0])
 
             if not first_nick:
                 first_nick = sbd.emails[0]
@@ -281,10 +285,11 @@ class ServDiscon():
         msncb.cb_joi(md1, type, tid, params, sbd)
 
 
-def disp_message(email, lines, eoh=0):
+def display_message(email, lines, eoh=0):
     """
     Prints an incoming message and an optional pointer at the
     end of your header.
+    :rtype : Bool
     """
     message = ""
 
@@ -305,29 +310,30 @@ def disp_message(email, lines, eoh=0):
     message = message.strip().decode("utf-8", "ignore")
 
     # Log query message
-    USEF_FUNCT.do_login(email, "in", message.encode("utf-8"))
+    USE_FUNCTION.do_login(email, "in", message.encode("utf-8"))
     message_to_send = chatbotini.action_process(message, email, msn=MSN)
 
     # We really need to add empty string??
-    extramsg = u""
-    message_to_send += extramsg.encode("utf-8")
+    extra_message = u""
+    message_to_send += extra_message.encode("utf-8")
 
     MSN.sendmsg(email, message_to_send.replace(r"\n", "\n"))
 
     # Log response message
-    USEF_FUNCT.do_login(email, "out", message_to_send)
+    USE_FUNCTION.do_login(email, "out", message_to_send)
+
 
 if __name__ == "__main__":
     # TODO: split into functions
     # classes start
-    USEF_FUNCT = UsefFunct()
-    SERV_DISCON = ServDiscon()
+    USE_FUNCTION = Use_Function()
+    SERVER_DISCONNECT = Server_Disconnect()
 
-    MSN.cb.out = SERV_DISCON.cb_disconnect
-    MSN.cb.msg = SERV_DISCON.cb_messages
-    MSN.cb.joi = SERV_DISCON.cb_join
-    MSN.cb.err = SERV_DISCON.cb_errors
-    MSN.cb.add = SERV_DISCON.cb_adding
+    MSN.cb.out = SERVER_DISCONNECT.cb_disconnect
+    MSN.cb.msg = SERVER_DISCONNECT.cb_messages
+    MSN.cb.joi = SERVER_DISCONNECT.cb_join
+    MSN.cb.err = SERVER_DISCONNECT.cb_errors
+    MSN.cb.add = SERVER_DISCONNECT.cb_adding
 
     print "\n\n* ChatBot MSN Client *\n"
     chatbotini.connection_log("Iniciando sesion\n", "msn")
@@ -335,7 +341,7 @@ if __name__ == "__main__":
     # First, the configuration
     print "Loading config... "
 
-    CONFIG = USEF_FUNCT.getconfigure()
+    CONFIG = USE_FUNCTION.get_configure()
     CONFIG["profile"] = None
 
     # Set the mandatory values
@@ -401,8 +407,8 @@ if __name__ == "__main__":
 
     # Set or void the debug
     if not CONFIG["debug"]:
-        msnlib.debug = USEF_FUNCT.null
-        msncb.debug = USEF_FUNCT.null
+        msnlib.debug = USE_FUNCTION.null
+        msncb.debug = USE_FUNCTION.null
 
     # Login to msn
     print "Logging in... "
@@ -414,7 +420,7 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         chatbotini.connection_log(
             "Interrupcion de teclado (Ctrl + C)\n", "msn")
-        USEF_FUNCT.quit()
+        USE_FUNCTION.quit()
 
     except socket.error, info:
         print "Network error: %s" % str(info)
@@ -461,9 +467,9 @@ if __name__ == "__main__":
         except KeyboardInterrupt:
             chatbotini.connection_log(
                 "Interrupcion de teclado (Ctrl + C)\n", "msn")
-            USEF_FUNCT.quit()
+            USE_FUNCTION.quit()
 
-        for comp in FDS[0] + FDS[1]:        # see msnlib.msnd.pollable.__doc__
+        for comp in FDS[0] + FDS[1]: # see msnlib.msnd.pollable.__doc__
             try:
                 MSN.read(comp)
 
@@ -499,12 +505,12 @@ if __name__ == "__main__":
 
                 if comp != MSN:
                     if comp.msgqueue:
-                        nick = USEF_FUNCT.emailtonick(comp.emails[0])
+                        nick = USE_FUNCTION.email_to_nick(comp.emails[0])
                         print("\rConnection with %s closed - the following" +
-                              "messages couldn't be sent:") % (nick)
+                              "messages couldn't be sent:") % nick
 
-                        for mssage in comp.msgqueue:
-                            print "\t>>> %s" % mssage
+                        for message in comp.msgqueue:
+                            print "\t>>> %s" % message
 
                     MSN.close(comp)
 
@@ -514,4 +520,4 @@ if __name__ == "__main__":
                     chatbotini.connection_log(
                         "Se cerro el socket principal\n", "msn")
 
-                    USEF_FUNCT.quit(1)
+                    USE_FUNCTION.quit(1)

@@ -6,25 +6,25 @@ import os
 
 ROOT_DIR = os.getcwd()
 DIR = '%s/%s.xml' % (ROOT_DIR, "ia_start")
-ARCHI = open(DIR, "r")
-ARCHI.seek(0)
-ARCHIVOS = []
-for line in ARCHI.readlines():
+ARCH = open(DIR, "r")
+ARCH.seek(0)
+ARCHIVES = []
+for line in ARCH.readlines():
     if "<learn>" in line:
         ini = line.find("<learn>") + 7
         fin = line.find("</learn>")
-        ARCHIVOS.append(line[ini:fin])
-ARCHI.close()
-PATTNERS = open(ROOT_DIR + "/questions.txt", "w")
-for archivo in ARCHIVOS:
-    DIR = '%s/%s' % (ROOT_DIR, archivo)
-    PATTNERS.write("\n-----" + archivo + "-----\n" + "\n")
-    ARCHI = open(DIR, "r")
-    ARCHI.seek(0)
-    for line in ARCHI.readlines():
+        ARCHIVES.append(line[ini:fin])
+ARCH.close()
+PARTNERS = open(ROOT_DIR + "/questions.txt", "w")
+for archive in ARCHIVES:
+    DIR = '%s/%s' % (ROOT_DIR, archive)
+    PARTNERS.write("\n-----" + archive + "-----\n" + "\n")
+    ARCH = open(DIR, "r")
+    ARCH.seek(0)
+    for line in ARCH.readlines():
         if "<pattern>" in line:
             ini = line.find("<pattern>") + 9
             fin = line.find("</pattern>")
-            PATTNERS.write(line[ini:fin] + "\n")
-    ARCHI.close()
-PATTNERS.close()
+            PARTNERS.write(line[ini:fin] + "\n")
+    ARCH.close()
+PARTNERS.close()

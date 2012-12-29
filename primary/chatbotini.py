@@ -9,7 +9,7 @@ from datetime import datetime
 import aiml
 import xmlfunctions
 
-ELEMENT = xmlfunctions.xmltodict('chatbot_settings.xml')
+ELEMENT = xmlfunctions.xml_to_dict('chatbot_settings.xml')
 
 # Main settings
 LOGINGTALK = ELEMENT['setup']['loginusergtalk']
@@ -34,9 +34,9 @@ CACHEDIR = '%s/%s/' % (ROOTDIR, CACHEPATH)
 
 # Create empty command cache file if doesn't exist
 if not os.path.exists(CACHEDIR + 'mencache.txt'):
-    command_cachefile = open(CACHEDIR + 'mencache.txt', 'w')
-    command_cachefile.write(str({}))
-    command_cachefile.close()
+    command_cache_file = open(CACHEDIR + 'mencache.txt', 'w')
+    command_cache_file.write(str({}))
+    command_cache_file.close()
 
 # Create directories (if missing)
 os.system('mkdir -p %s' % CACHEDIR)
@@ -51,7 +51,7 @@ def now():
     Returns the current date and time.
     """
     today = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
-    ret = '[%s]' % (today)
+    ret = '[%s]' % today
     return ret
 
 
@@ -59,6 +59,7 @@ def connection_log(message, bot):
     """
     Log msn/gtalk connection events.
     """
+    filename = ''
     if bot == 'msn':
         filename = LOGDIR + '/msn_events'
     elif bot == 'gtalk':
@@ -99,14 +100,14 @@ def action_process(message, senderemail, **kwargs):
     """
     remove_cache(senderemail)
     if CHATBOT.getPredicate('name', senderemail) == '':
-        dispname = senderemail.split('@')
-        if len(dispname) == 2:
-            CHATBOT.setPredicate('name', dispname[0], senderemail)
-    remsg = CHATBOT.respond(message, senderemail)
-    remsg = getheader() + remsg + getfooter()
-    if not remsg:
-        remsg = u"Sorry, can't understand.".encode('utf-8')
-    return remsg
+        display_name = senderemail.split('@')
+        if len(display_name) == 2:
+            CHATBOT.setPredicate('name', display_name[0], senderemail)
+    re_msg = CHATBOT.respond(message, senderemail)
+    re_msg = getheader() + re_msg + getfooter()
+    if not re_msg:
+        re_msg = u"Sorry, can't understand.".encode('utf-8')
+    return re_msg
 
 
 def getheader():

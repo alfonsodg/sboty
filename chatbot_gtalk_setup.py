@@ -1,4 +1,4 @@
-#! /usr/bin/env python26
+#! /usr/bin/env python
 #-*- coding: utf-8 -*-
 """
 CHATBOT en Google Talk
@@ -9,9 +9,10 @@ from primary import chatbotini
 import sqlite3
 
 
-def present_controller(conn, presence):
+def presence_controller(conn, presence):
     """
     Handler for automatically adding users to jabber servers (gtalk).
+    :rtype : Bool
     """
     if presence:
         try:
@@ -39,9 +40,10 @@ def present_controller(conn, presence):
             chatbotini.MY_LIST.Authorize(jid)
 
 
-def registrochat(message, email):
+def chat_registrar(message, email):
     """
     Logs the chat.
+    :rtype : Bool
     """
     filename = chatbotini.LOGDIR + "/gtalk/" + email
     logfile = open(filename, "a")
@@ -52,6 +54,7 @@ def registrochat(message, email):
 def step_on(conn):
     """
     Keeps the connection alive.
+    :rtype : Bool
     """
     try:
         conn.Process(1)
@@ -59,12 +62,13 @@ def step_on(conn):
         chatbotini.connection_log(
             "Interrupcion de teclado (Ctrl+C)\n", "gtalk")
         disconnect_bot()
-    return 1
+    return True
 
 
 def loop_start(conn):
     """
     Starts the loop.
+    :rtype : Bool
     """
     while step_on(conn):
         SHOW.setShow("ax")
@@ -74,52 +78,54 @@ def loop_start(conn):
 def disconnect_bot():
     """
     Quit and disconnect the bot.
+    :rtype : Bool
     """
     print "Exiting."
     chatbotini.connection_log("Sesion terminada\n\n\n", "gtalk")
     sys.exit(0)
 
 
-def cache_read_rpta(email):
+def cache_read_reply(email):
     """
     Reads the cache
+    :rtype : Bool
     """
-    rpta = 0
+    reply = False
     try:
         cache = open(
             "%s%s_1.txt" % (chatbotini.CACHEDIR, str(email)), "r")
-        frace = cache.read()
+        fraze = cache.read()
     except IOError:
         pass
     else:
-        if frace.count("cuantos años tienes") > 0 or \
-                frace.count("y cual es tu edad"):
-            rpta = 1
+        if fraze.count("cuantos años tienes") > 0 or\
+           fraze.count("y cual es tu edad"):
+            reply = True
         cache.close()
-    return rpta
+    return reply
 
 
-def cache_write_rpta(message, email):
+def cache_write_reply(message, email):
     """
     Writes to the cache
+    :rtype : object
     """
+    cache = False
     try:
         cache = open(
             chatbotini.CACHEDIR + str(email) + "_1.txt", "w")
         cache.write(message)
-
     except IOError:
-        pass
-
+        cache = False
     finally:
         cache.close()
 
 
-def rpta_gtalk(conn, mess):
+def reply_gtalk(conn, mess):
     """
     Respond to messages from gtalk contacts.
     """
-    logtime = chatbotini.now()
+    log_time = chatbotini.now()
     text = mess.getBody()
     #so you can convert to lower case
 
@@ -136,7 +142,7 @@ def rpta_gtalk(conn, mess):
     #text = text.replace(u"\xbf",u"") ##u"\xbf" = ¿
     user = mess.getFrom()
     user.lang = "en"   # dup
-    senderemail = user.getStripped()
+    sender_email = user.getStripped()
 
     try:
         message = text.lower().replace("\n", " ").encode("utf-8")
@@ -144,53 +150,46 @@ def rpta_gtalk(conn, mess):
         message = ""
 
     # Log query message
-    registrochat(("%s <<< %s\n" % (logtime, message)), senderemail)
+    chat_registrar(("%s <<< %s\n" % (log_time, message)), sender_email)
 
-    remsg = chatbotini.action_process(
-        message, senderemail, conn=CONN, mess=mess)
+    re_msg = chatbotini.action_process(
+        message, sender_email, conn=CONN, mess=mess)
 
     #stores the questions that have no answers
     record_questions_unanswered(
-        message, remsg, senderemail, logtime[1:11], logtime[12:20])
-
-    if remsg:
-        extramsg = u""
-
-        if cache_read_rpta(senderemail) == 1:
+        message, sender_email, log_time[1:11], log_time[12:20])
+    if re_msg:
+        extra_msg = u""
+        if cache_read_reply(sender_email):
             # try except really needed?
             try:
-                anios = int(text)
-
-            # TODO: find exception type
-            except:
+                age = int(text)
+            except Exception:
                 pass
-
             else:
-                if anios < 5:
-                    extramsg = u"Tan joven y ya sabes escribir?"
-                if anios > 95:
-                    extramsg = (u"Vaya eres la persona más longeva que" +
+                if age < 5:
+                    extra_msg = u"Tan joven y ya sabes escribir?"
+                if age > 95:
+                    extra_msg = (u"Vaya eres la persona más longeva que" +
                                 u"estoy conociendo!")
 
         message = xmpp.Message(
-            to=mess.getFrom(), body=extramsg.encode("utf-8") + remsg,
+            to=mess.getFrom(), body=extra_msg.encode("utf-8") + re_msg,
             typ="chat")
         CONN.send(unicode(message).encode("utf-8").replace(r"\n", "\n"))
 
     # Log response message
-    # TODO: move unneded code out of the try block
     try:
         message = message.getBody()
-        registrochat(
-            ("%s >>> %s\n" % (logtime, message.encode("utf-8"))), senderemail)
-
+        chat_registrar(
+            ("%s >>> %s\n" % (log_time, message.encode("utf-8"))), sender_email)
     except AttributeError:
         pass
 
-    cache_write_rpta(remsg, senderemail)
+    cache_write_reply(re_msg, sender_email)
 
 
-def record_questions_unanswered(message, answer, email, date, time):
+def record_questions_unanswered(message, email, date, time):
     """
     Records Unanswered Questions
     """
@@ -218,13 +217,13 @@ if __name__ == "__main__":
 
     # Show: dnd, away, ax
     SHOW.setShow("ax")
-    CONRES = CONN.connect(server=("talk.google.com", 5223))
+    CON_RES = CONN.connect(server=("talk.google.com", 5223))
 
     chatbotini.connection_log("Iniciando sesion\n", "gtalk")
     chatbotini.connection_log(
         "Conectando al servidor (talk.google.com)\n", "gtalk")
 
-    if not CONRES:
+    if not CON_RES:
         print "No se puede conectar al servidor %s!" % chatbotini.SERVER
 
         chatbotini.connection_log(
@@ -234,17 +233,17 @@ if __name__ == "__main__":
 
         sys.exit(1)
 
-    if CONRES != "tls":
+    if CON_RES != "tls":
         print(
             "Advertencia: no se puede estabilizar conexion segura - TLS fallo")
 
-    AUTHRES = CONN.auth(chatbotini.LOGINGTALK.split("@")[0],
-                        chatbotini.LOGINPASSWORD,
-                        chatbotini.BOTNAME)
+    AUTHKEY = CONN.auth(chatbotini.LOGINGTALK.split("@")[0],
+        chatbotini.LOGINPASSWORD,
+        chatbotini.BOTNAME)
 
     chatbotini.connection_log("Autenticando\n", "gtalk")
 
-    if not AUTHRES:
+    if not AUTHKEY:
         print("No se puede autorizar en %s - comprobar " +
               "nombre de usuario / contrasenia.") % chatbotini.SERVER
 
@@ -253,12 +252,12 @@ if __name__ == "__main__":
 
         sys.exit(1)
 
-    if AUTHRES != "sasl":
+    if AUTHKEY != "sasl":
         print """Warning: SASL authentication can not you% s.
         Old method of authentication used!""" % chatbotini.SERVER
 
-    CONN.RegisterHandler("message", rpta_gtalk)
-    CONN.RegisterHandler("presence", present_controller)
+    CONN.RegisterHandler("message", reply_gtalk)
+    CONN.RegisterHandler("presence", presence_controller)
     CONN.sendInitPresence()
     CONN.send(SHOW)
 

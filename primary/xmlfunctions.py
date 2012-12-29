@@ -8,11 +8,11 @@ class DictionaryXml(dict):
     Adds object like functionality to the standard dictionary.
     """
 
-    def __init__(self, iniciadicc=None):
+    def __init__(self, start_dic = None):
         """Starting"""
-        if iniciadicc is None:
-            iniciadicc = {}
-        dict.__init__(self, iniciadicc)
+        if start_dic is None:
+            start_dic = {}
+        dict.__init__(self, start_dic)
 
     def __getattr__(self, item):
         """Get Attributes"""
@@ -103,43 +103,43 @@ def _xmltodict(node, classdict):
     """
     Defined function to help xmltodict
     """
-    nodedict = classdict()
+    node_dict = classdict()
     if len(node.items()) > 0:
         # if we have attributes, set them
-        nodedict.update(dict(node.items()))
+        node_dict.update(dict(node.items()))
 
     for child in node:
         # recursively add the element's children
-        newitem = _xmltodict(child, classdict)
-        if child.tag in nodedict:
+        new_item = _xmltodict(child, classdict)
+        if child.tag in node_dict:
             # found duplicate tag, force a list
-            if isinstance(nodedict[child.tag], list):
+            if isinstance(node_dict[child.tag], list):
                 # append to existing list
-                nodedict[child.tag].append(newitem)
+                node_dict[child.tag].append(new_item)
             else:
                 # convert to list
-                nodedict[child.tag] = [nodedict[child.tag], newitem]
+                node_dict[child.tag] = [node_dict[child.tag], new_item]
         else:
             # only one, directly set the dictionary
-            nodedict[child.tag] = newitem
+            node_dict[child.tag] = new_item
 
     if node.text is None:
         text = ''
     else:
         text = node.text
 
-    if len(nodedict) > 0:
+    if len(node_dict) > 0:
         # if we have a dictionary add the text as a dictionary
         # value (if there is any)
         if len(text) > 0:
-            nodedict['_text'] = text
+            node_dict['_text'] = text
     else:
         # if we don't have child nodes or attributes, just set the text
-        nodedict = text
-    return nodedict
+        node_dict = text
+    return node_dict
 
 
-def xmltodict(root, classdict=DictionaryXml):
+def xml_to_dict(root, class_dict=DictionaryXml):
     """
     Converts an XML file or ElementTree Element to a dictionary
     """
@@ -148,4 +148,4 @@ def xmltodict(root, classdict=DictionaryXml):
         root = ElementTree.parse(root).getroot()
     elif not isinstance(root, ElementTree.Element):
         raise Exception('Expected ElementTree.Element or file path string')
-    return classdict({root.tag: _xmltodict(root, classdict)})
+    return class_dict({root.tag: _xmltodict(root, class_dict)})
