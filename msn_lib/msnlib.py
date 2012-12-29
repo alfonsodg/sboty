@@ -14,33 +14,34 @@ LOGIN_HOST = 'messenger.hotmail.com'
 LOGIN_PORT = 1863
 
 status_table = {
-    'online':       'NLN',
-    'away':         'AWY',
-    'busy':         'BSY',
-    'brb':          'BRB',
-    'phone':        'PHN',
-    'lunch':        'LUN',
-    'invisible':    'HDN',
-    'idle':         'IDL',
-    'offline':      'FLN',
+    'online': 'NLN',
+    'away': 'AWY',
+    'busy': 'BSY',
+    'brb': 'BRB',
+    'phone': 'PHN',
+    'lunch': 'LUN',
+    'invisible': 'HDN',
+    'idle': 'IDL',
+    'offline': 'FLN',
 }
 
 reverse_status = {
-    'NLN':		'online',
-    'AWY':		'away',
-    'BSY':		'busy',
-    'BRB':		'brb',
-    'PHN':		'phone',
-    'LUN':		'lunch',
-    'HDN':		'invisible',
-    'IDL':		'idle',
-    'FLN':		'offline',
+    'NLN': 'online',
+    'AWY': 'away',
+    'BSY': 'busy',
+    'BRB': 'brb',
+    'PHN': 'phone',
+    'LUN': 'lunch',
+    'HDN': 'invisible',
+    'IDL': 'idle',
+    'FLN': 'offline',
 }
 
 
 def debug(s):
     sys.stderr.write('\r' + str(s) + '\n')
     sys.stderr.flush()
+
 
 def nickquote(nick):
     """Quotes a nick the way the server likes it: replacing spaces with
@@ -49,9 +50,10 @@ def nickquote(nick):
     nick = nick.replace(' ', '%20')
     return nick
 
+
 class user:
     """User class, used to store your 'friends'"""
-    def __init__(self, email = '', nick = '', gid = None):
+    def __init__(self, email='', nick='', gid=None):
         self.email = email
         self.nick = nick
         self.realnick = ''
@@ -67,7 +69,7 @@ class user:
 
     def __repr__(self):
         return '<user email:%s nick:"%s" gid:%s>' % (self.email,
-                self.nick, self.gid)
+                                                     self.nick, self.gid)
 
 
 class sbd:
@@ -93,22 +95,22 @@ class sbd:
 
     def __init__(self):
         self.fd = None		# connection fd
-        self.state = None	# connection's state (see doc above)
-        self.emails = []	# emails we talk to through
-        self.msgqueue = []	# outgoing message queue
-        self.hash = None	# server-sent hash
-        self.session_id = None	# server-sent sid
-        self.endpoint = ()	# remote end (ip, port)
-        self.type = None	# either 'answer' or 'invite'
+        self.state = None  # connection's state (see doc above)
+        self.emails = []  # emails we talk to through
+        self.msgqueue = []  # outgoing message queue
+        self.hash = None  # server-sent hash
+        self.session_id = None  # server-sent sid
+        self.endpoint = ()  # remote end (ip, port)
+        self.type = None  # either 'answer' or 'invite'
         self.tid = 1		# the transaction id, it needs to be
                     # unique for consistency
         self.block = 1		# blocking state
-        self.orig_tid = None	# tid of the original XFR
+        self.orig_tid = None  # tid of the original XFR
 
     def __repr__(self):
         return '<sbd: emails:%s state:%s fd:%d endpoint:%s>' % \
-            (str(self.emails), self.state, \
-            self.fileno(), self.endpoint)
+            (str(self.emails), self.state,
+             self.fileno(), self.endpoint)
 
     def fileno(self):
         return self.fd.fileno()
@@ -117,7 +119,6 @@ class sbd:
         "Returns a valid tid as string"
         self.tid = self.tid + 1
         return str(self.tid - 1)
-
 
 
 class msnd:
@@ -169,7 +170,7 @@ class msnd:
         self.mobilep = None		# mobile phone
 
         self.status = 'FLN'		# status
-        self.encoding = 'iso-8859-1'	# local encoding
+        self.encoding = 'iso-8859-1'  # local encoding
 
         self.lhost = LOGIN_HOST
         self.lport = LOGIN_PORT
@@ -188,10 +189,9 @@ class msnd:
         self.reverse = {}		# reverse user list
         self.groups = {}		# group list
 
-
     def __repr__(self):
         return '<msnd object, fd:%s, email:%s, tid:%s>' % (self.fd,
-            self.email, self.tid)
+                                                           self.email, self.tid)
 
     def fileno(self):
         """Useful for select()"""
@@ -210,7 +210,6 @@ class msnd:
             return s.decode('utf-8').encode(self.encoding)
         except:
             return s
-
 
     def pollable(self):
         """Return a pair of lists of poll()/select()ables network
@@ -233,23 +232,21 @@ class msnd:
         owtd = []
         iwtd.append(self)
         for nd in self.sb_fds:
-            if nd.state == 'cp':	# connect is pending
+            if nd.state == 'cp':  # connect is pending
                 owtd.append(nd)
-            elif nd.state == 'xf':	# skip this case because it's
+            elif nd.state == 'xf':  # skip this case because it's
                         # not connected yet
                 pass
             else:			# readable!
                 iwtd.append(nd)
         return (iwtd, owtd)
 
-
     def get_tid(self):
         """Returns a valid tid as string"""
         self.tid = self.tid + 1
         return str(self.tid - 1)
 
-
-    def _send(self, cmd, params = '', nd = None, raw = 0):
+    def _send(self, cmd, params='', nd=None, raw=0):
         """Sends a command to the server, building it first as a
         string; uses, if specified, the pseudo fd (it can be either
         msnd or sbd)."""
@@ -258,15 +255,15 @@ class msnd:
         tid = nd.get_tid()
         fd = nd.fd
         c = cmd + ' ' + tid
-        if params: c = c + ' ' + params
+        if params:
+            c = c + ' ' + params
         debug(str(fd.fileno()) + ' >>> ' + c)
         if not raw:
             c = c + '\r\n'
         c = self.encode(c)
         return fd.send(c)
 
-
-    def _recv(self, fd = None):
+    def _recv(self, fd=None):
         """Reads a command from the server, returns (cmd, tid, params)"""
         if not fd:
             fd = self.fd
@@ -300,8 +297,7 @@ class msnd:
         debug(str(fd.fileno()) + ' <<< ' + buf)
         return (cmd, tid, params)
 
-
-    def _recvmsg(self, msglen, fd = None):
+    def _recvmsg(self, msglen, fd=None):
         """Read a message from the server, returns it"""
         if not fd:
             fd = self.fd
@@ -314,7 +310,6 @@ class msnd:
             left = left - len(c)
 
         return self.decode(buf)
-
 
     def submit_sbd(self, sbd):
         """Submits a switchboard descriptor to add to our list; it is
@@ -335,29 +330,31 @@ class msnd:
         self.users[email].sbd = sbd
         return
 
-
     def change_status(self, st):
         """Changes the current status to: online, away, busy, brb,
         phone, lunch, invisible, idle, offline"""
-        if not status_table.has_key(st): return 0
+        if st not in status_table:
+            return 0
         self.status = status_table[st]
         self._send('CHG', self.status)
         return 1
 
-
-    def privacy(self, public = 1, auth = 0):
+    def privacy(self, public=1, auth=0):
         """Sets our privacy state. First parameter define if you get
         messages from everybody or only from people on your list; the
         second defines if you want users to ask for authorization or
         let everybody add you"""
-        if public:	self._send('BLP', 'AL') # be social
-        else:		self._send('BLP', 'BL') # live in a cave
+        if public:
+            self._send('BLP', 'AL')  # be social
+        else:
+            self._send('BLP', 'BL')  # live in a cave
 
-        if auth:	self._send('GTC', 'A')	# ask for auth
-        else:		self._send('GTC', 'N')	# let them add you
+        if auth:
+            self._send('GTC', 'A')  # ask for auth
+        else:
+            self._send('GTC', 'N')  # let them add you
 
         return 1
-
 
     def change_nick(self, nick):
         """Changes our nick"""
@@ -365,16 +362,15 @@ class msnd:
         self._send('REA', self.email + ' ' + nick)
         return 1
 
-
     def sync(self):
         """Syncronizes the tables"""
         self._send('SYN', '0')
         return 1
 
-
-    def useradd(self, email, nick = None, gid = '0'):
+    def useradd(self, email, nick=None, gid='0'):
         """Adds a user"""
-        if not nick: nick = email
+        if not nick:
+            nick = email
         nick = nickquote(nick)
         self._send('ADD', 'AL ' + email + ' ' + nick)
         self._send('ADD', 'FL ' + email + ' ' + nick + ' ' + gid)
@@ -425,22 +421,20 @@ class msnd:
         self.fd.send('OUT\r\n')
         self.fd.close()
 
-
     def close(self, sb):
         """Closes a given sbd"""
         try:
             self.sb_fds.remove(sb)
             self.users[sb.emails[0]].sbd = None
-            self._send('BYE', self.email, nd = sb)
+            self._send('BYE', self.email, nd=sb)
             sb.fd.close()
         except:
             pass
         del(sb)
 
-
     def invite(self, email, sbd):
         """Invites a user into an existing sbd"""
-        self._send('CAL', email, nd = sbd)
+        self._send('CAL', email, nd=sbd)
 
     def login(self):
         """Logins to the server, really boring"""
@@ -457,8 +451,9 @@ class msnd:
             raise Exception('Error de version')
 
         # lie the version, just in case
-        self._send('CVR', '0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS ' + self.email)
-        self._recv()	# we just don't care what we get
+        self._send('CVR', '0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS ' +
+                   self.email)
+        self._recv()  # we just don't care what we get
 
         # ask for notification server
         self._send('USR', 'TWN I ' + self.email)
@@ -485,8 +480,9 @@ class msnd:
             raise Exception('Error de version')
 
         # lie the version, just in case
-        self._send('CVR', '0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS	' + self.email)
-        self._recv()	# we just don't care what we get
+        self._send('CVR', '0x0409 win 4.10 i386 MSNMSGR 5.0.0544 MSMSGS	' +
+                   self.email)
+        self._recv()  # we just don't care what we get
 
         # auth: send user, get hash
         self._send('USR', 'TWN I ' + self.email)
@@ -507,7 +503,6 @@ class msnd:
         self.nick = urllib.unquote(self.nick)
 
         return 1
-
 
     def passport_auth(self, hash):
         """Logins into passport and obtains an ID used for
@@ -532,7 +527,7 @@ class msnd:
         login_host = d['DALogin'].split('/')[0]
 
         # build the authentication headers
-        ahead =  'Passport1.4 OrgVerb=GET'
+        ahead = 'Passport1.4 OrgVerb=GET'
         ahead += ',OrgURL=http%3A%2F%2Fmessenger%2Emsn%2Ecom'
         ahead += ',sign-in=' + urllib.quote(self.email)
         ahead += ',pwd=' + urllib.quote(self.pwd)
@@ -540,7 +535,7 @@ class msnd:
         ahead += 'ru=http%3A%2F%2Fmessenger%2Emsn%2Ecom,ct=0,'
         ahead += 'kpp=1,kv=5,ver=2.1.0173.1,'
         ahead += hash
-        headers = { 'Authorization': ahead }
+        headers = {'Authorization': ahead}
 
         # connect to the given server
         debug('SSL Connect to %s' % login_server)
@@ -558,7 +553,7 @@ class msnd:
             login_host = login_server.split('/')[2]
             debug('SSL Redirect to %s' % login_server)
             ls = httplib.HTTPSConnection(login_host)
-            headers = { 'Authorization': ahead }
+            headers = {'Authorization': ahead}
             ls.request('GET', login_server, '', headers)
             resp = ls.getresponse()
             debug('SSL Response %d' % resp.status)
@@ -586,8 +581,7 @@ class msnd:
         passportid = passportid[1:-1]		# remove the "'"
         return passportid
 
-
-    def read(self, nd = None):
+    def read(self, nd=None):
         """Reads from the specified nd and run the callback. The nd
         can be either a msnd or a sbd (that's why it's called 'nd'
         from 'network descriptor').
@@ -601,7 +595,7 @@ class msnd:
             if nd.state == 'cp':
                 # see if the connect went well
                 r = nd.fd.getsockopt(socket.SOL_SOCKET,
-                    socket.SO_ERROR)
+                                     socket.SO_ERROR)
                 if r != 0:
                     raise socket.error('ConnectFailed')
                 nd.fd.setblocking(1)
@@ -621,45 +615,73 @@ class msnd:
                 nd.state = 'us'
                 return
 
-
-
         r = self._recv(nd.fd)
         type = r[0]
         tid = r[1]
         params = string.strip(r[2])
 
-        if   type == 'CHL': self.cb.chl(self, type, tid, params)
-        elif type == 'QRY': self.cb.qry(self, type, tid, params)
-        elif type == 'ILN': self.cb.iln(self, type, tid, params)
-        elif type == 'CHG': self.cb.chg(self, type, tid, params)
-        elif type == 'OUT': self.cb.out(self, type, tid, params)
-        elif type == 'FLN': self.cb.fln(self, type, tid, params)
-        elif type == 'NLN': self.cb.nln(self, type, tid, params)
-        elif type == 'BLP': self.cb.blp(self, type, tid, params)
-        elif type == 'LST': self.cb.lst(self, type, tid, params)
-        elif type == 'GTC': self.cb.gtc(self, type, tid, params)
-        elif type == 'SYN': self.cb.syn(self, type, tid, params)
-        elif type == 'PRP': self.cb.prp(self, type, tid, params)
-        elif type == 'LSG': self.cb.lsg(self, type, tid, params)
-        elif type == 'BPR': self.cb.bpr(self, type, tid, params)
-        elif type == 'ADD': self.cb.add(self, type, tid, params)
-        elif type == 'REA': self.cb.rea(self, type, tid, params)
-        elif type == 'REM': self.cb.rem(self, type, tid, params)
-        elif type == 'ADG': self.cb.adg(self, type, tid, params)
-        elif type == 'RMG': self.cb.rmg(self, type, tid, params)
-        elif type == 'REG': self.cb.reg(self, type, tid, params)
-        elif type == 'RNG': self.cb.rng(self, type, tid, params)
+        if   type == 'CHL':
+            self.cb.chl(self, type, tid, params)
+        elif type == 'QRY':
+            self.cb.qry(self, type, tid, params)
+        elif type == 'ILN':
+            self.cb.iln(self, type, tid, params)
+        elif type == 'CHG':
+            self.cb.chg(self, type, tid, params)
+        elif type == 'OUT':
+            self.cb.out(self, type, tid, params)
+        elif type == 'FLN':
+            self.cb.fln(self, type, tid, params)
+        elif type == 'NLN':
+            self.cb.nln(self, type, tid, params)
+        elif type == 'BLP':
+            self.cb.blp(self, type, tid, params)
+        elif type == 'LST':
+            self.cb.lst(self, type, tid, params)
+        elif type == 'GTC':
+            self.cb.gtc(self, type, tid, params)
+        elif type == 'SYN':
+            self.cb.syn(self, type, tid, params)
+        elif type == 'PRP':
+            self.cb.prp(self, type, tid, params)
+        elif type == 'LSG':
+            self.cb.lsg(self, type, tid, params)
+        elif type == 'BPR':
+            self.cb.bpr(self, type, tid, params)
+        elif type == 'ADD':
+            self.cb.add(self, type, tid, params)
+        elif type == 'REA':
+            self.cb.rea(self, type, tid, params)
+        elif type == 'REM':
+            self.cb.rem(self, type, tid, params)
+        elif type == 'ADG':
+            self.cb.adg(self, type, tid, params)
+        elif type == 'RMG':
+            self.cb.rmg(self, type, tid, params)
+        elif type == 'REG':
+            self.cb.reg(self, type, tid, params)
+        elif type == 'RNG':
+            self.cb.rng(self, type, tid, params)
 
-        elif type == 'IRO': self.cb.iro(self, type, tid, params, nd)
-        elif type == 'ANS': self.cb.ans(self, type, tid, params, nd)
-        elif type == 'XFR': self.cb.xfr(self, type, tid, params)
-        elif type == 'USR': self.cb.usr(self, type, tid, params, nd)
-        elif type == 'CAL': self.cb.cal(self, type, tid, params, nd)
-        elif type == 'JOI': self.cb.joi(self, type, tid, params, nd)
+        elif type == 'IRO':
+            self.cb.iro(self, type, tid, params, nd)
+        elif type == 'ANS':
+            self.cb.ans(self, type, tid, params, nd)
+        elif type == 'XFR':
+            self.cb.xfr(self, type, tid, params)
+        elif type == 'USR':
+            self.cb.usr(self, type, tid, params, nd)
+        elif type == 'CAL':
+            self.cb.cal(self, type, tid, params, nd)
+        elif type == 'JOI':
+            self.cb.joi(self, type, tid, params, nd)
 
-        elif type == 'ACK': self.cb.ack(self, type, tid, params, nd)
-        elif type == 'NAK': self.cb.nak(self, type, tid, params, nd)
-        elif type == 'BYE': self.cb.bye(self, type, tid, params, nd)
+        elif type == 'ACK':
+            self.cb.ack(self, type, tid, params, nd)
+        elif type == 'NAK':
+            self.cb.nak(self, type, tid, params, nd)
+        elif type == 'BYE':
+            self.cb.bye(self, type, tid, params, nd)
 
         elif type == 'MSG':
             params = tid + ' ' + params
@@ -680,15 +702,14 @@ class msnd:
                 errno = None
 
             if errno:
-                self.cb.err(self, errno, \
-                    str(tid) + ' ' + str(params))
+                self.cb.err(self, errno,
+                            str(tid) + ' ' + str(params))
             else:
                 # if we got this far, we have no idea
                 self.cb.unk(self, type, tid, params)
         return
 
-
-    def sendmsg(self, email, msg = '', sb = None):
+    def sendmsg(self, email, msg='', sb=None):
         """Sends a message to the user identified by 'email', either
         the one specified or flush the queue.
         Returns:
@@ -718,7 +739,7 @@ class msnd:
             sb.emails.append(email)
             sb.msgqueue.append(msg)
 
-            self.submit_sbd(sb)	# no need to connect it yet
+            self.submit_sbd(sb)  # no need to connect it yet
             # we set the orig_tid of the sbd to the next tid (that
             # is, the tid the XFR is going to have), in order to
             # be able to identify it later, in cb.cb_xfr()
@@ -745,10 +766,7 @@ class msnd:
                 m = header + m
                 msize = len(self.encode(m))
                 params = 'A ' + str(msize) + '\r\n' + m
-                self._send('MSG', params, sb, raw = 1)
+                self._send('MSG', params, sb, raw=1)
                 del(pend[0])
 
             return 2
-
-
-

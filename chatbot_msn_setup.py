@@ -192,8 +192,8 @@ class ServDiscon():
                 if not newmsgs:
                     return
 
-                print ("\rYou have %s unread email(s)" +
-                       " in your Hotmail account") % str(newmsgs)
+                print("\rYou have %s unread email(s)" +
+                      " in your Hotmail account") % str(newmsgs)
 
             elif headers["Content-Type"] == ("text/" +
                                              "x-msmsgsemailnotification;" +
@@ -202,8 +202,8 @@ class ServDiscon():
                 from_addr = hotmail_info["From-Addr"]
                 subject = hotmail_info["Subject"]
 
-                print ("\rYou have just received an email in your" +
-                       " Hotmail account:")
+                print("\rYou have just received an email in your" +
+                      " Hotmail account:")
                 print "\r\tFrom: %s (%s)" % (from_name, from_addr)
                 print "\r\tSubject: %s" % subject
             return
@@ -248,8 +248,8 @@ class ServDiscon():
         """
         When the server disconnect us from MSN.
         """
-        print ("\rServer sent disconnect" +
-               " (probably you logged in somewhere else)")
+        print("\rServer sent disconnect" +
+              " (probably you logged in somewhere else)")
 
         USEF_FUNCT.quit()
         msncb.cb_out(md1, type, tid, params)
@@ -500,8 +500,8 @@ if __name__ == "__main__":
                 if comp != MSN:
                     if comp.msgqueue:
                         nick = USEF_FUNCT.emailtonick(comp.emails[0])
-                        print ("\rConnection with %s closed - the following" +
-                               "messages couldn't be sent:") % (nick)
+                        print("\rConnection with %s closed - the following" +
+                              "messages couldn't be sent:") % (nick)
 
                         for mssage in comp.msgqueue:
                             print "\t>>> %s" % mssage

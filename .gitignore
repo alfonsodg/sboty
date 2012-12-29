@@ -7,6 +7,7 @@
 *.brn
 .hg/*
 .hgignore
+.idea/*
 chatbot_settings.xml
 cache/*
 errors/*
