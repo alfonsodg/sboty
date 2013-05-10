@@ -11,7 +11,7 @@ except:
 
 import msnlib
 
-"""
+ADVICE = """
 This is the home for the msn callback class and examples (that might move to
 another file in the near future).
 
@@ -119,7 +119,7 @@ error_table = {
 
 
 def cb_err(md, errno, params):
-    "Handle server errors"
+    """Handle server errors"""
     if errno not in error_table:
         desc = 'Unknown error %d' % errno
     else:
@@ -129,18 +129,18 @@ def cb_err(md, errno, params):
 
 
 def cb_def(md, type, tid, params):
-    "Default callback. It just prints the args"
+    """Default callback. It just prints the args"""
     debug('DEFAULT type: ' + type + ' :: Params: ' + str(params))
 
 
 def cb_unk(md, type, tid, params):
-    "Handles the unknown types"
+    """Handles the unknown types"""
     debug('Error! unknown event type "%s"' % type)
     debug('params: ' + str(params))
 
 
 def cb_chl(md, type, tid, params):
-    "Handles the challenges"
+    """Handles the challenges"""
     if type != 'CHL':
         raise 'CallbackMess', (md, type, params)
     hash = params + 'VT6PX?UQTM4WM%YR'  # magic from www.hypothetic.org
@@ -150,17 +150,17 @@ def cb_chl(md, type, tid, params):
 
 
 def cb_ign(md, type, tid, params, nd=None):
-    "Ignores"
+    """Ignores"""
     pass
 
 
 def cb_out(md, type, tid, params):
-    "Server disconnected us"
+    """Server disconnected us"""
     debug('!!! Server closed the connection: ' + params)
 
 
 def cb_iln(md, type, tid, params):
-    "Handles a friend status change"
+    """Handles a friend status change"""
     t = params.split(' ')
     status = t[0]
     email = t[1]
@@ -175,14 +175,14 @@ def cb_iln(md, type, tid, params):
 
 
 def cb_fln(md, type, tid, params):
-    "Handles a friend disconnection"
+    """Handles a friend disconnection"""
     email = tid
     debug('FRIEND %s disconnected (%s)' % (email, type))
     md.users[email].status = type
 
 
 def cb_nln(md, type, tid, params):
-    "Handles a friend status change"
+    """Handles a friend status change"""
     status = tid
     t = params.split(' ')
     email = t[0]
@@ -197,7 +197,7 @@ def cb_nln(md, type, tid, params):
 
 
 def cb_bpr(md, type, tid, params):
-    "Update friend info"
+    """Update friend info"""
     # the email is deduced from the last lst we got; if it's None it means
     # that we come from an add (the protocol behaves different if coming
     # from SYN or ADD)
@@ -230,7 +230,7 @@ def cb_bpr(md, type, tid, params):
 
 
 def cb_syn(md, type, tid, params):
-    "Receive a SYN notification"
+    """Receive a SYN notification"""
     t = params.split()
     if len(t) != 3:
         raise "SYNError"
@@ -293,7 +293,7 @@ def cb_lst(md, type, tid, params):
 
 
 def cb_lsg(md, type, tid, params):
-    "Handles group list"
+    """Handles group list"""
     p = params.split(' ')
     gid = tid
     name, unk = p[0:]
@@ -305,7 +305,7 @@ def cb_lsg(md, type, tid, params):
 
 
 def cb_prp(md, type, tid, params):
-    "Handles private info"
+    """Handles private info"""
     t = params.split(' ')
     type = t[0]
     if len(t) > 1:
@@ -324,7 +324,7 @@ def cb_prp(md, type, tid, params):
 
 
 def cb_add(md, type, tid, params):
-    "Handles a user add; both you adding a user and a user adding you"
+    """Handles a user add; both you adding a user and a user adding you"""
     t = params.split(' ')
     type = t[0]
     if type == 'RL':
@@ -362,7 +362,7 @@ def cb_rem(md, type, tid, params):
 
 
 def cb_adg(md, type, tid, params):
-    "Handle a group add"
+    """Handle a group add"""
     t = params.split(' ')
     lver, name, gid = t[0:3]
     md.groups[gid] = name
@@ -370,7 +370,7 @@ def cb_adg(md, type, tid, params):
 
 
 def cb_rmg(md, type, tid, params):
-    "Handle a group del"
+    """Handle a group del"""
     t = params.split(' ')
     lver, gid = t[0:2]
     for e in md.users.keys():
@@ -383,7 +383,7 @@ def cb_rmg(md, type, tid, params):
 
 
 def cb_reg(md, type, tid, params):
-    "Handle a group rename"
+    """Handle a group rename"""
     t = params.split(' ')
     gid = t[1]
     name = t[2]
@@ -392,7 +392,7 @@ def cb_reg(md, type, tid, params):
 
 
 def cb_rea(md, type, tid, params):
-    "Handles our info change"
+    """Handles our info change"""
     t = params.split(' ')
     email = t[1]
     nick = urllib.unquote(t[2])
@@ -404,7 +404,7 @@ def cb_rea(md, type, tid, params):
 
 
 def cb_rng(md, type, tid, params):
-    "Handles switchboard invitations."
+    """Handles switchboard invitations."""
     t = params.split(' ')
     sid = tid
     ip, port = t[0].split(':')
@@ -432,7 +432,7 @@ def cb_rng(md, type, tid, params):
 
 
 def cb_xfr(md, type, tid, params):
-    "Handles switchboard requests"
+    """Handles switchboard requests"""
     t = params.split(' ')
     ip, port = t[1].split(':')
     port = int(port)
@@ -460,7 +460,7 @@ def cb_xfr(md, type, tid, params):
 
 
 def cb_iro(md, type, tid, params, sbd):
-    "Handles the switchboard participant list"
+    """Handles the switchboard participant list"""
     p = params.split(' ')
     uid, ucount, email, nick = p
     if ucount == '1':
@@ -475,14 +475,14 @@ def cb_iro(md, type, tid, params, sbd):
 
 
 def cb_usr(md, type, tid, params, sbd):
-    "Handles switchboard requests initial identification"
+    """Handles switchboard requests initial identification"""
     email = sbd.emails[0]
     md._send('CAL', email, sbd)
     sbd.state = 'ca'
 
 
 def cb_joi(md, type, tid, params, sbd):
-    "Handles a switchboard join, and sends the pending messages"
+    """Handles a switchboard join, and sends the pending messages"""
     email = tid
     # if it's a multi-user chat, just append it to the list
     if sbd.emails and email != sbd.emails[0]:
@@ -506,27 +506,27 @@ def cb_ans(md, type, tid, params, sbd):
 
 
 def cb_msg(md, type, tid, params, sbd):
-    "Get a message"
+    """Get a message"""
     debug('MESSAGE\n+++ Header: %s\n%s\n\n' % (str(tid), str(params)))
 
 
 def cb_ack(md, type, tid, params, sbd):
-    "Get a message acknowledge"
+    """Get a message acknowledge"""
     debug('ACK: tid:%s' % tid)
 
 
 def cb_notice(md, type, tid, params, sbd):
-    "Get a notice"
+    """Get a notice"""
     debug('NOTICE\n+++ %s\n\n' % str(params))
 
 
 def cb_nak(md, type, tid, params, sbd):
-    "Get a message negative acknowledge"
+    """Get a message negative acknowledge"""
     debug('NAK: tid:%s' % tid)
 
 
 def cb_bye(md, type, tid, params, sbd):
-    "Handles a user sb disconnect"
+    """Handles a user sb disconnect"""
     email = tid
     if email != sbd.emails[0]:
         debug('BYE: user %s leaving sbd' % email)
@@ -538,5 +538,5 @@ def cb_bye(md, type, tid, params, sbd):
 
 
 def cb_qng(md, type, tid, params):
-    "Get the response of a ping"
+    """Get the response of a ping"""
     debug('PONG!: answered by the server')

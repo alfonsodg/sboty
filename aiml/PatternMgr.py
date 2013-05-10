@@ -177,7 +177,7 @@ class PatternMgr:
 
         # Pass the input off to the recursive pattern-matcher
         patMatch, template = self._match(input.split(), thatInput.split(), topicInput.split(), self._root)
-        if template == None:
+        if template is not None:
             return ""
 
         # Extract the appropriate portion of the pattern, based on the
@@ -262,7 +262,7 @@ class PatternMgr:
                 # pattern-match on the _THAT node with thatWords as words.
                 try:
                     pattern, template = self._match(thatWords, [], topicWords, root[self._THAT])
-                    if pattern != None:
+                    if pattern is not None:
                         pattern = [self._THAT] + pattern
                 except KeyError:
                     pattern = []
@@ -272,17 +272,17 @@ class PatternMgr:
                 # on the _TOPIC node with topicWords as words.
                 try:
                     pattern, template = self._match(topicWords, [], [], root[self._TOPIC])
-                    if pattern != None:
+                    if pattern is not None:
                         pattern = [self._TOPIC] + pattern
                 except KeyError:
                     pattern = []
                     template = None
-            if template == None:
+            if template is None:
                 # we're totally out of input.  Grab the template at this node.
                 pattern = []
                 try: template = root[self._TEMPLATE]
                 except KeyError: template = None
-            return (pattern, template)
+            return pattern, template
 
         first = words[0]
         suffix = words[1:]
@@ -298,21 +298,21 @@ class PatternMgr:
                 pattern, template = self._match(suf, thatWords, topicWords, root[self._UNDERSCORE])
                 if template is not None:
                     newPattern = [self._UNDERSCORE] + pattern
-                    return (newPattern, template)
+                    return newPattern, template
 
         # Check first
         if root.has_key(first):
             pattern, template = self._match(suffix, thatWords, topicWords, root[first])
             if template is not None:
                 newPattern = [first] + pattern
-                return (newPattern, template)
+                return newPattern, template
 
         # check bot name
         if root.has_key(self._BOT_NAME) and first == self._botName:
             pattern, template = self._match(suffix, thatWords, topicWords, root[self._BOT_NAME])
             if template is not None:
                 newPattern = [first] + pattern
-                return (newPattern, template)
+                return newPattern, template
 
         # check star
         if root.has_key(self._STAR):
@@ -323,7 +323,7 @@ class PatternMgr:
                 pattern, template = self._match(suf, thatWords, topicWords, root[self._STAR])
                 if template is not None:
                     newPattern = [self._STAR] + pattern
-                    return (newPattern, template)
+                    return newPattern, template
 
         # No matches were found.
-        return (None, None)			
+        return None, None

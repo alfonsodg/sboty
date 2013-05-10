@@ -46,12 +46,9 @@ class Kernel:
         self.setBotPredicate("name", "Nameless")
 
         # set up the word substitutors (subbers):
-        self._subbers = {}
-        self._subbers['gender'] = WordSub(DefaultSubs.defaultGender)
-        self._subbers['person'] = WordSub(DefaultSubs.defaultPerson)
-        self._subbers['person2'] = WordSub(DefaultSubs.defaultPerson2)
-        self._subbers['normal'] = WordSub(DefaultSubs.defaultNormal)
-        
+        self._subbers = {'gender': WordSub(DefaultSubs.defaultGender), 'person': WordSub(DefaultSubs.defaultPerson),
+                         'person2': WordSub(DefaultSubs.defaultPerson2), 'normal': WordSub(DefaultSubs.defaultNormal)}
+
         # set up the element processors
         self._elementProcessors = {
             "bot":          self._processBot,
@@ -87,7 +84,7 @@ class Kernel:
             "version":      self._processVersion,
         }
 
-    def bootstrap(self, brainFile = None, learnFiles = [], commands = []):
+    def bootstrap(self, brainFile=None, learnFiles=None, commands=None):
         """Prepare a Kernel object for use.
 
         If a brainFile argument is provided, the Kernel attempts to
@@ -100,6 +97,8 @@ class Kernel:
         passed to respond().
 
         """
+        if not commands: commands = []
+        if not learnFiles: learnFiles = []
         start = time.clock()
         if brainFile:
             self.loadBrain(brainFile)
@@ -143,7 +142,7 @@ class Kernel:
             kern = aiml.Kernel()
 
         """
-        del(self._brain)
+        del self._brain
         self.__init__()
 
     def loadBrain(self, filename):
@@ -514,7 +513,7 @@ class Kernel:
                             continue
                         # get the name of the predicate to test
                         liName = name
-                        if liName == None:
+                        if liName is None:
                             liName = liAttr['name']
                         # get the value to check against
                         liValue = liAttr['value']

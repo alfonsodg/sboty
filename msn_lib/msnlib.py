@@ -3,7 +3,7 @@ import string
 import socket
 import urllib
 
-"""
+ADVICE = """
 MSN Messenger Client Library
 by Alberto Bertogli (albertito@blitiri.com.ar)
 """
@@ -116,8 +116,8 @@ class sbd:
         return self.fd.fileno()
 
     def get_tid(self):
-        "Returns a valid tid as string"
-        self.tid = self.tid + 1
+        """Returns a valid tid as string"""
+        self.tid += 1
         return str(self.tid - 1)
 
 
@@ -239,11 +239,11 @@ class msnd:
                 pass
             else:			# readable!
                 iwtd.append(nd)
-        return (iwtd, owtd)
+        return iwtd, owtd
 
     def get_tid(self):
         """Returns a valid tid as string"""
-        self.tid = self.tid + 1
+        self.tid += 1
         return str(self.tid - 1)
 
     def _send(self, cmd, params='', nd=None, raw=0):
@@ -259,7 +259,7 @@ class msnd:
             c = c + ' ' + params
         debug(str(fd.fileno()) + ' >>> ' + c)
         if not raw:
-            c = c + '\r\n'
+            c += '\r\n'
         c = self.encode(c)
         return fd.send(c)
 
@@ -271,7 +271,7 @@ class msnd:
         buf = ''
         c = fd.recv(1)
         while c != '\n' and c != '':
-            buf = buf + c
+            buf += c
             c = fd.recv(1)
 
         if c == '':
@@ -295,7 +295,7 @@ class msnd:
             params = ''
 
         debug(str(fd.fileno()) + ' <<< ' + buf)
-        return (cmd, tid, params)
+        return cmd, tid, params
 
     def _recvmsg(self, msglen, fd=None):
         """Read a message from the server, returns it"""
@@ -306,8 +306,8 @@ class msnd:
         while len(buf) != msglen:
             c = fd.recv(left)
             #debug(str(fd.fileno()) + ' <<< ' + buf)
-            buf = buf + c
-            left = left - len(c)
+            buf += c
+            left -= len(c)
 
         return self.decode(buf)
 
@@ -430,7 +430,7 @@ class msnd:
             sb.fd.close()
         except:
             pass
-        del(sb)
+        del sb
 
     def invite(self, email, sbd):
         """Invites a user into an existing sbd"""

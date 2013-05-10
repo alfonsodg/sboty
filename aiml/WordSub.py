@@ -48,14 +48,16 @@ class WordSub(dict):
         self._regex = re.compile("|".join(map(self._wordToRegex, self.keys())))
         self._regexIsDirty = False
 
-    def __init__(self, defaults = {}):
+    def __init__(self, defaults=None, **kwargs):
         """Initialize the object, and populate it with the entries in
-        the defaults dictionary.
+            the defaults dictionary.
 
-        """
+            """
+        dict.__init__(self, **kwargs)
+        if not defaults: defaults = {}
         self._regex = None
         self._regexIsDirty = True
-        for k,v in defaults.items():
+        for k, v in defaults.items():
             self[k] = v
 
     def __call__(self, match):
