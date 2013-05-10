@@ -48,7 +48,7 @@ USE_BRAIN = True
 
 def now():
     """
-    Returns the current date and time.
+    ChatBot object
     """
     today = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
     ret = '[%s]' % today
@@ -62,8 +62,11 @@ def connection_log(message, bot):
     filename = ''
     if bot == 'msn':
         filename = LOGDIR + '/msn_events'
+
     elif bot == 'gtalk':
         filename = LOGDIR + '/gtalk_events'
+
+    # TODO: embed into an exception block
     logfile = open(filename, 'a')
     logfile.write(now() + ' ' + message)
     logfile.close()
@@ -74,7 +77,6 @@ def configure(configfile, brainer):
     Bot properties configuration.
     """
     # Setup bot properties such name, birthplace, etc.
-
     fil = open(configfile)
     opt = fil.readlines()
     fil.close()
@@ -99,6 +101,7 @@ def action_process(message, senderemail, **kwargs):
     Perform the particular action for the given command.
     """
     remove_cache(senderemail)
+
     if CHATBOT.getPredicate('name', senderemail) == '':
         display_name = senderemail.split('@')
         if len(display_name) == 2:
@@ -122,16 +125,3 @@ def getfooter():
     Returns the footer.
     """
     return ''
-
-
-# Initialization
-CHATBOT = aiml.Kernel()
-configure(CONFIGFILE, CHATBOT)
-CHATBOT.verbose(False)
-
-# Load brain
-if USE_BRAIN and os.path.isfile(BRAIN):
-    CHATBOT.bootstrap(brainFile=BRAIN)
-else:
-    CHATBOT.bootstrap(learnFiles='ia_start.xml', commands='load aiml b')
-    CHATBOT.saveBrain(BRAIN)

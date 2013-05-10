@@ -5,8 +5,10 @@ CHATBOT en Google Talk
 """
 import sys
 import xmpp
-from primary import chatbotini
 import sqlite3
+
+from primary import chatbotini
+from primary.chatbotio import write_to_file
 
 
 def presence_controller(conn, presence):
@@ -28,7 +30,7 @@ def presence_controller(conn, presence):
 
         except UnicodeEncodeError:
             print "-" * 100
-            print "%s,%s,%s,No se puede mostrar nick,%s" % (
+            print "%s,%s,%s,Cannot show nick,%s" % (
                 presence.getFrom().getStripped(),
                 presence.getFrom().getResource(),
                 presence.getType(),
@@ -40,15 +42,14 @@ def presence_controller(conn, presence):
             chatbotini.MY_LIST.Authorize(jid)
 
 
+
 def chat_registrar(message, email):
     """
     Logs the chat.
     :rtype : Bool
     """
-    filename = chatbotini.LOGDIR + "/gtalk/" + email
-    logfile = open(filename, "a")
-    logfile.write(message)
-    logfile.close()
+    filename = "%s/gtalk/%s" % (config.common.log, email)
+    write_to_file(filename, message)
 
 
 def step_on(conn):
@@ -60,7 +61,7 @@ def step_on(conn):
         conn.Process(1)
     except KeyboardInterrupt:
         chatbotini.connection_log(
-            "Interrupcion de teclado (Ctrl+C)\n", "gtalk")
+            "Keyboard Interrupt (Ctrl+C)\n", "gtalk")
         disconnect_bot()
     return True
 
@@ -71,8 +72,8 @@ def loop_start(conn):
     :rtype : Bool
     """
     while step_on(conn):
-        SHOW.setShow("ax")
-        CONN.send(SHOW)
+        show.setShow("ax")
+        conn.send(show)
 
 
 def disconnect_bot():
@@ -81,7 +82,7 @@ def disconnect_bot():
     :rtype : Bool
     """
     print "Exiting."
-    chatbotini.connection_log("Sesion terminada\n\n\n", "gtalk")
+    chatbotini.connection_log("Session terminated\n\n\n", "gtalk")
     sys.exit(0)
 
 
@@ -172,11 +173,10 @@ def reply_gtalk(conn, mess):
                 if age > 95:
                     extra_msg = (u"Vaya eres la persona más longeva que" +
                                 u"estoy conociendo!")
-
         message = xmpp.Message(
             to=mess.getFrom(), body=extra_msg.encode("utf-8") + re_msg,
             typ="chat")
-        CONN.send(unicode(message).encode("utf-8").replace(r"\n", "\n"))
+        conn.send(unicode(message).encode("utf-8").replace(r"\n", "\n"))
 
     # Log response message
     try:
@@ -185,7 +185,9 @@ def reply_gtalk(conn, mess):
             ("%s >>> %s\n" % (log_time, message.encode("utf-8"))), sender_email)
     except AttributeError:
         pass
-
+    else:
+        chatregistry(
+            ("%s >>> %s\n" % (logtime, message.encode("utf-8"))), senderemail)
     cache_write_reply(re_msg, sender_email)
 
 
@@ -193,9 +195,7 @@ def record_questions_unanswered(message, email, date, time):
     """
     Records Unanswered Questions
     """
-    answer = open("unanswered.txt", "r")
-    unanswered = answer.readlines()
-    answer.close()
+    unanswered = read_file_lines("unanswered.txt")
     answer_random = [elem.split("\n") for elem in unanswered]
 
     for data in answer_random:
@@ -210,61 +210,54 @@ def record_questions_unanswered(message, email, date, time):
             conn_cursor.close()
             conn.close()
 
+
 if __name__ == "__main__":
     print "\n\n* ChatBot Gtalk Client *\n"
-    CONN = xmpp.Client(chatbotini.SERVER, debug=[])
-    SHOW = xmpp.Presence()
+    config = chatbotini.Config()
+    conn = xmpp.Client(config.gtalk.server, debug=[])
+    show = xmpp.Presence()
 
     # Show: dnd, away, ax
     SHOW.setShow("ax")
     CON_RES = CONN.connect(server=("talk.google.com", 5223))
-
-    chatbotini.connection_log("Iniciando sesion\n", "gtalk")
+    chatbotini.connection_log("Initializing session\n", "gtalk")
     chatbotini.connection_log(
-        "Conectando al servidor (talk.google.com)\n", "gtalk")
-
+        "Connecting to server (talk.google.com)\n", "gtalk")
     if not CON_RES:
         print "No se puede conectar al servidor %s!" % chatbotini.SERVER
-
         chatbotini.connection_log(
-            "No ha sido posible conectar al servidor jabber (%s)\n" % (
-                chatbotini.SERVER), "gtalk")
-        chatbotini.connection_log("Terminando\n\n\n", "gtalk")
-
+            "Unable to connect to jabber server (%s)\n" % (
+                config.gtalk.server), "gtalk")
+        chatbotini.connection_log("Ending\n\n\n", "gtalk")
         sys.exit(1)
 
     if CON_RES != "tls":
         print(
             "Advertencia: no se puede estabilizar conexion segura - TLS fallo")
-
     AUTHKEY = CONN.auth(chatbotini.LOGINGTALK.split("@")[0],
         chatbotini.LOGINPASSWORD,
         chatbotini.BOTNAME)
-
-    chatbotini.connection_log("Autenticando\n", "gtalk")
+    chatbotini.connection_log("Authenticating\n", "gtalk")
 
     if not AUTHKEY:
         print("No se puede autorizar en %s - comprobar " +
               "nombre de usuario / contrasenia.") % chatbotini.SERVER
-
-        chatbotini.connection_log("Login/Password incorrectos\n", "gtalk")
-        chatbotini.connection_log("Terminando\n\n\n", "gtalk")
-
+        chatbotini.connection_log("Login/Password incorrect\n", "gtalk")
+        chatbotini.connection_log("Terminating\n\n\n", "gtalk")
         sys.exit(1)
 
     if AUTHKEY != "sasl":
         print """Warning: SASL authentication can not you% s.
         Old method of authentication used!""" % chatbotini.SERVER
-
     CONN.RegisterHandler("message", reply_gtalk)
     CONN.RegisterHandler("presence", presence_controller)
     CONN.sendInitPresence()
     CONN.send(SHOW)
 
-    chatbotini.MY_LIST = CONN.getRoster()
+    chatbotini.MY_LIST = conn.getRoster()
 
     print "Gtalk Login OK"
-    chatbotini.connection_log("Sesion iniciada\n", "gtalk")
+    chatbotini.connection_log("Session initialized\n", "gtalk")
 
     # Starts Application
-    loop_start(CONN)
+    loop_start(conn)

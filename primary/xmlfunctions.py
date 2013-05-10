@@ -10,6 +10,7 @@ class DictionaryXml(dict):
 
     def __init__(self, start_dic = None):
         """Starting"""
+
         if start_dic is None:
             start_dic = {}
         dict.__init__(self, start_dic)
@@ -26,6 +27,7 @@ class DictionaryXml(dict):
         """Get or Set"""
         if '_text' in self:
             return self.__getitem__('_text')
+
         else:
             return ''
 
@@ -37,8 +39,10 @@ class DictionaryXml(dict):
         if isinstance(elem, dict):
             return DictionaryXml(
                 (k, DictionaryXml.wrap_dict(v)) for (k, v) in elem.iteritems())
+
         elif isinstance(elem, list):
             return [DictionaryXml.wrap_dict(v) for v in elem]
+
         else:
             return elem
 
@@ -51,8 +55,10 @@ class DictionaryXml(dict):
             return dict(
                 (k, DictionaryXml._unwrap_dict(v))
                 for (k, v) in elem.iteritems())
+
         elif isinstance(elem, list):
             return [DictionaryXml._unwrap_dict(v) for v in elem]
+
         else:
             return elem
 
@@ -74,16 +80,20 @@ def _dicttoxml(parent, elemdict):
         for (tag, child) in elemdict.iteritems():
             if str(tag) == '_text':
                 parent.text = str(child)
+
             elif isinstance(child, list):
                 # iterate through the array and convert
+
                 for listchild in child:
                     elem = ElementTree.Element(tag)
                     parent.append(elem)
                     _dicttoxml(elem, listchild)
+
             else:
                 elem = ElementTree.Element(tag)
                 parent.append(elem)
                 _dicttoxml(elem, child)
+
     else:
         parent.text = str(elemdict)
 
@@ -112,6 +122,7 @@ def _xmltodict(node, classdict):
         # recursively add the element's children
         new_item = _xmltodict(child, classdict)
         if child.tag in node_dict:
+
             # found duplicate tag, force a list
             if isinstance(node_dict[child.tag], list):
                 # append to existing list
@@ -125,6 +136,7 @@ def _xmltodict(node, classdict):
 
     if node.text is None:
         text = ''
+
     else:
         text = node.text
 
@@ -146,6 +158,7 @@ def xml_to_dict(root, class_dict=DictionaryXml):
     # If a string is passed in, try to open it as a file
     if isinstance(root, basestring):
         root = ElementTree.parse(root).getroot()
+
     elif not isinstance(root, ElementTree.Element):
         raise Exception('Expected ElementTree.Element or file path string')
     return class_dict({root.tag: _xmltodict(root, class_dict)})
